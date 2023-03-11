@@ -141,6 +141,7 @@ return [
                 'route'      => 'voyager.logout',
                 'icon_class' => 'voyager-power',
             ],
+            'voyager::generic.is_rtl' => true
         ],
 
         'widgets' => [
