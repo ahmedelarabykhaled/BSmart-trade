@@ -43,7 +43,7 @@
         .voyager .breadcrumb a{
             color:{{ config('voyager.primary_color','#22A7F0') }};
         }
-        code
+        /* code
         {
             display: none !important;
         }
@@ -51,7 +51,13 @@
         .alert-info
         {
             display: none;
+        } 
+        footer
+        {
+            position: fixed;
+            bottom: 0px;
         }
+        */
     </style>
 
     @if(!empty(config('voyager.additional_css')))<!-- Additional CSS -->
