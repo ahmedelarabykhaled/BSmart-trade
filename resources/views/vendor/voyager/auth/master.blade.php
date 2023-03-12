@@ -8,6 +8,17 @@
     <meta name="description" content="admin login">
     <title>@yield('title', 'Admin - '.Voyager::setting("admin.title"))</title>
     <link rel="stylesheet" href="{{ voyager_asset('css/app.css') }}">
+
+    
+    <!-- Favicon -->
+    <?php $admin_favicon = Voyager::setting('admin.icon_image', ''); ?>
+    @if($admin_favicon == '')
+        <link rel="shortcut icon" href="{{ voyager_asset('images/logo-icon.png') }}" type="image/png">
+    @else
+        <link rel="shortcut icon" href="{{ Voyager::image($admin_favicon) }}" type="image/png">
+    @endif
+
+    
     @if (__('voyager::generic.is_rtl') == 'true')
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css">
         <link rel="stylesheet" href="{{ voyager_asset('css/rtl.css') }}">
