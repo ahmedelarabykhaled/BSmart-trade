@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class CustomerLegal extends Model
 {
+    
     protected $table = "customer_legals";
+
+    protected $fillable = ['user_id'];
 }

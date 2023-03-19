@@ -38,17 +38,17 @@
             }
         }
         body.login .form-group-default.focused{
-            border-color:{{ config('voyager.primary_color','#22A7F0') }};
+            border-color:{{ config('voyager.primary_color','#22A7F0') }}; 
         }
         .login-button, .bar:before, .bar:after{
             background:{{ config('voyager.primary_color','#22A7F0') }};
         }
         .remember-me-text{
-            padding:0 5px;
+            padding:0 5px; 
         }
         .login{
             background-size: auto !important;
-            background-position-x: right !important;
+            background-position-x: 75% !important;
         }
     </style>
     
