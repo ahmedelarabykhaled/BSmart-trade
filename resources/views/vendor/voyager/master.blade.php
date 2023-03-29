@@ -43,6 +43,9 @@
         .voyager .breadcrumb a{
             color:{{ config('voyager.primary_color','#22A7F0') }};
         }
+        .form-group, table tr, .panel-body{
+            color: black;
+        }
         /* code
         {
             display: none !important;

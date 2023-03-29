@@ -44,7 +44,7 @@ class CustomersLegalControllers extends VoyagerBaseController
             } else {
                 $redirect = redirect()->back();
             }
-
+ 
             return $redirect->with([
                 'message'    => __('voyager::generic.successfully_added_new')." {$dataType->getTranslatedAttribute('display_name_singular')}",
                 'alert-type' => 'success',
