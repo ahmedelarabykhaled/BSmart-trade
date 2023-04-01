@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('pdf', '\App\Http\Controllers\PdfController@index');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
