@@ -212,4 +212,40 @@
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
+
+    {{-- my custom script --}}
+
+    <script>
+        // let income = jQuery('input[name=final_customer_tatal_income]').val();
+        // jQuery('input[name=final_overall_income]').attr('disabled' , 'true');
+        jQuery('input[name=final_overall_income]').attr('disabled' , 'true');
+
+        // jQuery('input[type=number]').attr('min' , '0');
+
+
+        function get_total_income(){
+            let c_i = jQuery('input[name=final_customer_tatal_income]').val();
+
+            console.log( 'the customer => ' + c_i);
+            
+            let customer_income = (!isNaN(jQuery('input[name=final_customer_tatal_income]').val())) ? jQuery('input[name=final_customer_tatal_income]').val() : 0
+            let customer_income_float = parseFloat( customer_income );
+            console.log('customer_income ' + customer_income);
+
+            let customer_trade_income = !isNaN(jQuery('input[name=final_business_income]').val()) ? jQuery('input[name=final_business_income]').val() : 0;
+            let customer_trade_income_float = parseFloat( customer_trade_income ) ;
+            console.log('customer_trade_income ' + customer_trade_income);
+            
+            return ( parseFloat(customer_income) + parseFloat(customer_trade_income));
+        }
+
+
+        jQuery('input[name=final_customer_tatal_income],input[name=final_business_income]').keyup(function(){
+            let total_income = get_total_income();
+            console.log( total_income );
+            
+            jQuery('input[name=final_overall_income]').val(total_income);
+        });
+</script>
+
 @stop

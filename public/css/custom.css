@@ -1,8 +1,24 @@
-.return-to-list
-{
+.return-to-list {
     float: left;
 }
-.page-title
-{
+.page-title {
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .app-container .content-container .side-body {
+        margin-right: 10px !important;
+    }
+    [dir="rtl"] .navbar{
+        padding-right: 10px;
+    }
+}
+
+
+@media (max-width: 1000) {
+
+    .app-footer {
+        display: none;
+    }
+    
 }
