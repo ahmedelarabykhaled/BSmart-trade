@@ -1,3 +1,4 @@
+<!--
 <footer class="app-footer">
     <div class="site-footer-right">
         @if (rand(1,100) == 100)
@@ -9,3 +10,4 @@
         
     </div>
 </footer>
+-->

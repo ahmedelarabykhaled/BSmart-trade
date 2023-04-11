@@ -22,3 +22,6 @@ Route::get('pdf', '\App\Http\Controllers\PdfController@index');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+
+Route::get('customers/{id}','\App\Http\Controllers\CustomersController@show');

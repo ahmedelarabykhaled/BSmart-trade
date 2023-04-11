@@ -18,7 +18,7 @@
 @media (max-width: 1000) {
 
     .app-footer {
-        display: none;
+        display: none !important;
     }
     
 }
