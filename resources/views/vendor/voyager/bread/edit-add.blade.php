@@ -333,6 +333,7 @@
 </script>
 
 <script>
+    let customer_div_id = '';
     jQuery('.select2-ajax').change(function() {
         let customer_id = jQuery(this).val();
         console.log('customer id ' + customer_id);
@@ -340,11 +341,16 @@
             $.ajax({
                 url: "{{ URL::to('/') }}/customers/" + customer_id,
                 success: function(result) {
-                    console.log(result);
-                    $("#div1").html(result);
-                    let div_id = '{{ rand(0000,9999) }}';
-                    jQuery('.select2-ajax').parent('.form-group').after('#customer_'+div_id);
-                    jQuery('#customer_'+div_id).html(result);
+
+                    if (customer_div_id === '') {
+                        customer_div_id = "customer_" + '{{ rand(0000, 9999) }}' + Math.floor(Math
+                            .random() * 1000) + 1;
+                        console.log(customer_div_id);
+                        jQuery('.select2-ajax').parent('.form-group').after("<div id='" +
+                            customer_div_id + "'></div>");
+                    }
+
+                    jQuery('#' + customer_div_id).html(result);
                 }
             });
         }
