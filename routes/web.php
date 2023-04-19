@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use TCG\Voyager\Facades\Voyager;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,8 @@ Route::get('pdf', '\App\Http\Controllers\PdfController@index');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+    Route::resource('installments','\App\Http\Controllers\Admin\InstallmentsController');
+    Route::get('order/installments/{customer_id}','\App\Http\Controllers\Admin\InstallmentsController@getCustomerInstallments');
 });
 
 

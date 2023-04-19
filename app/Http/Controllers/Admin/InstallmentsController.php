@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Customer;
+use App\CustomerInstallment;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use TCG\Voyager\Facades\Voyager;
 
-class CustomersController extends Controller
+class InstallmentsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,9 @@ class CustomersController extends Controller
      */
     public function index()
     {
-        //
+        $customers = Customer::select('id','name')->get();
+        // return $customers;
+        return view('installments.index',['customers' => $customers]);
     }
 
     /**
@@ -48,15 +50,7 @@ class CustomersController extends Controller
      */
     public function show($id)
     {
-        // $customer = Customer::findOrFail($id);
-        
-        $dataType = Voyager::model('DataType')->where('slug', '=', 'customers')->first();
-        // return $dataType;
-        // $dataTypeContent = DB::table($dataType->name)->where('id', $id)->first();
-        $dataTypeContent = Customer::where('id', $id)->first();
-
-        // return [$dataTypeContent];
-        return view('customers.show',['dataTypeContent' => $dataTypeContent,'dataType'=>$dataType]);
+        //
     }
 
     /**
@@ -91,5 +85,10 @@ class CustomersController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getCustomerInstallments($customer_id){
+        $customer_installments = CustomerInstallment::where('customer_id', $customer_id)->get();
+        return $customer_installments;
     }
 }

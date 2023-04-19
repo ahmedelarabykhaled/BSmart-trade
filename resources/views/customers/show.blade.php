@@ -8,10 +8,17 @@
             <div class="panel panel-bordered" style="padding-bottom:5px;">
                 <!-- form start -->
                 <div class="container">
-                    <div class="row" style="border: 1px solid gray">
+                    <div class="row">
 
                         @foreach ($dataType->readRows as $row)
-                            <div class="col-md-4" style="border: 1px solid gray">
+                        
+                            @php
+
+                                if (in_array( $row->field, ['governorate_id','city_id','region_id'])) {
+                                    continue;
+                                }
+                            @endphp
+                            <div class="col-md-4" style="border: 1px solid gray;height:100px;overflow-y:auto;">
                                 <div class="panel-heading" style="border-bottom:0;">
                                     <h3 class="panel-title">{{ $row->getTranslatedAttribute('display_name') }}</h3>
                                 </div>

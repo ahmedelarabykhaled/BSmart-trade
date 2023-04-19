@@ -243,9 +243,9 @@
      */
 
     jQuery('input[name=final_overall_income],input[name=final_customer_tatal_income],input[name=final_business_income]')
-        .attr('disabled', 'true');
+        .attr('readonly', 'true');
 
-    // jQuery('input[name=final_customer_tatal_income]').attr('disabled','true');
+    // jQuery('input[name=final_customer_tatal_income]').attr('readonly','true');
 
 
     let t_i = 0;
@@ -334,27 +334,288 @@
 
 <script>
     let customer_div_id = '';
-    jQuery('.select2-ajax').change(function() {
+    jQuery('select[name=customer_id].select2-ajax').change(function() {
         let customer_id = jQuery(this).val();
         console.log('customer id ' + customer_id);
         if (customer_id !== '' && customer_id !== null) {
+            if (customer_div_id === '') {
+                customer_div_id = "customer_" + '{{ rand(0000, 9999) }}' + Math.floor(Math
+                    .random() * 1000) + 1;
+                console.log(customer_div_id);
+                jQuery(this).parent('.form-group').after("<div id='" +
+                    customer_div_id + "'><p style='text-align:center;'>جاري التحميل ...</p></div>");
+            }
             $.ajax({
                 url: "{{ URL::to('/') }}/customers/" + customer_id,
                 success: function(result) {
 
-                    if (customer_div_id === '') {
-                        customer_div_id = "customer_" + '{{ rand(0000, 9999) }}' + Math.floor(Math
-                            .random() * 1000) + 1;
-                        console.log(customer_div_id);
-                        jQuery('.select2-ajax').parent('.form-group').after("<div id='" +
-                            customer_div_id + "'></div>");
-                    }
-
                     jQuery('#' + customer_div_id).html(result);
                 }
             });
+        } else {
+            jQuery('#' + customer_div_id).html('');
         }
     });
+
+
+    
+    let grantor_div_id = '';
+    jQuery('select[name=grantor_id].select2-ajax').change(function() {
+        let grantor_id = jQuery(this).val();
+        console.log('customer id ' + grantor_id);
+        if (grantor_id !== '' && grantor_id !== null) {
+            if (grantor_div_id === '') {
+                grantor_div_id = "customer_" + '{{ rand(0000, 9999) }}' + Math.floor(Math
+                    .random() * 1000) + 1;
+                console.log(grantor_div_id);
+                jQuery(this).parent('.form-group').after("<div id='" +
+                    grantor_div_id + "'><p style='text-align:center;'>جاري التحميل ...</p></div>");
+            }
+            $.ajax({
+                url: "{{ URL::to('/') }}/customers/" + grantor_id,
+                success: function(result) {
+
+                    jQuery('#' + grantor_div_id).html(result);
+                }
+            });
+        } else {
+            jQuery('#' + grantor_div_id).html('');
+        }
+    });
+
+    // jQuery('#richtextrelatives_data_ifr').contents().find('body').html('hello');
+    // jQuery('#richtextrelatives_data').parent('.form-group').after('label').html('what');
+    jQuery('#richtextrelatives_data').parent('.form-group').children('label').append(
+        '<button id="load_relatives_table" type="button" class="btn btn-primary" >تحميل بيانات الاقارب</button>');
+    jQuery('#richtextcommitments').parent('.form-group').children('label').append(
+        '<button id="load_commitments" type="button" class="btn btn-primary" >تحميل بيانات الالتزامات</button>');
+    jQuery('#richtextbusiness_data').parent('.form-group').children('label').append(
+        '<button id="load_trades_data" type="button" class="btn btn-primary" >تحميل بيانات النشاط التجاري</button>');
+
+    let relatives_data = `<table style="border-collapse: collapse; width: 99.085%; height: 252px; float: right;" border="1">
+<tbody>
+<tr style="height: 63px;">
+<td style="width: 33.3333%; text-align: right; height: 63px;">صلة القرابة</td>
+<td style="width: 33.3333%; text-align: right; height: 63px;">رقم الهاتف</td>
+<td style="width: 33.3333%; text-align: right; height: 63px;">اسم احد الاقارب</td>
+</tr>
+<tr style="text-align: right;">
+<td style="width: 33.3333%; height: 63px;">&nbsp;</td>
+<td style="width: 33.3333%; height: 63px;">&nbsp;</td>
+<td style="width: 33.3333%; height: 63px;">&nbsp;</td>
+</tr>
+<tr style="text-align: right;">
+<td style="width: 33.3333%; height: 63px;">&nbsp;</td>
+<td style="width: 33.3333%; height: 63px;">&nbsp;</td>
+<td style="width: 33.3333%; height: 63px;">&nbsp;</td>
+</tr>
+<tr style="text-align: right;">
+<td style="width: 33.3333%; height: 63px;">&nbsp;</td>
+<td style="width: 33.3333%; height: 63px;">&nbsp;</td>
+<td style="width: 33.3333%; height: 63px;">&nbsp;</td>
+</tr>
+</tbody>
+</table>`;
+
+    let commitments = `<table style="border-collapse: collapse; width: 99.6078%; height: 304px; float: right;" border="1">
+<tbody>
+<tr>
+<td style="width: 16.6667%; text-align: right;">تاريخ الانتهاء</td>
+<td style="width: 16.6667%; text-align: right;">تاريخ البداية</td>
+<td style="width: 16.6667%; text-align: right;">مده القرض</td>
+<td style="width: 16.6667%; text-align: right;">قيمة القسط</td>
+<td style="width: 16.6667%; text-align: right;">قيمة القرض</td>
+<td style="width: 16.6667%; text-align: right;">الجهة المانحة للقرض</td>
+</tr>
+<tr style="text-align: right;">
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+</tr>
+<tr style="text-align: right;">
+<td style="width: 16.6667%;">تاريخ الانتهاء</td>
+<td style="width: 16.6667%;">المدة</td>
+<td style="width: 16.6667%;">قيمة القسط</td>
+<td style="width: 16.6667%;">المبلغ</td>
+<td style="width: 16.6667%;">المنتج المستهدف</td>
+<td style="width: 16.6667%;">جهات اخرى</td>
+</tr>
+<tr style="text-align: right;">
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+</tr>
+<tr style="text-align: right;">
+<td style="width: 16.6667%;">اجمالي الالتزامات</td>
+<td style="width: 16.6667%;">مصاريف اخرى</td>
+<td style="width: 16.6667%;">فاتورة النت</td>
+<td style="width: 16.6667%;">فاتورة الغاز</td>
+<td style="width: 16.6667%;">فاتورة المياه</td>
+<td style="width: 16.6667%;">شفاتورة الكهرباء</td>
+</tr>
+<tr style="text-align: right;">
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+</tr>
+</tbody>
+</table>`;
+
+    let trade_data = `<table style="border-collapse: collapse; width: 99.673%; height: 231px;" border="1">
+<tbody>
+<tr>
+<td style="width: 16.6667%;">صافي الدخل الشهري</td>
+<td style="width: 16.6667%;">الدخل الشهري</td>
+<td style="width: 16.6667%;">الدخل السنوي</td>
+<td style="width: 16.6667%;">قيمة البضاعة</td>
+<td style="width: 16.6667%;">رأس المال</td>
+<td style="width: 16.6667%;">تاريخ بداية النشاط</td>
+</tr>
+<tr>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 16.6667%;">اجمالي الالتزامات</td>
+<td style="width: 16.6667%;">المرافق</td>
+<td style="width: 16.6667%;">مده الايجار</td>
+<td style="width: 16.6667%;">قيمة الايجار</td>
+<td style="width: 16.6667%;">اجمالي الاجوز</td>
+<td style="width: 16.6667%;">عدد العمال</td>
+</tr>
+<tr>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+<td style="width: 16.6667%;">&nbsp;</td>
+</tr>
+</tbody>
+</table>`;
+
+    jQuery('#load_relatives_table').click(function() {
+        jQuery('#richtextrelatives_data_ifr').contents().find('body').html(relatives_data);
+        jQuery('#richtextrelatives_data_ifr').contents().find('td').css('font-size','20px');
+    });
+
+    jQuery('#load_commitments').click(function() {
+        jQuery('#richtextcommitments_ifr').contents().find('body').html(commitments);
+        jQuery('#richtextcommitments_ifr').contents().find('td').css('font-size','20px');
+    });
+
+    jQuery('#load_trades_data').click(function() {
+        jQuery('#richtextbusiness_data_ifr').contents().find('body').html(trade_data);
+        jQuery('#richtextbusiness_data_ifr').contents().find('td').css('font-size','20px');
+
+    });
+
+    jQuery('#monthly_amount_id input').attr('readonly', 'true');
+    jQuery('#total_installement_amout input').attr('readonly', 'true');
+</script>
+
+<script>
+    let product_price = jQuery('#order_amount_id input');
+    let profit_percentage = jQuery('#order_profit_percentage_id input');
+    let installement_months = jQuery('#order_months_count_id input');
+    let downpayment_order = jQuery('#downpayment_id input');
+
+    let total_amoutn = jQuery('#total_installement_amout input');
+    let monthly_amount = jQuery('#monthly_amount_id input');
+
+    jQuery(product_price).keyup(function() {
+        update_total_order();
+    });
+
+    
+    jQuery(profit_percentage).keyup(function() {
+        update_total_order();
+    });
+
+    
+    jQuery(downpayment_order).keyup(function() {
+        update_total_order();
+    });
+    
+    jQuery(installement_months).keyup(function() {
+        update_total_order();
+    });
+
+    function update_total_order() {
+
+        // console.log('hello');
+        product_price_float = parseFloat(product_price.val());
+        // console.log('product ' + product_price_float);
+        profit_percentage_float = parseFloat(profit_percentage.val());
+        // console.log('profit ' + profit_percentage_float);
+        installement_months_float = parseFloat(installement_months.val());
+        // console.log('months ' + installement_months_float);
+        downpayment_order_float = parseFloat(downpayment_order.val());
+
+        let total = ( product_price_float - downpayment_order_float ) +( (product_price_float - downpayment_order_float) * profit_percentage_float / 100 );
+
+        let installement_per_month = total / installement_months_float;
+        // console.log('the total ' + total);
+        total_amoutn.val(total);
+
+        monthly_amount.val(installement_per_month);
+    }
+
+    jQuery('input[name=required_installement]').attr('readonly','true');
+
+    let required_installement = jQuery('input[name=required_installement]');
+    let required_product_price = jQuery('input[name=product_price]');
+    let installement_duration = jQuery('input[name=installement_duration]');
+    let downpayment = jQuery('input[name=downpayment]');
+    let required_profit_percentage = jQuery('input[name=profit_percentage]');
+
+    jQuery(required_product_price).keyup(function(){
+        update_required_installement();
+    })
+    
+    jQuery(installement_duration).keyup(function(){
+        update_required_installement();
+    })
+    
+    jQuery(downpayment).keyup(function(){
+        update_required_installement();
+    })
+    
+    jQuery(required_profit_percentage).keyup(function(){
+        update_required_installement();
+    })
+
+    function update_required_installement(){
+            
+    let required_installement_float = parseFloat(required_installement.val()) !== NaN ? parseFloat(required_installement.val()) : 0;
+    let required_product_price_float = parseFloat(required_product_price.val()) !== NaN ? parseFloat(required_product_price.val()) : 0;
+    let installement_duration_float = parseFloat(installement_duration.val()) !== NaN ? parseFloat(installement_duration.val()) : 0;
+    let downpayment_float = parseFloat(downpayment.val()) !== NaN ? parseFloat(downpayment.val()) : 0;
+    let required_profit_percentage_float = parseFloat(required_profit_percentage.val()) !== NaN ? parseFloat(required_profit_percentage.val()) : 0;
+
+        total_price = (required_product_price_float - downpayment_float) + ( ( required_product_price_float * required_profit_percentage_float ) / 100 ) ;
+
+        result = total_price / installement_duration_float;
+
+        required_installement.val( result );
+    }
+
+    
+
+    
 </script>
 
 @stop
