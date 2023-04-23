@@ -1,11 +1,20 @@
 @extends('voyager::master')
 
+@section('page_title', 'اقساط العميل')
+
+@section('page_header')
+    <h1 class="page-title">
+        {{-- <i class="{{ $dataType->icon }}"></i> --}}
+        اقساط العميل
+        {{-- <a href="{{ url()->previous() }}" class="return-to-list">{{ __('translations.go_back') }}</a> --}}
+    </h1>
+@stop
+
+
 @section('content')
     <div class="page-content">
 
         @include('voyager::alerts')
-
-        <h2 class="page-title">اقساط عميل</h2>
 
         <div class="page-content browse container-fluid">
             <div class="alerts">
@@ -23,6 +32,9 @@
                                     @endforeach
                                 </select>
                             </div>
+                            <div class="form-group" id="customer_orders_div">
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -34,29 +46,65 @@
 @section('javascript')
 
     <script>
-        let customer_div_id = '';
+        // start load orders options
+        // var customer_div_id = '';
         jQuery('select[name=customer_id]').change(function() {
-            let customer_id = jQuery(this).val();
+            var customer_id = jQuery(this).val();
             console.log('customer id ' + customer_id);
+            // jQuery('#' + customer_div_id).delete();
             if (customer_id !== '' && customer_id !== null) {
-                if (customer_div_id === '') {
-                    customer_div_id = "customer_" + '{{ rand(0000, 9999) }}' + Math.floor(Math
-                        .random() * 1000) + 1;
-                    console.log(customer_div_id);
-                    jQuery(this).parent('.form-group').after("<div id='" +
-                        customer_div_id + "'><p style='text-align:center;'>جاري التحميل ...</p></div>");
-                }
+                // if (customer_div_id === '') {
+                    
+                    jQuery('#customer_orders_div').html("<div id=''><p style='text-align:center;'>جاري التحميل ...</p></div>");
+                // }
                 $.ajax({
-                    url: "{{ URL::to('/') }}/customers/" + customer_id,
+                    url: "{{ URL::to('/') }}/admin/customer/orders/" + customer_id,
                     success: function(result) {
 
-                        jQuery('#' + customer_div_id).html(result);
+                        jQuery('#customer_orders_div').html(result);
                     }
                 });
             } else {
-                jQuery('#' + customer_div_id).html('');
+                jQuery('#customer_orders_div').html('');
             }
         });
+
+        // end load orders options
+    </script>
+
+
+    <script>
+        // start get order installments
+
+        // if (typeof customer_installments_id === 'undefined') {
+        // let customer_installments_id = '';
+        // }
+
+        function click_on_order(e) {
+            // console.log('hello');
+            let order_id = jQuery('#customer_order').val();
+            let customer_id = jQuery('select[name=customer_id]').val();
+            console.log('customer id ' + customer_id + ' and order id ' + order_id);
+            if (order_id !== '' && order_id !== null && customer_id !== '' && customer_id !== null) {
+                // if (customer_installments_id === '') {
+                    // customer_installments_id = "customer_order_" + '{{ rand(0000, 9999) }}' + Math.floor(Math
+                    //     .random() * 1000) + 1;
+                    // console.log(customer_installments_id);
+                    jQuery('#order_installment_div').html("<div id=''><p style='text-align:center;'>جاري التحميل ...</p></div>");
+                // }
+                $.ajax({
+                    url: "{{ URL::to('/') }}/admin/order/" + order_id + "/installments/" + customer_id,
+                    success: function(result) {
+
+                        jQuery('#order_installment_div').html(result);
+                    }
+                });
+            } else {
+                jQuery('#order_installment_div').html('');
+            }
+        };
+
+        // end get order installments
     </script>
 
 @stop

@@ -9,7 +9,7 @@ class CustomerInstallment extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['customer_id','amount' ,'due_date', 'order_id' ];
+    protected $fillable = ['customer_id','amount' ,'due_date', 'order_id','status','paid_penalty', 'paid_penalty_date' ];
 
     public function installmentOrder(){
         return $this->hasOne(Order::class,'id','order_id');

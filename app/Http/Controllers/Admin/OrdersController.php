@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\CustomerInstallment;
 use App\Http\Controllers\Controller;
+use App\Order;
 use Illuminate\Http\Request;
 use TCG\Voyager\Events\BreadDataAdded;
 use TCG\Voyager\Events\BreadDataUpdated;
@@ -69,7 +70,8 @@ class OrdersController extends VoyagerBaseController
                     'customer_id' => $request->customer_id,
                     'amount'      => $installment_amout_per_month,
                     'due_date'    => date('Y-m-d', strtotime('+'. $i .' months', strtotime($request->installment_start_date))),
-                    'order_id'    => $id
+                    'order_id'    => $id,
+                    'status'      => 'not_paid'
                 ]);
             }
         }
@@ -116,5 +118,12 @@ class OrdersController extends VoyagerBaseController
         } else {
             return response()->json(['success' => true, 'data' => $data]);
         }
+    }
+
+    public function getCustomerOrders($customer_id)
+    {
+        $customer_orders = Order::where('customer_id',$customer_id)->get();
+        return view('installments.customer_orders_options',['customer_orders'=>$customer_orders]);
+        // return $customer_orders;
     }
 }
