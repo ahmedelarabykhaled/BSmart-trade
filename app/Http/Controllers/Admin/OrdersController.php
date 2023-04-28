@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\CustomerInstallment;
+use App\Http\Constants\OrderConst;
 use App\Http\Controllers\Controller;
 use App\Order;
 use Illuminate\Http\Request;
@@ -62,16 +63,24 @@ class OrdersController extends VoyagerBaseController
             $redirect = redirect()->back();
         }
 
+        $installments_to_be_deleted_count = (int) CustomerInstallment::whereDate('due_date', '>',date('Y-m-d') )->where(['order_id'=>$id,'status' => OrderConst::$NOT_PAID,'customer_id'=>$request->customer_id])->get()->count();
+        // return $installments_to_be_deleted_count;
+
         if(isset($request->customer_id) && isset($request->order_amount) && isset($request->downpayment) && isset($request->order_profit_percentage) && isset($request->installment_start_date) && isset($request->months_count)){
-            CustomerInstallment::where(['customer_id'=>$request->customer_id,'order_id' => $id])->delete();
-            $installment_amout_per_month =( ($request->order_amount - $request->downpayment) + (($request->order_amount - $request->downpayment) * $request->order_profit_percentage / 100 )) / $request->months_count;
-            for($i = 1;$i <= $request->months_count;$i++){
+            // CustomerInstallment::whereYear('due_date','>=',date('Y'))->whereMonth('due_date','>',date('m'))->where(['order_id'=>$id,'status' => OrderConst::$NOT_PAID,'customer_id'=>$request->customer_id])->delete();
+            CustomerInstallment::whereDate('due_date', '>',date('Y-m-d') )->where(['order_id'=>$id,'status' => OrderConst::$NOT_PAID,'customer_id'=>$request->customer_id])->delete();
+            $installment_amout_per_month = ( ($request->order_amount - $request->downpayment) + (($request->order_amount - $request->downpayment) * $request->order_profit_percentage / 100 )) / $request->months_count;
+            // var_dump([$installment_amout_per_month,$installments_to_be_deleted_count,$request->request]);die;
+            for($i = 1;$i <= $installments_to_be_deleted_count ;$i++){
+                // print_r('from for');
+                // var_dump('from for');die;
                 CustomerInstallment::create([
                     'customer_id' => $request->customer_id,
-                    'amount'      => $installment_amout_per_month,
-                    'due_date'    => date('Y-m-d', strtotime('+'. $i .' months', strtotime($request->installment_start_date))),
+                    'amount'      => round($installment_amout_per_month,2),
+                    'due_date'    => date('Y-m-d', strtotime('+'. ($i - 1) .' months', strtotime($request->installment_start_date))),
                     'order_id'    => $id,
-                    'status'      => 'not_paid'
+                    'status'      => 'not_paid',
+                    'installment_id' => $i
                 ]);
             }
         }
@@ -103,6 +112,21 @@ class OrdersController extends VoyagerBaseController
         $data = $this->insertUpdateData($request, $slug, $dataType->addRows, new $dataType->model_name());
 
         event(new BreadDataAdded($dataType, $data));
+
+        if(isset($request->customer_id) && isset($request->order_amount) && isset($request->downpayment) && isset($request->order_profit_percentage) && isset($request->installment_start_date) && isset($request->months_count)){
+            CustomerInstallment::where(['customer_id'=>$request->customer_id,'order_id' => $data->id])->delete();
+            $installment_amout_per_month =( ($request->order_amount - $request->downpayment) + (($request->order_amount - $request->downpayment) * $request->order_profit_percentage / 100 )) / $request->months_count;
+            for($i = 1;$i <= $request->months_count;$i++){
+                CustomerInstallment::create([
+                    'customer_id' => $request->customer_id,
+                    'amount'      => round($installment_amout_per_month,2),
+                    'due_date'    => date('Y-m-d', strtotime('+'. ($i - 1) .' months', strtotime($request->installment_start_date))),
+                    'order_id'    => $data->id,
+                    'status'      => 'not_paid',
+                    'installment_id' => $i
+                ]);
+            }
+        }
 
         if (!$request->has('_tagging')) {
             if (auth()->user()->can('browse', $data)) {

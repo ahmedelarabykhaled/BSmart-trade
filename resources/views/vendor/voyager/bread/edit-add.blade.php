@@ -571,7 +571,7 @@
         // console.log('the total ' + total);
         total_amoutn.val(total);
 
-        monthly_amount.val(installement_per_month);
+        monthly_amount.val( parseFloat(installement_per_month).toFixed(2) );
     }
 
     jQuery('input[name=required_installement]').attr('readonly','true');

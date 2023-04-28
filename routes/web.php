@@ -29,6 +29,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('pay_installment_form/{installment_id}','\App\Http\Controllers\Admin\InstallmentsController@pay_installment_form')->name('pay_installment_form');
 
     Route::post('pay_installment/{installment_id}','\App\Http\Controllers\Admin\InstallmentsController@pay_installment')->name('pay_installment');
+    Route::post('print_pill/{installment_id}','\App\Http\Controllers\Admin\InstallmentsController@print_pill');
 });
 
 

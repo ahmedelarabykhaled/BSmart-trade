@@ -48,6 +48,7 @@
     <script>
         // start load orders options
         // var customer_div_id = '';
+        
         jQuery('select[name=customer_id]').change(function() {
             var customer_id = jQuery(this).val();
             console.log('customer id ' + customer_id);
