@@ -1,10 +1,6 @@
-@php
-
-@endphp
-
 
 <div class="clearfix container-fluid row">
-    {{-- @can('browse', App\Customer::class) --}}
+    @if(Auth::user()->hasPermission('browse_customers'))
     <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="panel widget center bgimage"
             style="margin-bottom:0;overflow:hidden;background-image:url('{{ asset('images/clients.jpg') }}');">
@@ -20,7 +16,8 @@
             </div>
         </div>
     </div>
-    {{-- @endcan --}}
+    @endif
+    @if(Auth::user()->hasPermission('browse_visitors') )
     <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="panel widget center bgimage"
             style="margin-bottom:0;overflow:hidden;background-image:url('{{ asset('images/visitor.jpg') }}');">
@@ -35,6 +32,8 @@
             </div>
         </div>
     </div>
+    @endif
+    @if(Auth::user()->hasPermission('browse_customer_installment_requests'))
     <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="panel widget center bgimage"
             style="margin-bottom:0;overflow:hidden;
@@ -48,7 +47,10 @@
                 {{-- <a href="http://localhost/bsmart/public/admin/pages" class="btn btn-primary">عرض جميع طلبات التقسيط</a> --}}
             </div>
         </div>
-    </div><div class="col-xs-12 col-sm-6 col-md-4">
+    </div>
+    @endif
+    @if(Auth::user()->hasPermission('browse_traders'))
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="panel widget center bgimage"
             style="margin-bottom:0;overflow:hidden;background-image:url('{{ asset('images/traders.jpg') }}');">
             <div class="dimmer"></div>
@@ -60,7 +62,10 @@
                 {{-- <a href="http://localhost/bsmart/public/admin/pages" class="btn btn-primary">عرض جميع التجار</a> --}}
             </div>
         </div>
-    </div><div class="col-xs-12 col-sm-6 col-md-4">
+    </div>
+    @endif
+    @if(Auth::user()->hasPermission('browse_customer_requests'))
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="panel widget center bgimage"
             style="margin-bottom:0;overflow:hidden;background-image:url('{{ asset('images/customer_request.jpeg') }}');">
             <div class="dimmer"></div>
@@ -74,6 +79,8 @@
             </div>
         </div>
     </div>
+    @endif
+    @if(Auth::user()->hasPermission('browse_steps_actions'))
     <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="panel widget center bgimage"
             style="margin-bottom:0;overflow:hidden;background-image:url('{{ asset('images/steps_actions.jpg') }}');">
@@ -86,4 +93,5 @@
             </div>
         </div>
     </div>
+    @endif
 </div>
