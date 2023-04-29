@@ -168,7 +168,7 @@ class InstallmentsController extends Controller
             'paid_penalty_date' => new DateTime('now'),
             'status' => $installment_status,
             'notes' => $request->notes,
-            'bill_no' => rand(0000000000, 9999999999),
+            'bill_no' => ( $installment_status == OrderConst::$PAID ) ? rand(0000000000, 9999999999) : null,
             'user_id' => Auth::id(),
             'installment_amount_paid' => $request->installment_amount + $customer_installment->installment_amount_paid,
             'total_paid' => $installment_total_amount_paid

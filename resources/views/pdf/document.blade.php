@@ -129,7 +129,7 @@
         <h2 style="text-align: center;margin:0px; margin-bottom: 25px;">
             فاتورة قسط رقم {{ $installment_no }}
         </h2>
-        <table style="text-align: right;">
+        <table style="text-align: right;border: 1px solid gray;" >
 
 
             <tr class="heading">
@@ -170,7 +170,7 @@
             <tr class="item">
                 <td>الغرامة المدفوعة</td>
 
-                <td>{{ $paid_penalty }}</td>
+                <td>{{ $installment->paid_penalty }}</td>
             </tr>
             <tr class="item">
                 <td>عدد الاقساط المتبقية</td>

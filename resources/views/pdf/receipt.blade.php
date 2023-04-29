@@ -111,7 +111,7 @@
                 <td colspan="2">
                     <table>
                         <tr>
-                            <td style="padding: 40px 0px;text-align:right;">
+                            <td style="padding: 70px 0px;text-align:right;">
 
                                 رقم السند: {{ $payment_id }}<br />
                                 تاريخ السند: {{ date('Y-F-d') }}<br />
