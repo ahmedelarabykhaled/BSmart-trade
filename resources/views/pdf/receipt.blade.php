@@ -144,7 +144,7 @@
                     مبلغ وقدره
                 </td>
 
-                <td>{{ $amount }}</td>
+                <td>{{ $amount }} جنيه مصري</td>
             </tr>
             
             <tr class="item">
