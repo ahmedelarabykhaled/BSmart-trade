@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>ايصال سداد قسط رقم 437</title>
+    <title>
+        فاتورة قسط رقم {{ $installment_no }}
+    </title>
 
     <style>
         .invoice-box {
@@ -13,14 +15,14 @@
             border: 1px solid #eee;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
             font-size: 16px;
-            line-height: 24px;
+            /* line-height: 24px; */
             font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
             color: #555;
         }
 
         .invoice-box table {
             width: 100%;
-            line-height: inherit;
+            /* line-height: inherit; */
             text-align: left;
         }
 
@@ -39,7 +41,7 @@
 
         .invoice-box table tr.top table td.title {
             /* font-size: 45px; */
-            line-height: 45px;
+            /* line-height: 45px; */
             color: #333;
         }
 
@@ -101,32 +103,31 @@
 </head>
 
 <body>
-    
+
     <div class="invoice-box">
-        
+
         <table cellpadding="0" cellspacing="0">
             <tr class="top">
                 <td colspan="2">
                     <table>
                         <tr>
-                            <td style="padding: 40px 0px;text-align:right;">
-                                
+                            <td style="padding: 70px 0px;text-align:right;">
+
                                 رقم الفاتورة: {{ $invoice_no }}<br />
                                 تاريخ الفاتورة: {{ date('Y-F-d') }}<br />
                             </td>
                             <td class="title" style="text-align: left;">
-                                <?php $admin_favicon = Voyager::setting('admin.icon_image', ''); ?>
+                                <?php $admin_favicon = Voyager::setting('admin.bg_image', ''); ?>
                                 <img src="{{ Voyager::image($admin_favicon) }}"
-                                    style="width: 100px; max-width: 300px" />
-                                <h3 style="">B-Smart</h3>
+                                    style="width: 150px; max-width: 300px" />
                             </td>
                         </tr>
                     </table>
                 </td>
             </tr>
         </table>
-        <h2 style="text-align: center;">
-            ايصال سداد قسط رقم {{ $installment_no }}
+        <h2 style="text-align: center;margin:0px; margin-bottom: 25px;">
+            فاتورة قسط رقم {{ $installment_no }}
         </h2>
         <table style="text-align: right;">
 
@@ -144,9 +145,32 @@
             </tr>
 
             <tr class="item">
-                <td>المبلغ المدفوع</td>
+                <td>قيمة القسط</td>
 
                 <td>{{ $paid_amount }}</td>
+            </tr>
+            
+            {{-- <tr class="item">
+                <td>اجمالي الاقساط الغير مدفوعه</td>
+
+                <td>{{ $total_unpaid_installments }}</td>
+            </tr> --}}
+            <tr class="item">
+                <td>تاريخ الااستحقاق</td>
+
+                <td>{{ $due_date }}</td>
+            </tr>
+
+            <tr class="item">
+                <td>الغرامة المستحقة</td>
+
+                <td>{{ $penalty_amount }}</td>
+            </tr>
+
+            <tr class="item">
+                <td>الغرامة المدفوعة</td>
+
+                <td>{{ $paid_penalty }}</td>
             </tr>
             <tr class="item">
                 <td>عدد الاقساط المتبقية</td>
@@ -154,26 +178,76 @@
                 <td>{{ $rest_installments_no }}</td>
             </tr>
             <tr class="item">
-                <td>اجمالي الاقساط الغير مدفوعه</td>
-
-                <td>{{ $total_unpaid_installments }}</td>
+                <td>
+                    اجمالي المستحق للأقساط
+                </td>
+                <td>
+                    {{ $installment->installmentOrder->total_order_amount }}
+                </td>
             </tr>
             <tr class="item">
-                <td>تاريخ الااستحقاق</td>
-
-                <td>{{ $due_date }}</td>
+                <td>
+                    اجمالي المدفوع للأقساط
+                </td>
+                <td>
+                    {{ $paid_installments }}
+                </td>
             </tr>
-			
             <tr class="item">
-                <td>الغرامة المستحقة</td>
-
-                <td>{{ $penalty_amount }}</td>
+                <td>
+                    اجمالي المبلغ المتبقى للأقساط
+                </td>
+                <td>
+                    {{ $all_installments_amount - $paid_installments }}
+                </td>
             </tr>
-			
             <tr class="item">
-                <td>الغرامة المدفوعة</td>
-
-                <td>{{ $paid_penalty }}</td>
+                <td>
+                    اجمالي المبلغ المستحق للغرامات
+                </td>
+                <td>
+                    {{ $all_penalty_amount }}
+                </td>
+            </tr>
+            <tr class="item">
+                <td>
+                    اجمالي المدفوع للغرامات
+                </td>
+                <td>
+                    {{ $paid_penalty }}
+                </td>
+            </tr>
+            <tr class="item">
+                <td>
+                    اجمالي المبلغ المتبقى للغرامات
+                </td>
+                <td>
+                    {{ $all_penalty_amount - $paid_penalty }}
+                </td>
+            </tr>
+            <tr class="item">
+                <td>
+                    اجمالي المستحق للأقساط والغرامات
+                </td>
+                <td>
+                    {{ $all_installments_amount + $all_penalty_amount }}
+                </td>
+            </tr>
+            <tr class="item">
+                <td>
+                    اجمالي المدفوع للأقساط والغرامات
+                </td>
+                <td>
+                    {{ $paid_installments + $paid_penalty }}
+                </td>
+            </tr>
+            <tr class="item">
+                <td>
+                    اجمالي المبلغ المتبقى للأقساط والغرامات
+                </td>
+                <td>
+                    {{ $all_installments_amount - $paid_installments + ($all_penalty_amount - $paid_penalty) }}
+                </td>
             </tr>
             <tr class="item">
                 <td>ملاحظة سداد</td>
@@ -190,7 +264,7 @@
             </tr>
         </table>
 
-        <footer style="text-align: center; margin: 50px 0px;">
+        <footer style="text-align: center; margin: 40px 0px;">
             <small>بي سمارت - B-Smart</small>
             <br>
             <small>

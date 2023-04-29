@@ -131,16 +131,20 @@ class InstallmentsController extends Controller
     {
         // return 'from form';
         $installment = CustomerInstallment::with('installmentOrder')->findOrFail($installment_id);
-        $paid_orders = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id])->sum('total_paid');
-        $unpaid_orders = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id, 'status' => OrderConst::$NOT_PAID])->sum('amount', 'penalty_amount');
-        $partially_total = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id, 'status' => OrderConst::$PARTIALLY_PAID])->sum('amount', 'penalty_amount');
-        $partially_paid = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id, 'status' => OrderConst::$PARTIALLY_PAID])->sum('total_paid');
-        $partially_unpaid = $partially_total - $partially_paid;
-        $total_paid = $paid_orders + $partially_paid;
-        $total_unpaid = $unpaid_orders + $partially_unpaid;
-        // return $total_unpaid;
-        // return $installment;
-        return view('installments.pay_installment_form', ['installment' => $installment, 'total_paid' => $total_paid, 'total_unpaid' => $total_unpaid,'unpaid_orders' ]);
+
+        $paid_installments = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id])->sum('installment_amount_paid');
+        $all_installments_amount = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id])->sum('amount');
+
+
+        $paid_penalty = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id])->sum('paid_penalty');
+        $all_penalty_amount = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id])->sum('penalty_amount');
+
+        $installment_payments = CustomerPayment::where(['order_installment_id' => $installment_id])->with('installment')->get();
+
+        return view('installments.pay_installment_form', [
+            'installment' => $installment, 'paid_installments' => $paid_installments, 'all_installments_amount' => $all_installments_amount,
+            'paid_penalty' => $paid_penalty, 'all_penalty_amount' => $all_penalty_amount, 'installment_payments' => $installment_payments
+        ]);
     }
 
     public function pay_installment(PayInstallmentRequest $request, $installment_id)
@@ -171,10 +175,11 @@ class InstallmentsController extends Controller
         ]);
 
         $customer_payment = CustomerPayment::create([
-            'amount' => $installment_total_amount_paid,
+            'amount' => $request->installment_amount + $request->penalty_amount,
             'user_id' => Auth::user()->id,
             'order_installment_id' => $installment_id,
-            'customer_id' => $customer_installment->customer_id
+            'customer_id' => $customer_installment->customer_id,
+            'note' => $request->notes
         ]);
 
         return back()->with(['message' => "تم دفع القسط بنجاج", 'alert-type' => 'success']);
@@ -185,29 +190,33 @@ class InstallmentsController extends Controller
         $installment = CustomerInstallment::with('customer', 'user')->findOrFail($installment_id);
         // return $installment;
 
-        // $qrCode = new QrCode($installment->bill_no);
-        // Echo an HTML table
-        // $output = new Output\Html();
-        // $qr_code = $output->output($qrCode);
-        // 
-        // $output = new Output\Svg();
-        // $qr_code = $output->output($qrCode, 100, 'white', 'black');
+        
+        $paid_installments = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id])->sum('installment_amount_paid');
+        $all_installments_amount = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id])->sum('amount');
 
-        // $output = new Output\Png();
-        // $qr_code = $output->output($qrCode, 100, [255, 255, 255], [0, 0, 0]);
+
+        $paid_penalty = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id])->sum('paid_penalty');
+        $all_penalty_amount = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id])->sum('penalty_amount');
+
+        $rest_installments_no = CustomerInstallment::where(['order_id' => $installment->order_id,'customer_id'=>$installment->customer_id])->where('status' , '!=' , OrderConst::$PAID)->count();
 
         $pdf_data = [
             'invoice_no' => $installment->bill_no,
             'installment_no' => $installment->installment_id,
             'customer_name' => $installment->customer->name,
             'paid_amount' => $installment->amount,
-            'rest_installments_no' => '30',
-            'total_unpaid_installments' => '43',
+            'rest_installments_no' => $rest_installments_no,
+            // 'total_unpaid_installments' => '43',
             'penalty_amount' => $installment->penalty_amount,
             'paid_penalty' => $installment->paid_penalty,
             'due_date' => $installment->due_date,
             'note' => $installment->notes,
             'reciever' => $installment->user->name,
+            'installment' => $installment,
+            'paid_installments' => $paid_installments,
+            'all_installments_amount' => $all_installments_amount,
+            'paid_penalty' => $paid_penalty,
+            'all_penalty_amount' => $all_penalty_amount
             // 'qr_code' => $qr_code
         ];
         // return redirect('pdf');
@@ -219,6 +228,25 @@ class InstallmentsController extends Controller
         return new Response($pdf->output(), 200, [
             'Content-Type' => 'application/pdf',
             'Content-Disposition' =>  'inline; filename="invoice.pdf"',
+        ]);
+    }
+
+    public function print_receipt($payment_id){
+        $payment = CustomerPayment::findOrFail($payment_id);
+        $data = [
+            'payment_id' => $payment->id,
+            'customer' => $payment->customer->name,
+            'amount'   => $payment->amount,
+            'note' => $payment->note,
+            'reciever' => $payment->user->name
+        ];
+
+        // return view('pdf.receipt',$data);
+        $pdf = PDF::loadView('pdf.receipt',$data);
+
+        return new Response($pdf->output(), 200, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' =>  'inline; filename="receipt.pdf"',
         ]);
     }
 }

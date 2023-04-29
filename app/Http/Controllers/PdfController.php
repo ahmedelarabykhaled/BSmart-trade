@@ -36,4 +36,22 @@ class PdfController extends Controller
         // return $pdf->stream('document.pdf');
         // return $pdf->download('document.pdf');
     }
+
+    public function print_receipt(){
+        $data = [
+            'payment_id' => 345,
+            'customer' => 'احمد خالد السيد',
+            'amount'   => 500,
+            'note' => 'سداد الغرامة',
+            'reciever' => 'المدير'
+        ];
+
+        // return view('pdf.receipt',$data);
+        $pdf = PDF::loadView('pdf.receipt',$data);
+
+        return new Response($pdf->output(), 200, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' =>  'inline; filename="receipt.pdf"',
+        ]);
+    }
 }

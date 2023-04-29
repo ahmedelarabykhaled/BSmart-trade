@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('pdf', '\App\Http\Controllers\PdfController@index');
+Route::get('receipt-pdf', '\App\Http\Controllers\PdfController@print_receipt');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -30,6 +31,7 @@ Route::group(['prefix' => 'admin'], function () {
 
     Route::post('pay_installment/{installment_id}','\App\Http\Controllers\Admin\InstallmentsController@pay_installment')->name('pay_installment');
     Route::post('print_pill/{installment_id}','\App\Http\Controllers\Admin\InstallmentsController@print_pill');
+    Route::post('print_receipt/{payment_id}','\App\Http\Controllers\Admin\InstallmentsController@print_receipt');
 });
 
 

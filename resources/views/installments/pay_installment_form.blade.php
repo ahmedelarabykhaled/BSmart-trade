@@ -38,28 +38,13 @@
                                             @endif
                                             <tr>
                                                 <td>
-                                                    اجمالي مبلغ التقسيط
+                                                    رقم القسط
                                                 </td>
                                                 <td>
-                                                    {{ $installment->installmentOrder->total_order_amount }}
+                                                    {{ $installment->installment_id }}
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>
-                                                    اجمالي المدفوع للأقساط
-                                                </td>
-                                                <td>
-                                                    {{ $total_paid }}
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    اجمالي المستحق للأقساط
-                                                </td>
-                                                <td>
-                                                    {{ $total_unpaid }}
-                                                </td>
-                                            </tr>
+
                                             <tr>
                                                 <td>
                                                     تاريخ استحقاق القسط
@@ -68,12 +53,27 @@
                                                     {{ $installment->due_date }}
                                                 </td>
                                             </tr>
+
+                                            <tr>
+                                                <td>المبلغ الاجمالي المطلوب دفعه</td>
+                                                <td>
+                                                    {{ $installment->amount + $installment->penalty_amount }}
+                                                </td>
+                                            </tr>
                                             <tr>
                                                 <td>
                                                     مبلغ القسط
                                                 </td>
                                                 <td>
                                                     {{ $installment->amount }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    المبلغ المدفوع للقسط
+                                                </td>
+                                                <td>
+                                                    {{ $installment->installment_amount_paid }}
                                                 </td>
                                             </tr>
                                             <tr>
@@ -89,15 +89,89 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>المبلغ الاجمالي </td>
-                                                <td>
-                                                    {{ $installment->amount + $installment->penalty_amount }}
-                                                </td>
-                                            </tr>
-                                            <tr>
                                                 <td>مبلغ العرامة المدفوع</td>
                                                 <td>
                                                     {{ $installment->paid_penalty }}
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>المبلغ الاجمالي المدفوع</td>
+                                                <td>
+                                                    {{ $installment->total_paid }}
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    اجمالي المستحق للأقساط
+                                                </td>
+                                                <td>
+                                                    {{ $installment->installmentOrder->total_order_amount }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    اجمالي المدفوع للأقساط
+                                                </td>
+                                                <td>
+                                                    {{ $paid_installments }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    اجمالي المبلغ المتبقى للأقساط
+                                                </td>
+                                                <td>
+                                                    {{ $all_installments_amount - $paid_installments }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    اجمالي المبلغ المستحق للغرامات
+                                                </td>
+                                                <td>
+                                                    {{ $all_penalty_amount }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    اجمالي المدفوع للغرامات
+                                                </td>
+                                                <td>
+                                                    {{ $paid_penalty }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    اجمالي المبلغ المتبقى للغرامات
+                                                </td>
+                                                <td>
+                                                    {{ $all_penalty_amount - $paid_penalty }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    اجمالي المستحق للأقساط والغرامات
+                                                </td>
+                                                <td>
+                                                    {{ $all_installments_amount + $all_penalty_amount }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    اجمالي المدفوع للأقساط والغرامات
+                                                </td>
+                                                <td>
+                                                    {{ $paid_installments + $paid_penalty }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    اجمالي المبلغ المتبقى للأقساط والغرامات
+                                                </td>
+                                                <td>
+                                                    {{ $all_installments_amount - $paid_installments + ($all_penalty_amount - $paid_penalty) }}
                                                 </td>
                                             </tr>
                                             <tr>
@@ -120,31 +194,95 @@
                                             </tr>
                                         </tbody>
                                     </table>
+                                    <hr>
+                                    <hr>
+                                    <div class="form-group">
+                                        <h5>المدفوعات للقسط</h5>
+                                        @if ($installment_payments->count() > 0)
+                                            <table class="table table-stripped table-bordered">
+                                                <thead>
+                                                    <th>رقم القسط</th>
+                                                    <th>المبلغ المدفوع</th>
+                                                    <th>تاريخ الدفع</th>
+                                                    <th>
+                                                        ملاحظة
+                                                    </th>
+                                                    <th>
+                                                        طباعة
+                                                    </th>
+                                                </thead>
+                                                <tbody>
+
+
+
+                                                    @foreach ($installment_payments as $payment)
+                                                        <tr>
+
+                                                            <td>
+                                                                {{ $payment->installment->installment_id }}
+                                                            </td>
+
+                                                            <td>
+                                                                {{ $payment->amount }}
+                                                            </td>
+
+                                                            <td>
+                                                                {{ $payment->created_at }}
+                                                            </td>
+
+                                                            <td>
+                                                                {{ $payment->note }}
+                                                            </td>
+
+                                                            <td>
+                                                                <form
+                                                                    action="{{ url('admin/print_receipt/' . $payment->id) }}"
+                                                                    method="post" target="_blank">
+                                                                    @csrf
+                                                                    <button type="submit" class="btn btn-primary">طباعة
+                                                                        ايصال</button>
+                                                                </form>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
+
+
+                                                </tbody>
+                                            </table>
+                                        @else
+                                            <p class="text-center">لا توجد مدفوعات </p>
+                                        @endif
+                                    </div>
                                     @if ($installment->status !== 'paid')
+                                        <hr>
                                         <hr>
                                         <h5>دفع القسط </h5>
                                         <form action="{{ route('pay_installment', $installment->id) }}" method="post">
                                             @csrf
                                             <label for="">مبلغ الغرامة المراد دفعه</label>
-                                            <input type="number" name="penalty_amount" class="form-control" required step="any"
-                                                min="0" value="{{ $installment->penalty_amount - $installment->paid_penalty}}">
+                                            <input type="number" name="penalty_amount" class="form-control" required
+                                                step="any" min="0"
+                                                value="{{ $installment->penalty_amount - $installment->paid_penalty }}">
                                             <label for="">مبلغ القسط المراد دفعه</label>
-                                            <input type="number" name="installment_amount" class="form-control" required step="any"
-                                                min="0" value="{{ $installment->amount - $installment->installment_amount_paid }}" max="{{ $installment->amount - $installment->installment_amount_paid }}">
+                                            <input type="number" name="installment_amount" class="form-control" required
+                                                step="any" min="0"
+                                                value="{{ $installment->amount - $installment->installment_amount_paid }}"
+                                                max="{{ $installment->amount - $installment->installment_amount_paid }}">
                                             <label for="">اجمالي المبلغ المدفوع</label>
                                             <input type="number" name="total_amount" readonly class="form-control" required
-                                                value="{{ ($installment->penalty_amount - $installment->paid_penalty) + $installment->amount - $installment->installment_amount_paid }}">
+                                                value="{{ $installment->penalty_amount - $installment->paid_penalty + $installment->amount - $installment->installment_amount_paid }}">
                                             <label for="">ملاحظة</label>
                                             <textarea name="notes" class="form-control" cols="30" rows="10"></textarea>
                                             <button type="submit" class="btn btn-success">دفع</button>
                                         </form>
                                     @else
-                                            <form action="{{ url('admin/print_pill/' . $installment->id) }}" method="post" target="_blank">
-                                                @csrf
-                                                <button class="btn btn-primary" type="submit">
-                                                    طباعة ايصال
-                                                </button>
-                                            </form>
+                                        <form action="{{ url('admin/print_pill/' . $installment->id) }}" method="post"
+                                            target="_blank">
+                                            @csrf
+                                            <button class="btn btn-primary" type="submit">
+                                                طباعة الفاتورة
+                                            </button>
+                                        </form>
                                     @endif
                                 @else
                                     <b class="text-center">لا يوجد قسط</b>
