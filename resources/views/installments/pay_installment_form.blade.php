@@ -242,6 +242,14 @@
                                                                     <button type="submit" class="btn btn-primary">طباعة
                                                                         ايصال</button>
                                                                 </form>
+                                                                
+                                                                <form
+                                                                    action="{{ url('admin/print_paper_receipt/' . $payment->id) }}"
+                                                                    method="post" target="_blank">
+                                                                    @csrf
+                                                                    <button type="submit" class="btn btn-primary">طباعة
+                                                                        ايصال ورقي</button>
+                                                                </form>
                                                             </td>
                                                         </tr>
                                                     @endforeach

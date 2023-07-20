@@ -32,6 +32,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('pay_installment/{installment_id}','\App\Http\Controllers\Admin\InstallmentsController@pay_installment')->name('pay_installment');
     Route::post('print_pill/{installment_id}','\App\Http\Controllers\Admin\InstallmentsController@print_pill');
     Route::post('print_receipt/{payment_id}','\App\Http\Controllers\Admin\InstallmentsController@print_receipt');
+    Route::post('print_paper_receipt/{payment_id}','\App\Http\Controllers\Admin\InstallmentsController@print_paper_receipt');
 });
 
 

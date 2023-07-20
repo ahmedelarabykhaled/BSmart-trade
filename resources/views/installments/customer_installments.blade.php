@@ -16,7 +16,7 @@
     <tbody>
         @foreach ($customer_installments as $customer_installment)
             <tr>
-                <td>{{ $customer_installment->id }}</td>
+                <td>{{ $customer_installment->installment_id }}</td>
                 <td>{{ $customer_installment->amount }}</td>
                 <td>{{ $customer_installment->due_date }}</td>
                 <td>{{ $customer_installment->installment_amount_paid }}</td>

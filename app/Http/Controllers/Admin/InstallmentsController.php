@@ -249,4 +249,26 @@ class InstallmentsController extends Controller
             'Content-Disposition' =>  'inline; filename="receipt.pdf"',
         ]);
     }
+
+    
+    public function print_paper_receipt($payment_id){
+        $payment = CustomerPayment::findOrFail($payment_id);
+        $data = [
+            'payment_id' => $payment->id,
+            'customer' => $payment->customer->name,
+            'amount'   => $payment->amount,
+            'note' => $payment->note,
+            'reciever' => $payment->user->name
+        ];
+
+        // return view('pdf.receipt',$data);
+        $pdf = PDF::loadView('pdf.print_paper_receipt',$data);
+
+        return new Response($pdf->output(), 200, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' =>  'inline; filename="receipt.pdf"',
+        ]);
+    }
+
+
 }
