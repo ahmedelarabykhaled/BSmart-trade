@@ -732,6 +732,16 @@ $('input[type=date]').change(function(){
     $(this).parent().children('label').append( "<div class='date_value' > =>  <b>" + $(this).val() + "</b>  </div>" )
 })
 
+$('input[type=date]').each(function(){
+    // console.log('single date')
+    // console.log($(this).parent().children('label'))
+    $(this).parent().children('label').children('.date_value').remove();
+    $(this).parent().children('label').append( "<div class='date_value' > =>  <b>" + $(this).val() + "</b>  </div>" )
+})
+
+// console.log(['all dates' ])
+// console.log($('input[type=date]'))
+
 </script>
 
 @stop
