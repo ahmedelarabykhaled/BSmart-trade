@@ -8,13 +8,11 @@
 @section('css')
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
-
-
-        .date_value
-        {
+        .date_value {
             display: inline-block;
         }
     </style>
+    <link rel="stylesheet" href="{{ asset('css/jquery-ui.css') }}">
 @stop
 
 @section('page_title', __('voyager::generic.' . ($edit ? 'edit' : 'add')) . ' ' .
@@ -163,6 +161,7 @@
 @stop
 
 @section('javascript')
+<script src="{{ asset('js/code.jquery.com_ui_1.13.2_jquery-ui.js') }}"></script>
 <script>
     var params = {};
     var $file;
@@ -447,9 +446,11 @@
     jQuery('#richtextbusiness_data').parent('.form-group').children('label').append(
         '<button id="load_trades_data" type="button" class="btn btn-primary" >تحميل بيانات النشاط التجاري</button>');
     jQuery('#richtextcustomer_childrens_data').parent('.form-group').children('label').append(
-        '<button id="load_customer_childrens_data" type="button" class="btn btn-primary" >تحميل بيانات ابناء العميل</button>');
+        '<button id="load_customer_childrens_data" type="button" class="btn btn-primary" >تحميل بيانات ابناء العميل</button>'
+    );
     jQuery('#richtextgrantor_childrens_data').parent('.form-group').children('label').append(
-        '<button id="load_grantor_childrens_data" type="button" class="btn btn-primary" >تحميل بيانات ابناء الضامن</button>');
+        '<button id="load_grantor_childrens_data" type="button" class="btn btn-primary" >تحميل بيانات ابناء الضامن</button>'
+    );
 
     let relatives_data = `<table style="border-collapse: collapse; width: 99.085%; height: 252px; float: right;" border="1">
 <tbody>
@@ -570,7 +571,7 @@
 </tbody>
 </table>`;
 
-let childrens_data = `
+    let childrens_data = `
 <table style="border-collapse: collapse; width: 97.9739%; height: 360px; float: right;" border="1">
 <tbody>
 <tr>
@@ -613,14 +614,14 @@ let childrens_data = `
 
     });
 
-    
+
     jQuery('#load_customer_childrens_data').click(function() {
         jQuery('#richtextcustomer_childrens_data_ifr').contents().find('body').html(childrens_data);
         jQuery('#richtextcustomer_childrens_data_ifr').contents().find('td').css('font-size', '20px');
 
     });
 
-    
+
     jQuery('#load_grantor_childrens_data').click(function() {
         jQuery('#richtextgrantor_childrens_data_ifr').contents().find('body').html(childrens_data);
         jQuery('#richtextgrantor_childrens_data_ifr').contents().find('td').css('font-size', '20px');
@@ -724,24 +725,32 @@ let childrens_data = `
     }
 </script>
 
+{{-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> --}}
+{{-- <link rel="stylesheet" href="/resources/demos/style.css"> --}}
+{{-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> --}}
+
 <script>
 
+    $(function() {
+        $('input[type=date]').each(function() {
+            // console.log('single date')
+            // console.log($(this).parent().children('label'))
+            $(this).attr('type','text');
+            $(this).attr('class','form-control custom-date-format');
+        })
 
-$('input[type=date]').change(function(){
-    $(this).parent().children('label').children('.date_value').remove();
-    $(this).parent().children('label').append( "<div class='date_value' > =>  <b>" + $(this).val() + "</b>  </div>" )
-})
+        $(".custom-date-format").datepicker({
+            dateFormat: "dd-mm-yy"
+        });
 
-$('input[type=date]').each(function(){
-    // console.log('single date')
-    // console.log($(this).parent().children('label'))
-    $(this).parent().children('label').children('.date_value').remove();
-    $(this).parent().children('label').append( "<div class='date_value' > =>  <b>" + $(this).val() + "</b>  </div>" )
-})
+        $("input[name=code]").attr('disabled','disabled');
+        // $( "#format" ).on( "change", function() {
+        //   $( "#datepicker" ).datepicker( "option", "dateFormat", $( this ).val() );
+        // });
+    });
 
-// console.log(['all dates' ])
-// console.log($('input[type=date]'))
-
+    // console.log(['all dates' ])
+    // console.log($('input[type=date]'))
 </script>
 
 @stop

@@ -113,6 +113,13 @@ class OrdersController extends VoyagerBaseController
 
         event(new BreadDataAdded($dataType, $data));
 
+                /**
+         * add the new order bill code
+         */
+        $order = Order::latest()->first();
+        Order::find($order->id)->update(['code' => 'B-' . $order->id]);
+
+
         if(isset($request->customer_id) && isset($request->order_amount) && isset($request->downpayment) && isset($request->order_profit_percentage) && isset($request->installment_start_date) && isset($request->months_count)){
             CustomerInstallment::where(['customer_id'=>$request->customer_id,'order_id' => $data->id])->delete();
             $installment_amout_per_month =( ($request->order_amount - $request->downpayment) + (($request->order_amount - $request->downpayment) * $request->order_profit_percentage / 100 )) / $request->months_count;

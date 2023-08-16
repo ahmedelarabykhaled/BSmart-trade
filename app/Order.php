@@ -9,4 +9,5 @@ class Order extends Model
 {
     
     use SoftDeletes;
+    protected $fillable = ['code'];
 }

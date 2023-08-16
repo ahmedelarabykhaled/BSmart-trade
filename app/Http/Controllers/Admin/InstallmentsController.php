@@ -26,7 +26,7 @@ class InstallmentsController extends Controller
      */
     public function index()
     {
-        $customers = Customer::select('id', 'name')->get();
+        $customers = Customer::select('id', 'name','code')->get();
         // return $customers;
         return view('installments.index', ['customers' => $customers]);
     }
@@ -270,5 +270,8 @@ class InstallmentsController extends Controller
         ]);
     }
 
+    public function display_bill_installments($request,$bill_id){
+        pretty_print(['bill_id' => $bill_id]);
+    }
 
 }

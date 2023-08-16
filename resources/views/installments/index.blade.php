@@ -28,7 +28,7 @@
                                 <select name="customer_id" class="select2">
                                     <option value="">اختر</option>
                                     @foreach ($customers as $customer)
-                                        <option value="{{ $customer->id }}">{{ $customer->name }}</option>
+                                        <option value="{{ $customer->id }}">{{ $customer->name  }} {{ $customer->code ?  ( "  -  " . $customer->code) : '' }}</option>
                                     @endforeach
                                 </select>
                             </div>
