@@ -34,7 +34,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('print_receipt/{payment_id}','\App\Http\Controllers\Admin\InstallmentsController@print_receipt');
     Route::post('print_paper_receipt/{payment_id}','\App\Http\Controllers\Admin\InstallmentsController@print_paper_receipt');
 
-    Route::get('customer-installments/{bill_id}','\App\Http\Controllers\Admin\InstallmentsController@display_bill_installments');
+    Route::get('customer-installments-bills','\App\Http\Controllers\Admin\InstallmentsController@display_bill_installments');
 });
 
 

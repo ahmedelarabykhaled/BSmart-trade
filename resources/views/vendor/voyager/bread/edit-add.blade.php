@@ -452,7 +452,7 @@
         '<button id="load_grantor_childrens_data" type="button" class="btn btn-primary" >تحميل بيانات ابناء الضامن</button>'
     );
 
-    let relatives_data = `<table style="border-collapse: collapse; width: 99.085%; height: 252px; float: right;" border="1">
+    let relatives_data = `<table style="border-collapse: collapse; width: 99.085%; height: 252px; float: right;text-align:center;" border="1">
 <tbody>
 <tr style="height: 63px;">
 <td style="width: 33.3333%; text-align: right; height: 63px;">صلة القرابة</td>
@@ -477,7 +477,7 @@
 </tbody>
 </table>`;
 
-    let commitments = `<table style="border-collapse: collapse; width: 99.6078%; height: 304px; float: right;" border="1">
+    let commitments = `<table style="border-collapse: collapse; width: 99.6078%; height: 304px; float: right;text-align:center;" border="1">
 <tbody>
 <tr>
 <td style="width: 16.6667%; text-align: right;">تاريخ الانتهاء</td>
@@ -530,7 +530,7 @@
 </tbody>
 </table>`;
 
-    let trade_data = `<table style="border-collapse: collapse; width: 99.673%; height: 216px;" border="1">
+    let trade_data = `<table style="border-collapse: collapse; width: 99.673%; height: 216px;text-align:center;" border="1">
 <tbody>
 <tr style="height: 55px;">
 <td style="width: 8.33335%; font-size: 20px;">نوع النشاط التجاري</td>
@@ -572,7 +572,7 @@
 </table>`;
 
     let childrens_data = `
-<table style="border-collapse: collapse; width: 97.9739%; height: 360px; float: right;" border="1">
+<table style="border-collapse: collapse; width: 97.9739%; height: 360px; float: right;text-align:center;" border="1">
 <tbody>
 <tr>
 <td style="width: 33.3333%;">المؤهل الدراسي</td>
@@ -739,15 +739,19 @@
             $(this).attr('class','form-control custom-date-format');
         })
 
-        $(".custom-date-format").datepicker({
-            dateFormat: "dd-mm-yy"
-        });
+        add_custom_date()
 
         $("input[name=code]").attr('disabled','disabled');
         // $( "#format" ).on( "change", function() {
         //   $( "#datepicker" ).datepicker( "option", "dateFormat", $( this ).val() );
         // });
     });
+
+    function add_custom_date(){
+        $(".custom-date-format").datepicker({
+            dateFormat: "dd-mm-yy"
+        });
+    }
 
     // console.log(['all dates' ])
     // console.log($('input[type=date]'))

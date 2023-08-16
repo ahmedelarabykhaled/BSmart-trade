@@ -26,7 +26,7 @@ class InstallmentsController extends Controller
      */
     public function index()
     {
-        $customers = Customer::select('id', 'name','code')->get();
+        $customers = Customer::select('id', 'name', 'code')->get();
         // return $customers;
         return view('installments.index', ['customers' => $customers]);
     }
@@ -101,23 +101,34 @@ class InstallmentsController extends Controller
     {
         // $customer_installments = CustomerInstallment::where(['customer_id'=> $customer_id,'order_id'=>$order_id])->get();
         $customer_installments = CustomerInstallment::where(['customer_id' => $customer_id, 'order_id' => $order_id])->get();
+        // return $customer_installments;
         return view('installments.customer_installments', ['customer_installments' => $customer_installments]);
         // return $customer_installments;
     }
 
-    public function update_installments()
+    public function update_installments(Request $request)
     {
+        $today = new DateTime('today');
+        if (isset($request->pay_date) && $request->pay_date !== '') {
+            $today = date('d-m-Y', strtotime($request->pay_date));
+            $today = new DateTime($today);
+        }
+
+        // pretty_print( ['custom_date' => new DateTime($request->pay_date), 'date_time' => new DateTime('today')]);die;
+        // return ['custom_date' => new DateTime($date), 'date_time' => new DateTime('today')];
         $installments = CustomerInstallment::get();
         foreach ($installments as $installment) {
 
             if ($installment->status !== OrderConst::$PAID) {
                 $date1 = new DateTime($installment->due_date);
-                $today = new DateTime('today');
+                // $today = new DateTime('today');
                 if ($today > $date1) {
                     $days  = $today->diff($date1)->format('%a');
+                    pretty_print(['due_date' => $installment->due_date,'days' => $days]);
                     CustomerInstallment::where('id', $installment->id)->update(['penalty_amount' => $days * 10]);
                 } else {
                     $days = 0;
+                    CustomerInstallment::where('id', $installment->id)->update(['penalty_amount' => $days]);
                 }
 
                 // return $days;
@@ -141,6 +152,7 @@ class InstallmentsController extends Controller
 
         $installment_payments = CustomerPayment::where(['order_installment_id' => $installment_id])->with('installment')->get();
 
+        // pretty_print(['installment' => $installment]);die;
         return view('installments.pay_installment_form', [
             'installment' => $installment, 'paid_installments' => $paid_installments, 'all_installments_amount' => $all_installments_amount,
             'paid_penalty' => $paid_penalty, 'all_penalty_amount' => $all_penalty_amount, 'installment_payments' => $installment_payments
@@ -168,7 +180,7 @@ class InstallmentsController extends Controller
             'paid_penalty_date' => new DateTime('now'),
             'status' => $installment_status,
             'notes' => $request->notes,
-            'bill_no' => ( $installment_status == OrderConst::$PAID ) ? rand(0000000000, 9999999999) : null,
+            'bill_no' => ($installment_status == OrderConst::$PAID) ? rand(0000000000, 9999999999) : null,
             'user_id' => Auth::id(),
             'installment_amount_paid' => $request->installment_amount + $customer_installment->installment_amount_paid,
             'total_paid' => $installment_total_amount_paid
@@ -190,7 +202,7 @@ class InstallmentsController extends Controller
         $installment = CustomerInstallment::with('customer', 'user')->findOrFail($installment_id);
         // return $installment;
 
-        
+
         $paid_installments = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id])->sum('installment_amount_paid');
         $all_installments_amount = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id])->sum('amount');
 
@@ -198,7 +210,7 @@ class InstallmentsController extends Controller
         $paid_penalty = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id])->sum('paid_penalty');
         $all_penalty_amount = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id])->sum('penalty_amount');
 
-        $rest_installments_no = CustomerInstallment::where(['order_id' => $installment->order_id,'customer_id'=>$installment->customer_id])->where('status' , '!=' , OrderConst::$PAID)->count();
+        $rest_installments_no = CustomerInstallment::where(['order_id' => $installment->order_id, 'customer_id' => $installment->customer_id])->where('status', '!=', OrderConst::$PAID)->count();
 
         $pdf_data = [
             'invoice_no' => $installment->bill_no,
@@ -231,7 +243,8 @@ class InstallmentsController extends Controller
         ]);
     }
 
-    public function print_receipt($payment_id){
+    public function print_receipt($payment_id)
+    {
         $payment = CustomerPayment::findOrFail($payment_id);
         $data = [
             'payment_id' => $payment->id,
@@ -242,7 +255,7 @@ class InstallmentsController extends Controller
         ];
 
         // return view('pdf.receipt',$data);
-        $pdf = PDF::loadView('pdf.receipt',$data);
+        $pdf = PDF::loadView('pdf.receipt', $data);
 
         return new Response($pdf->output(), 200, [
             'Content-Type' => 'application/pdf',
@@ -250,8 +263,9 @@ class InstallmentsController extends Controller
         ]);
     }
 
-    
-    public function print_paper_receipt($payment_id){
+
+    public function print_paper_receipt($payment_id)
+    {
         $payment = CustomerPayment::findOrFail($payment_id);
         $data = [
             'payment_id' => $payment->id,
@@ -262,7 +276,7 @@ class InstallmentsController extends Controller
         ];
 
         // return view('pdf.receipt',$data);
-        $pdf = PDF::loadView('pdf.print_paper_receipt',$data);
+        $pdf = PDF::loadView('pdf.print_paper_receipt', $data);
 
         return new Response($pdf->output(), 200, [
             'Content-Type' => 'application/pdf',
@@ -270,8 +284,13 @@ class InstallmentsController extends Controller
         ]);
     }
 
-    public function display_bill_installments($request,$bill_id){
-        pretty_print(['bill_id' => $bill_id]);
+    public function display_bill_installments(Request $request)
+    {
+        $date_request = new Request([
+            'pay_date' => $request->pay_date
+        ]);
+        $this->update_installments($date_request);
+        // pretty_print(['request' => $request->all()]);
+        return redirect()->to('admin/order/' . $request->customer_order . '/installments/' . $request->customer_id . '?pay_date=' . urlencode($request->pay_date));
     }
-
 }

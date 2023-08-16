@@ -22,3 +22,8 @@
     }
     
 }
+
+#ui-datepicker-div
+{
+    right: 300px !important;
+}

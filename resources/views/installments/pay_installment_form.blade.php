@@ -6,7 +6,8 @@
     <h1 class="page-title">
         {{-- <i class="{{ $dataType->icon }}"></i> --}}
         دفع قسط للعميل : {{ $installment->customer->name }}
-        <a href="{{ url('admin/customer-installments') }}" class="return-to-list">{{ __('translations.go_back') }}</a>
+        <a href="{{ url('admin/order/'. $installment->order_id .'/installments/' . $installment->customer_id) }}" class="return-to-list">{{ __('translations.go_back') }}</a>
+        {{-- <a href="{{ url()->previous() }}" class="return-to-list">{{ __('translations.go_back') }}</a> --}}
     </h1>
 @stop
 
