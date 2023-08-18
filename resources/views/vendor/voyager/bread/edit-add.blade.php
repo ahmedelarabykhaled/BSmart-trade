@@ -455,21 +455,21 @@
     let relatives_data = `<table style="border-collapse: collapse; width: 99.085%; height: 252px; float: right;text-align:center;" border="1">
 <tbody>
 <tr style="height: 63px;">
-<td style="width: 33.3333%; text-align: right; height: 63px;">صلة القرابة</td>
-<td style="width: 33.3333%; text-align: right; height: 63px;">رقم الهاتف</td>
-<td style="width: 33.3333%; text-align: right; height: 63px;">اسم احد الاقارب</td>
+<td style="width: 33.3333%;  height: 63px;">صلة القرابة</td>
+<td style="width: 33.3333%;  height: 63px;">رقم الهاتف</td>
+<td style="width: 33.3333%;  height: 63px;">اسم احد الاقارب</td>
 </tr>
-<tr style="text-align: right;">
-<td style="width: 33.3333%; height: 63px;">&nbsp;</td>
-<td style="width: 33.3333%; height: 63px;">&nbsp;</td>
-<td style="width: 33.3333%; height: 63px;">&nbsp;</td>
-</tr>
-<tr style="text-align: right;">
+<tr style="">
 <td style="width: 33.3333%; height: 63px;">&nbsp;</td>
 <td style="width: 33.3333%; height: 63px;">&nbsp;</td>
 <td style="width: 33.3333%; height: 63px;">&nbsp;</td>
 </tr>
-<tr style="text-align: right;">
+<tr style="">
+<td style="width: 33.3333%; height: 63px;">&nbsp;</td>
+<td style="width: 33.3333%; height: 63px;">&nbsp;</td>
+<td style="width: 33.3333%; height: 63px;">&nbsp;</td>
+</tr>
+<tr style="">
 <td style="width: 33.3333%; height: 63px;">&nbsp;</td>
 <td style="width: 33.3333%; height: 63px;">&nbsp;</td>
 <td style="width: 33.3333%; height: 63px;">&nbsp;</td>
@@ -480,14 +480,14 @@
     let commitments = `<table style="border-collapse: collapse; width: 99.6078%; height: 304px; float: right;text-align:center;" border="1">
 <tbody>
 <tr>
-<td style="width: 16.6667%; text-align: right;">تاريخ الانتهاء</td>
-<td style="width: 16.6667%; text-align: right;">تاريخ البداية</td>
-<td style="width: 16.6667%; text-align: right;">مده القرض</td>
-<td style="width: 16.6667%; text-align: right;">قيمة القسط</td>
-<td style="width: 16.6667%; text-align: right;">قيمة القرض</td>
-<td style="width: 16.6667%; text-align: right;">الجهة المانحة للقرض</td>
+<td style="width: 16.6667%; ">تاريخ الانتهاء</td>
+<td style="width: 16.6667%; ">تاريخ البداية</td>
+<td style="width: 16.6667%; ">مده القرض</td>
+<td style="width: 16.6667%; ">قيمة القسط</td>
+<td style="width: 16.6667%; ">قيمة القرض</td>
+<td style="width: 16.6667%; ">الجهة المانحة للقرض</td>
 </tr>
-<tr style="text-align: right;">
+<tr style="">
 <td style="width: 16.6667%;">&nbsp;</td>
 <td style="width: 16.6667%;">&nbsp;</td>
 <td style="width: 16.6667%;">&nbsp;</td>
@@ -495,7 +495,7 @@
 <td style="width: 16.6667%;">&nbsp;</td>
 <td style="width: 16.6667%;">&nbsp;</td>
 </tr>
-<tr style="text-align: right;">
+<tr style="">
 <td style="width: 16.6667%;">تاريخ الانتهاء</td>
 <td style="width: 16.6667%;">المدة</td>
 <td style="width: 16.6667%;">قيمة القسط</td>
@@ -503,7 +503,7 @@
 <td style="width: 16.6667%;">المنتج المستهدف</td>
 <td style="width: 16.6667%;">جهات اخرى</td>
 </tr>
-<tr style="text-align: right;">
+<tr style="">
 <td style="width: 16.6667%;">&nbsp;</td>
 <td style="width: 16.6667%;">&nbsp;</td>
 <td style="width: 16.6667%;">&nbsp;</td>
@@ -511,7 +511,7 @@
 <td style="width: 16.6667%;">&nbsp;</td>
 <td style="width: 16.6667%;">&nbsp;</td>
 </tr>
-<tr style="text-align: right;">
+<tr style="">
 <td style="width: 16.6667%;">اجمالي الالتزامات</td>
 <td style="width: 16.6667%;">مصاريف اخرى</td>
 <td style="width: 16.6667%;">فاتورة النت</td>
@@ -519,7 +519,7 @@
 <td style="width: 16.6667%;">فاتورة المياه</td>
 <td style="width: 16.6667%;">فاتورة الكهرباء</td>
 </tr>
-<tr style="text-align: right;">
+<tr style="">
 <td style="width: 16.6667%;">&nbsp;</td>
 <td style="width: 16.6667%;">&nbsp;</td>
 <td style="width: 16.6667%;">&nbsp;</td>
