@@ -117,7 +117,7 @@ class OrdersController extends VoyagerBaseController
          * add the new order bill code
          */
         $order = Order::latest()->first();
-        Order::find($order->id)->update(['code' => 'B-' . $order->id]);
+        Order::find($order->id)->update(['code' => 'B' . $order->id]);
 
 
         if(isset($request->customer_id) && isset($request->order_amount) && isset($request->downpayment) && isset($request->order_profit_percentage) && isset($request->installment_start_date) && isset($request->months_count)){
