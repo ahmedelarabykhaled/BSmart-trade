@@ -111,7 +111,7 @@ if (\Illuminate\Support\Str::startsWith(Auth::user()->avatar, 'http://') || \Ill
 
                     if (window.innerWidth > 768 && window.localStorage && window.localStorage['voyager.stickySidebar'] == 'true') {
                         appContainer.className += ' expanded no-animation';
-                        loader.style.left = (sidebar.clientWidth/2)+'px';
+                        loader.style.right = (sidebar.clientWidth/2)+'px';
                         hamburgerMenu.className += ' is-active no-animation';
                     }
 
