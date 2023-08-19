@@ -130,7 +130,8 @@ class OrdersController extends VoyagerBaseController
                     'due_date'    => date('Y-m-d', strtotime('+'. ($i - 1) .' months', strtotime($request->installment_start_date))),
                     'order_id'    => $data->id,
                     'status'      => 'not_paid',
-                    'installment_id' => $i
+                    'installment_id' => $i,
+                    'penalty_amount_perday' => $request->penalty_amount ?: 0
                 ]);
             }
         }

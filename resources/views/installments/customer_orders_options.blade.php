@@ -5,7 +5,7 @@
     {{-- <select name="customer_order" id="customer_order" class="" style="display:inline-block;width: 100%;" onchange="click_on_order()"> --}}
     <option value="">اختر</option>
     @foreach ($customer_orders as $customer_order)
-        <option value="{{ $customer_order->id }}">{{'كود الفاتورة = ' . $customer_order->code }}</option>
+        <option value="{{ $customer_order->id }}">{{$customer_order->code }}</option>
     @endforeach
 </select>
 

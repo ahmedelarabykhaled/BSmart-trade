@@ -12,7 +12,7 @@ class CustomerInstallment extends Model
     protected $fillable = [
         'customer_id', 'installment_id', 'amount', 'due_date', 'order_id', 'status',
         'paid_penalty', 'paid_penalty_date', 'notes', 'bill_no', 'user_id', 'total_paid',
-        'installment_amount_paid'
+        'installment_amount_paid','penalty_amount_perday'
     ];
 
     public function installmentOrder()

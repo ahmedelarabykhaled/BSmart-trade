@@ -125,7 +125,7 @@ class InstallmentsController extends Controller
                 if ($today > $date1) {
                     $days  = $today->diff($date1)->format('%a');
                     pretty_print(['due_date' => $installment->due_date,'days' => $days]);
-                    CustomerInstallment::where('id', $installment->id)->update(['penalty_amount' => $days * 10]);
+                    CustomerInstallment::where('id', $installment->id)->update(['penalty_amount' => ($days * $installment->penalty_amount_perday) ]);
                 } else {
                     $days = 0;
                     CustomerInstallment::where('id', $installment->id)->update(['penalty_amount' => $days]);
