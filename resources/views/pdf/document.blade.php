@@ -252,7 +252,10 @@
             <tr class="item">
                 <td>ملاحظة سداد</td>
 
-                <td>{{ $note }}</td>
+                <td>
+                    <p>{{ $code }}</p>
+                    <p>{{ $note }}</p>
+                </td>
             </tr>
             <tr class="item">
                 <td>المستلم</td>

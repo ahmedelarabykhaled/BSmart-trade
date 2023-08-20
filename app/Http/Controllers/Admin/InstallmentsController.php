@@ -166,11 +166,14 @@ class InstallmentsController extends Controller
         if ($customer_installment->status == OrderConst::$PAID) {
             return back()->with(['message' => 'القسط المراد دفعه بالفعل مدفوع', 'alert-type' => 'error']);
         }
-
+        // return ['request' => $request->all(),'installment' => $customer_installment];
         $installment_total_amount_paid = $request->penalty_amount + $request->installment_amount + $customer_installment->total_paid;
         $installment_status = '';
 
-        if (($request->installment_amount + $customer_installment->installment_amount_paid) == $customer_installment->amount) {
+        if (
+            ($request->installment_amount + $customer_installment->installment_amount_paid) == $customer_installment->amount && 
+            ($request->penalty_amount + $customer_installment->paid_penalty) == $customer_installment->penalty_amount 
+        ) {
             $installment_status = OrderConst::$PAID;
         } elseif ($request->installmen_amount < $customer_installment->amount) {
             $installment_status = OrderConst::$PARTIALLY_PAID;
@@ -199,7 +202,7 @@ class InstallmentsController extends Controller
 
     public function print_pill($installment_id)
     {
-        $installment = CustomerInstallment::with('customer', 'user')->findOrFail($installment_id);
+        $installment = CustomerInstallment::with('customer', 'user','installmentOrder')->findOrFail($installment_id);
         // return $installment;
 
 
@@ -228,7 +231,8 @@ class InstallmentsController extends Controller
             'paid_installments' => $paid_installments,
             'all_installments_amount' => $all_installments_amount,
             'paid_penalty' => $paid_penalty,
-            'all_penalty_amount' => $all_penalty_amount
+            'all_penalty_amount' => $all_penalty_amount,
+            'code' => $installment->customer->code . '-' . $installment->installmentOrder->code . '-' . $installment->installment_id
             // 'qr_code' => $qr_code
         ];
         // return redirect('pdf');
@@ -246,12 +250,20 @@ class InstallmentsController extends Controller
     public function print_receipt($payment_id)
     {
         $payment = CustomerPayment::findOrFail($payment_id);
+        // $customer = Customer::findOrFail($payment->cusomer)
+        // return [
+        //     'code' => $payment->customer->code . '-' . $payment->installment->installmentOrder->code . '-' . $payment->installment->installment_id,
+        //     'payment' => $payment,
+        //     'customer' => $payment->customer,
+        //     'installment' => $payment->installment->installmentOrder
+        // ];
         $data = [
             'payment_id' => $payment->id,
             'customer' => $payment->customer->name,
             'amount'   => $payment->amount,
             'note' => $payment->note,
-            'reciever' => $payment->user->name
+            'reciever' => $payment->user->name,
+            'code' => $payment->customer->code . '-' . $payment->installment->installmentOrder->code . '-' . $payment->installment->installment_id
         ];
 
         // return view('pdf.receipt',$data);
@@ -272,7 +284,8 @@ class InstallmentsController extends Controller
             'customer' => $payment->customer->name,
             'amount'   => $payment->amount,
             'note' => $payment->note,
-            'reciever' => $payment->user->name
+            'reciever' => $payment->user->name,
+            'code' => $payment->customer->code . '-' . $payment->installment->installmentOrder->code . '-' . $payment->installment->installment_id
         ];
 
         // return view('pdf.receipt',$data);
