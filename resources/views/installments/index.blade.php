@@ -16,33 +16,45 @@
 
         @include('voyager::alerts')
 
-        <form action="{{ url('admin/customer-installments-bills') }}" method="get">
-            <div class="page-content browse container-fluid">
-                <div class="alerts">
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel panel-bordered">
-                            <div class="panel-body">
-                                <div class="form-group">
-                                    <label for="customer_id" style="margin: 20px 0px;">اختر عميل : </label>
-                                    <select name="customer_id" class="select2" required>
-                                        <option value="">اختر</option>
-                                        @foreach ($customers as $customer)
-                                            <option value="{{ $customer->id }}">{{ $customer->name }}
-                                                {{ $customer->code ? '  -  ' . $customer->code : '' }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="form-group" id="customer_orders_div">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12" style="overflow: scroll;">
 
+
+                    <form action="{{ url('admin/customer-installments-bills') }}" method="get">
+                        <div class="page-content browse container-fluid">
+                            <div class="alerts">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel panel-bordered">
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <label for="customer_id" style="margin: 20px 0px;">اختر عميل : </label>
+                                                <select name="customer_id" class="select2" required>
+                                                    <option value="">اختر</option>
+                                                    @foreach ($customers as $customer)
+                                                        <option value="{{ $customer->id }}">{{ $customer->name }}
+                                                            {{ $customer->code ? '  -  ' . $customer->code : '' }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                            <div class="form-group" id="customer_orders_div">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
+
+
+
                 </div>
             </div>
-        </form>
+        </div>
+
     </div>
 @stop
 
@@ -96,7 +108,7 @@
                 //     .random() * 1000) + 1;
                 // console.log(customer_installments_id);
                 jQuery('#order_installment_div').html(
-                "<div id=''><p style='text-align:center;'>جاري التحميل ...</p></div>");
+                    "<div id=''><p style='text-align:center;'>جاري التحميل ...</p></div>");
                 // }
                 $.ajax({
                     url: "{{ URL::to('/') }}/admin/order/" + order_id + "/installments/" + customer_id,

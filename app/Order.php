@@ -10,4 +10,10 @@ class Order extends Model
     
     use SoftDeletes;
     protected $fillable = ['code'];
+
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class, 'customer_id', 'id');
+    }
+
 }

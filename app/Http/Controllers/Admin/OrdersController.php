@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\City;
+use App\Customer;
 use App\CustomerInstallment;
+use App\Governement;
 use App\Http\Constants\OrderConst;
 use App\Http\Controllers\Controller;
 use App\Order;
@@ -113,11 +116,37 @@ class OrdersController extends VoyagerBaseController
 
         event(new BreadDataAdded($dataType, $data));
 
-                /**
+        /**
          * add the new order bill code
          */
-        $order = Order::latest()->first();
+        $order = Order::latest()->with('customer')->first();
         Order::find($order->id)->update(['code' => 'B' . $order->id]);
+
+        
+        $governorate_id = $order->customer->governorate_id;
+        $city_id = $order->customer->city_id;
+
+        $governorate = Governement::find($governorate_id);
+        $city = City::find($city_id);
+
+        // pretty_print([
+            // 'city' => $city,
+            // 'governate' => $governorate,
+            // 'customer' => $order->customer
+            // 'governate_id' => $governorate_id,
+            // 'governate' => $governorate->code,
+            // 'city_id' => $city_id,
+            // 'city' => $city->code,
+        // ]);die;
+        $governorate_code = isset($governorate->code) ? $governorate->code : '';
+        $city_code = isset($city->code) ? $city->code : '';
+        $precode = ( $governorate_code !== '' && $city_code !== '' ) ? $governorate_code . $city_code . '-' : '';
+        // $customer = Customer::latest()->first();
+        Customer::find($order->customer->id)->update(['code' => $precode . 'C' . $order->customer->id]);
+        
+        // $customer = $order->customer;
+
+        // pretty_print($order);die;
 
 
         if(isset($request->customer_id) && isset($request->order_amount) && isset($request->downpayment) && isset($request->order_profit_percentage) && isset($request->installment_start_date) && isset($request->months_count)){

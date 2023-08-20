@@ -38,12 +38,13 @@ class CustomersCustomController extends \TCG\Voyager\Http\Controllers\VoyagerBas
 
         /**
          * add the new customer code
+         * transfered to add code on save order
          */
-        $governorate_id = $request->governorate_id;
-        $city_id = $request->city_id;
+        // $governorate_id = $request->governorate_id;
+        // $city_id = $request->city_id;
 
-        $governorate = Governement::find($governorate_id);
-        $city = City::find($city_id);
+        // $governorate = Governement::find($governorate_id);
+        // $city = City::find($city_id);
 
         // pretty_print([
         //     'governate_id' => $governorate_id,
@@ -51,11 +52,11 @@ class CustomersCustomController extends \TCG\Voyager\Http\Controllers\VoyagerBas
         //     'city_id' => $city_id,
         //     'city' => $city->code,
         // ]);die;
-        $governorate_code = isset($governorate->code) ? $governorate->code : '';
-        $city_code = isset($city->code) ? $city->code : '';
-        $precode = ( $governorate_code !== '' && $city_code !== '' ) ? $governorate_code . $city_code . '-' : '';
-        $customer = Customer::latest()->first();
-        Customer::find($customer->id)->update(['code' => $precode . 'C' . $customer->id]);
+        // $governorate_code = isset($governorate->code) ? $governorate->code : '';
+        // $city_code = isset($city->code) ? $city->code : '';
+        // $precode = ( $governorate_code !== '' && $city_code !== '' ) ? $governorate_code . $city_code . '-' : '';
+        // $customer = Customer::latest()->first();
+        // Customer::find($customer->id)->update(['code' => $precode . 'C' . $customer->id]);
 
         if (!$request->has('_tagging')) {
             if (auth()->user()->can('browse', $data)) {
