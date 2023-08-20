@@ -741,7 +741,9 @@
 
         add_custom_date()
 
-        $("input[name=code]").attr('disabled','disabled');
+        $("input[name=code]:not(#address)").attr('disabled','disabled');
+
+        $("#address input[name=code]").removeAttr('disabled');
         // $( "#format" ).on( "change", function() {
         //   $( "#datepicker" ).datepicker( "option", "dateFormat", $( this ).val() );
         // });

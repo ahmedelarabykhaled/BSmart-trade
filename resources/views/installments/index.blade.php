@@ -18,7 +18,7 @@
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12" style="overflow: scroll;">
+                <div class="col-12">
 
 
                     <form action="{{ url('admin/customer-installments-bills') }}" method="get">
