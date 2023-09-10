@@ -26,7 +26,7 @@ class InstallmentsController extends Controller
      */
     public function index()
     {
-        $customers = Customer::select('id', 'name', 'code')->get();
+        $customers = Customer::select('id', 'name', 'code')->with('orders')->whereHas('orders')->get();
         // return $customers;
         return view('installments.index', ['customers' => $customers]);
     }

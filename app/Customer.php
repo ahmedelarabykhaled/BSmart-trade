@@ -10,4 +10,8 @@ class Customer extends Model
     protected $hidden = ['governorate_id'];
     protected $fillable = ['code'];
     use SoftDeletes;
+
+    public function orders(){
+        return $this->belongsTo(Order::class,'id','customer_id');
+    }
 }

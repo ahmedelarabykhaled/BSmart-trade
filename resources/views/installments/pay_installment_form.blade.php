@@ -263,9 +263,21 @@
                                         @endif
                                     </div>
                                     @if ($installment->status !== 'paid')
+                                        @php
+                                            $amount_to_pay = $installment->amount - $installment->installment_amount_paid;
+                                        @endphp
                                         <hr>
                                         <hr>
                                         <h5>دفع القسط </h5>
+                                        @if ( ( $installment->penalty_amount - $installment->paid_penalty) > 0 ) 
+                                            <div class="alert alert-danger">
+                                                لا يمكن دفع مبلغ القسط الا بعد سداد كامل بملغ الغرامة
+                                            </div>
+                                            @php
+                                                $amount_to_pay = 0;
+                                            @endphp
+                                        @endif
+                                        
                                         <form action="{{ route('pay_installment', $installment->id) }}" method="post">
                                             @csrf
                                             <label for="">مبلغ الغرامة المراد دفعه</label>
@@ -275,11 +287,11 @@
                                             <label for="">مبلغ القسط المراد دفعه</label>
                                             <input type="number" name="installment_amount" class="form-control" required
                                                 step="any" min="0"
-                                                value="{{ $installment->amount - $installment->installment_amount_paid }}"
-                                                max="{{ $installment->amount - $installment->installment_amount_paid }}">
+                                                value="{{ $amount_to_pay }}"
+                                                max="{{ $amount_to_pay }}">
                                             <label for="">اجمالي المبلغ المدفوع</label>
                                             <input type="number" name="total_amount" readonly class="form-control" required
-                                                value="{{ $installment->penalty_amount - $installment->paid_penalty + $installment->amount - $installment->installment_amount_paid }}">
+                                                value="{{ $installment->penalty_amount - $installment->paid_penalty + $amount_to_pay }}">
                                             <label for="">ملاحظة</label>
                                             <textarea name="notes" class="form-control" cols="30" rows="10"></textarea>
                                             <button type="submit" class="btn btn-success">دفع</button>
