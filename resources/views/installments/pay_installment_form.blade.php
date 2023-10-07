@@ -286,6 +286,7 @@
                                                 value="{{ $installment->penalty_amount - $installment->paid_penalty }}">
                                             <label for="">مبلغ القسط المراد دفعه</label>
                                             <input type="number" name="installment_amount" class="form-control" required
+                                            
                                                 step="any" min="0"
                                                 value="{{ $amount_to_pay }}"
                                                 max="{{ $amount_to_pay }}">

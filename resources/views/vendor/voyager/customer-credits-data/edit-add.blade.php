@@ -7,11 +7,93 @@
 
 @section('css')
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <style>
+    {{-- <style>
         .date_value {
             display: inline-block;
         }
-    </style>
+
+
+        .wrapper {
+            /* max-width: 50rem; */
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .tabs {
+            position: relative;
+            margin: 3rem 0;
+            background: #1abc9c;
+            height: 14.75rem;
+        }
+
+        .tabs::before,
+        .tabs::after {
+            content: "";
+            display: table;
+        }
+
+        .tabs::after {
+            clear: both;
+        }
+
+        .tab {
+            float: right;
+        }
+
+        .tab-switch {
+            display: none;
+        }
+
+        .tab-label {
+            position: relative;
+            display: block;
+            line-height: 2.75em;
+            height: 3em;
+            padding: 0 1.618em;
+            background: #1abc9c;
+            border-right: 0.125rem solid #16a085;
+            color: #fff;
+            cursor: pointer;
+            top: 0;
+            transition: all 0.25s;
+        }
+
+        .tab-label:hover {
+            top: -0.25rem;
+            transition: top 0.25s;
+        }
+
+        .tab-content {
+            width: 100%;
+            height: 12rem;
+            position: absolute;
+            z-index: 1;
+            top: 2.75em;
+            left: 0;
+            padding: 1.618rem;
+            background: #fff;
+            color: #2c3e50;
+            border-bottom: 0.25rem solid #bdc3c7;
+            opacity: 0;
+            transition: all 0.35s;
+        }
+
+        .tab-switch:checked+.tab-label {
+            background: #fff;
+            color: #2c3e50;
+            border-bottom: 0;
+            border-right: 0.125rem solid #fff;
+            transition: all 0.35s;
+            z-index: 1;
+            top: -0.0625rem;
+        }
+
+        .tab-switch:checked+label+.tab-content {
+            z-index: 2;
+            opacity: 1;
+            transition: all 0.35s;
+        }
+    </style> --}}
     <link rel="stylesheet" href="{{ asset('css/jquery-ui.css') }}">
 @stop
 
@@ -46,6 +128,40 @@
                         {{ csrf_field() }}
 
                         <div class="panel-body">
+
+
+                            {{-- <div class="wrapper">
+                                <div class="tabs">
+                                    <div class="tab">
+                                        <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+                                        <label for="tab-1" class="tab-label">Tab One</label>
+                                        <div class="tab-content">My father had a small estate in Nottinghamshire: I was the
+                                            third of five sons. He sent me to Emanuel College in Cambridge at fourteen years
+                                            old, where I resided three years, and applied myself close to my studies; but
+                                            the charge of maintaining me, although I had a very scanty allowance, being too
+                                            great for a narrow fortune, I was bound apprentice to Mr. James Bates, an
+                                            eminent surgeon in London, with whom I continued four years. </div>
+                                    </div>
+                                    <div class="tab">
+                                        <input type="radio" name="css-tabs" id="tab-2" class="tab-switch">
+                                        <label for="tab-2" class="tab-label">Tab Two</label>
+                                        <div class="tab-content">My father now and then sending me small sums of money, I
+                                            laid them out in learning navigation, and other parts of the mathematics, useful
+                                            to those who intend to travel, as I always believed it would be, some time or
+                                            other, my fortune to do. </div>
+                                    </div>
+                                    <div class="tab">
+                                        <input type="radio" name="css-tabs" id="tab-3" class="tab-switch">
+                                        <label for="tab-3" class="tab-label">Tab Three</label>
+                                        <div class="tab-content">When I left Mr. Bates, I went down to my father: where, by
+                                            the assistance of him and my uncle John, and some other relations, I got forty
+                                            pounds, and a promise of thirty pounds a year to maintain me at Leyden: there I
+                                            studied physic two years and seven months, knowing it would be useful in long
+                                            voyages.</div>
+                                    </div>
+                                </div>
+                            </div> --}}
+
 
                             @if (count($errors) > 0)
                                 <div class="alert alert-danger">
@@ -725,23 +841,19 @@
     }
 </script>
 
-{{-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> --}}
-{{-- <link rel="stylesheet" href="/resources/demos/style.css"> --}}
-{{-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> --}}
 
 <script>
-
     $(function() {
         $('input[type=date]').each(function() {
             // console.log('single date')
             // console.log($(this).parent().children('label'))
-            $(this).attr('type','text');
-            $(this).attr('class','form-control custom-date-format');
+            $(this).attr('type', 'text');
+            $(this).attr('class', 'form-control custom-date-format');
         })
 
         add_custom_date()
 
-        $("input[name=code]:not(#address)").attr('disabled','disabled');
+        $("input[name=code]:not(#address)").attr('disabled', 'disabled');
 
         $("#address input[name=code]").removeAttr('disabled');
         // $( "#format" ).on( "change", function() {
@@ -749,12 +861,11 @@
         // });
     });
 
-    function add_custom_date(){
+    function add_custom_date() {
         $(".custom-date-format").datepicker({
             dateFormat: "dd-mm-yy"
         });
     }
-
 </script>
 
 @stop

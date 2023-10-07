@@ -16,7 +16,7 @@ use TCG\Voyager\Facades\Voyager;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('pdf', '\App\Http\Controllers\PdfController@index');
 Route::get('receipt-pdf', '\App\Http\Controllers\PdfController@print_receipt');

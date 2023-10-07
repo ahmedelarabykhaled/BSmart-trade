@@ -12,6 +12,6 @@ class Customer extends Model
     use SoftDeletes;
 
     public function orders(){
-        return $this->belongsTo(Order::class,'id','customer_id');
+        return $this->hasMany(Order::class,'customer_id','id');
     }
 }
