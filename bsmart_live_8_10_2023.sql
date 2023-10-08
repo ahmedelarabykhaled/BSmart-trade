@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 29, 2023 at 02:04 AM
+-- Generation Time: Oct 08, 2023 at 11:01 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.3.30
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bsmart`
+-- Database: `bsmart_live`
 --
 
 -- --------------------------------------------------------
@@ -103,9 +103,42 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`id`, `code`, `name`, `national_id`, `phone`, `phone_2`, `notes`, `created_at`, `updated_at`, `address`, `region_id`, `national_id_end_date`, `governorate_id`, `landline`, `work_number`, `whatsapp_number`, `city_id`, `birth_date`, `deleted_at`) VALUES
-(2, '66357-9887', 'Rupert Haag', '17722222222222', '12222222221', '24455555441', '103', '2023-03-11 20:18:38', '2023-03-11 20:18:38', '95797 Osinski Bypass', 'el mahalla', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, '45437-2761', 'ahmed khaled', '45199999999999', '1156766789', '1156766789', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2023-03-12 15:08:07', '2023-04-11 05:40:15', '36444 Lauryn Flat', '1', NULL, '1', NULL, NULL, NULL, 1, NULL, NULL),
-(4, NULL, 'Jamaal Schmitt', '30784839202846', NULL, '649', '326', '2023-04-17 11:25:01', '2023-04-17 11:25:08', '7793 Kunde Hollow', NULL, '2023-01-18 00:00:00', NULL, '500', '33', '533', NULL, '2023-02-23 00:00:00', '2023-04-17 11:25:08');
+(2, '66357-9887', 'Rupert Haag', '17722222222222', '12222222221', '24455555441', '103', '2023-03-11 20:18:38', '2023-04-29 00:43:39', '95797 Osinski Bypass', 'el mahalla', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-04-29 00:43:39'),
+(3, '45437-2761', 'ahmed khaled', '45199999999999', '1156766789', '1156766789', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2023-03-12 15:08:07', '2023-04-29 00:43:39', '36444 Lauryn Flat', '1', NULL, '1', NULL, NULL, NULL, 1, NULL, '2023-04-29 00:43:39'),
+(4, NULL, 'Jamaal Schmitt', '30784839202846', NULL, '649', '326', '2023-04-17 11:25:01', '2023-04-17 11:25:08', '7793 Kunde Hollow', NULL, '2023-01-18 00:00:00', NULL, '500', '33', '533', NULL, '2023-02-23 00:00:00', '2023-04-17 11:25:08'),
+(5, 'GHT-C5', 'امال فهمى السيد على', '11111111111111', '01289766058', NULL, NULL, '2023-04-29 08:10:08', '2023-08-20 06:27:46', '61 شارع السيد عبداللطيف /  طنطا ثانى / الغربية', NULL, '2023-07-22 00:00:00', '1', NULL, NULL, NULL, 1, '2023-07-22 00:00:00', NULL),
+(6, 'GHT-C6', 'محمد عبد الغنى السيد بكر', '26812151600151', '01222831600', NULL, NULL, '2023-04-29 10:42:56', '2023-08-20 07:57:28', 'طنطا - ش الاستاد', '1', '2023-07-20 00:00:00', '1', '0403569033', NULL, '01222831600', 1, '1999-02-01 00:00:00', NULL),
+(7, NULL, 'تقى محمد عبد الغنى بكر', '29501011629189', '01111786229', NULL, NULL, '2023-04-29 10:44:14', '2023-04-29 10:44:32', 'طنطا ش الاستاد', '1', NULL, '1', '0403569033', NULL, '01111786229', 1, NULL, NULL),
+(8, NULL, 'راندا سليمان عبد الكريم سليمان', '28104281602026', '01154208652', NULL, NULL, '2023-04-29 10:45:38', '2023-04-29 10:45:38', 'طنطا ش الاستاد', '1', NULL, '1', NULL, NULL, '01154208652', NULL, NULL, NULL),
+(9, 'GHT-C9', 'دينا محمد عبد ربه ابو زيد', '30111061600788', '01104866184', NULL, NULL, '2023-04-29 10:46:37', '2023-04-29 10:46:58', NULL, '1', NULL, '1', NULL, NULL, '01104866184', 1, NULL, NULL),
+(10, NULL, 'فوزى عبدالفتاح مصطفى محمد', '26301131600133', NULL, NULL, NULL, '2023-04-29 11:51:31', '2023-04-29 11:52:51', NULL, NULL, '2028-12-08 00:00:00', NULL, NULL, NULL, NULL, NULL, '1963-12-01 00:00:00', '2023-04-29 11:52:51'),
+(11, NULL, 'فوزى عبدالفتاح مصطفى محمد', '26301131600133', '01221038257', NULL, NULL, '2023-04-29 12:13:10', '2023-04-29 12:40:26', '12 شارع الزهره - اول الحكمه - طنطا اول - غربيه', NULL, '2028-08-17 00:00:00', '1', '3522699', NULL, '01221038257', 1, '1963-01-13 00:00:00', '2023-04-29 12:40:26'),
+(12, NULL, 'محمد فوزى عبد الفتاح مصطفى', '29506151601391', '01007488260', NULL, NULL, '2023-04-29 12:17:59', '2023-04-29 12:17:59', '31 شارع ابراهيم مبروك من ترعه الشيتى - طنطا اول - الغربيه', NULL, '2025-10-09 00:00:00', '1', NULL, NULL, '01007488260', 1, '1995-06-15 00:00:00', NULL),
+(13, NULL, 'فوزى عبدالفتاح مصطفى محمد', '26301131600133', '01221038257', NULL, NULL, '2023-04-29 12:47:59', '2023-04-29 12:47:59', '12 شترع الزهرة اول الحكمه - طنطا اول - الغربيه', NULL, '2028-08-17 00:00:00', '1', '0403522699', NULL, '01221038257', 1, '1963-01-13 00:00:00', NULL),
+(14, NULL, 'ahmed khaled', '84938273894839', '2136845', NULL, NULL, '2023-08-16 04:34:27', '2023-08-16 04:34:27', 'cairo', NULL, '2023-08-15 00:00:00', NULL, NULL, NULL, NULL, NULL, '2023-08-10 00:00:00', NULL),
+(15, NULL, 'Lula Ebert', '26695849038541', NULL, '407', '300', '2023-08-16 04:45:49', '2023-08-16 04:46:02', '908 Clotilde Villages', NULL, '2023-09-28 05:36:30', NULL, '453', '501', '218', NULL, '2024-06-30 06:17:05', '2023-08-16 04:46:02'),
+(16, NULL, 'Mohammad Hilll', '44444444444444', NULL, '317', '278', '2023-08-16 04:48:56', '2023-08-16 04:48:56', '61551 Wuckert Burgs', NULL, '2024-01-01 15:18:39', NULL, '664', '3', '63', NULL, '2023-10-07 13:58:47', NULL),
+(17, NULL, 'Mohammad Hilll', '44444444444444', NULL, '317', '278', '2023-08-16 04:49:35', '2023-08-16 04:49:35', '61551 Wuckert Burgs', NULL, '2024-01-01 15:18:39', NULL, '664', '3', '63', NULL, '2023-10-07 13:58:47', NULL),
+(18, NULL, 'Mohammad Hilll', '44444444444444', NULL, '317', '278', '2023-08-16 04:50:05', '2023-08-16 04:50:05', '61551 Wuckert Burgs', NULL, '2024-01-01 15:18:39', NULL, '664', '3', '63', NULL, '2023-10-07 13:58:47', NULL),
+(19, NULL, 'Mohammad Hilll', '44444444444444', NULL, '317', '278', '2023-08-16 04:50:15', '2023-08-16 04:50:15', '61551 Wuckert Burgs', NULL, '2024-01-01 15:18:39', NULL, '664', '3', '63', NULL, '2023-10-07 13:58:47', NULL),
+(20, NULL, 'Mohammad Hilll', '44444444444444', NULL, '317', '278', '2023-08-16 04:52:29', '2023-08-16 04:52:29', '61551 Wuckert Burgs', NULL, '2024-01-01 15:18:39', NULL, '664', '3', '63', NULL, '2023-10-07 13:58:47', NULL),
+(21, NULL, 'Mohammad Hilll', '44444444444444', NULL, '317', '278', '2023-08-16 04:52:46', '2023-08-16 04:52:46', '61551 Wuckert Burgs', NULL, '2024-01-01 15:18:39', NULL, '664', '3', '63', NULL, '2023-10-07 13:58:47', NULL),
+(22, NULL, 'Mohammad Hilll', '44444444444444', NULL, '317', '278', '2023-08-16 04:54:34', '2023-08-16 04:54:34', '61551 Wuckert Burgs', NULL, '2024-01-01 15:18:39', NULL, '664', '3', '63', NULL, '2023-10-07 13:58:47', NULL),
+(23, 'C-23', 'Mohammad Hilll', '44444444444444', NULL, '317', '278', '2023-08-16 04:55:01', '2023-08-16 04:55:01', '61551 Wuckert Burgs', NULL, '2024-01-01 15:18:39', NULL, '664', '3', '63', NULL, '2023-10-07 13:58:47', NULL),
+(24, 'C-24', 'Dovie Torp', '88888888888888', NULL, '149', '422', '2023-08-16 04:55:28', '2023-08-16 04:55:29', '634 Halie Port', NULL, '2024-05-24 18:34:38', NULL, '575', '7', '666', NULL, '2024-04-08 21:12:49', NULL),
+(25, NULL, 'Constantin Barrows', '22222222222219', NULL, '601', '612', '2023-08-18 12:11:43', '2023-08-18 12:11:43', '72079 Matt Burg', '1', '2023-08-08 00:00:00', '1', '286', '538', '417', 1, NULL, NULL),
+(26, NULL, 'Constantin Barrows', '22222222222219', NULL, '601', '612', '2023-08-18 12:13:18', '2023-08-18 12:13:18', '72079 Matt Burg', '1', '2023-08-08 00:00:00', '1', '286', '538', '417', 1, NULL, NULL),
+(27, NULL, 'Constantin Barrows', '22222222222219', NULL, '601', '612', '2023-08-18 12:13:59', '2023-08-18 12:13:59', '72079 Matt Burg', '1', '2023-08-08 00:00:00', '1', '286', '538', '417', 1, NULL, NULL),
+(28, NULL, 'Constantin Barrows', '22222222222219', NULL, '601', '612', '2023-08-18 12:14:13', '2023-08-18 12:14:13', '72079 Matt Burg', '1', '2023-08-08 00:00:00', '1', '286', '538', '417', 1, NULL, NULL),
+(29, NULL, 'Constantin Barrows', '22222222222219', NULL, '601', '612', '2023-08-18 12:14:19', '2023-08-18 12:14:19', '72079 Matt Burg', '1', '2023-08-08 00:00:00', '1', '286', '538', '417', 1, NULL, NULL),
+(30, NULL, 'Constantin Barrows', '22222222222219', NULL, '601', '612', '2023-08-18 12:14:53', '2023-08-18 12:14:53', '72079 Matt Burg', '1', '2023-08-08 00:00:00', '1', '286', '538', '417', 1, NULL, NULL),
+(31, NULL, 'Constantin Barrows', '22222222222219', NULL, '601', '612', '2023-08-18 12:15:02', '2023-08-18 12:15:02', '72079 Matt Burg', '1', '2023-08-08 00:00:00', '1', '286', '538', '417', 1, NULL, NULL),
+(32, 'GHT-C32', 'Constantin Barrows', '22222222222219', NULL, '601', '612', '2023-08-18 12:16:13', '2023-08-18 12:16:13', '72079 Matt Burg', '1', '2023-08-08 00:00:00', '1', '286', '538', '417', 1, NULL, NULL),
+(33, NULL, 'Asia Grant', '64222222222222', NULL, '221', '647', '2023-08-18 12:17:25', '2023-08-18 12:17:25', '53157 Steuber Court', NULL, NULL, NULL, '93', '220', '15', NULL, NULL, NULL),
+(34, '-C34', 'Asia Grant', '64222222222222', NULL, '221', '647', '2023-08-18 12:20:05', '2023-08-18 12:20:05', '53157 Steuber Court', NULL, NULL, NULL, '93', '220', '15', NULL, NULL, NULL),
+(35, 'C35', 'Agustin Lehner', '56479597095987', '01118157695', '475', '639', '2023-08-18 12:30:00', '2023-08-18 12:30:00', '97664 Vernie Path', NULL, '2023-08-08 00:00:00', NULL, '589', '624', '193', NULL, '2023-08-07 00:00:00', NULL),
+(36, 'CAG-C36', 'احمد خالد السيد', '11111111111111', NULL, NULL, NULL, '2023-08-20 06:29:46', '2023-08-20 06:30:38', NULL, NULL, '2023-08-14 00:00:00', '2', NULL, NULL, NULL, 2, '2023-08-08 00:00:00', NULL),
+(37, 'CAG-C37', 'علاء محمد بهاء', '33333333333332', NULL, NULL, NULL, '2023-09-10 07:20:23', '2023-09-10 07:21:30', NULL, NULL, '2023-09-10 00:00:00', '2', NULL, NULL, NULL, 2, '2023-09-10 00:00:00', NULL);
 
 -- --------------------------------------------------------
 
@@ -125,6 +158,13 @@ CREATE TABLE `customer_care` (
   `note` longtext DEFAULT NULL,
   `status` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `customer_care`
+--
+
+INSERT INTO `customer_care` (`id`, `reason`, `customer_id`, `user_id`, `date`, `department_id`, `created_at`, `updated_at`, `note`, `status`) VALUES
+(4, 'fafasdf  asf', 8, 4, '2023-10-02 00:00:00', NULL, '2023-10-07 10:34:50', '2023-10-07 10:34:50', '437', 'hold');
 
 -- --------------------------------------------------------
 
@@ -148,18 +188,16 @@ CREATE TABLE `customer_credits` (
   `credit_manager_id` int(11) DEFAULT NULL,
   `credit_researcher_feedback` longtext DEFAULT NULL,
   `notes` longtext DEFAULT NULL,
-  `history_notes` longtext DEFAULT NULL
+  `history_notes` longtext DEFAULT NULL,
+  `max_credit_limit` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `customer_credits`
 --
 
-INSERT INTO `customer_credits` (`id`, `customer_id`, `created_at`, `updated_at`, `status`, `user_id`, `income_feedback`, `discussion_feedback`, `enquiry_feedback`, `credit_manager_feedback`, `documents_feedback`, `credit_researcher_id`, `credit_manager_id`, `credit_researcher_feedback`, `notes`, `history_notes`) VALUES
-(4, 1, '2023-03-11 21:11:19', '2023-03-11 21:11:19', 'approved', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(5, 3, '2023-03-12 15:09:34', '2023-03-12 15:09:34', 'approved', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(6, 2, '2023-03-16 20:22:55', '2023-03-16 20:22:55', 'rejected', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(7, 2, '2023-03-16 20:23:13', '2023-03-16 20:23:13', 'rejected', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `customer_credits` (`id`, `customer_id`, `created_at`, `updated_at`, `status`, `user_id`, `income_feedback`, `discussion_feedback`, `enquiry_feedback`, `credit_manager_feedback`, `documents_feedback`, `credit_researcher_id`, `credit_manager_id`, `credit_researcher_feedback`, `notes`, `history_notes`, `max_credit_limit`) VALUES
+(8, 6, '2023-07-20 09:52:16', '2023-07-20 09:52:16', 'hold', 1, 'Dolores quis tempore in quae distinctio.', 'Dicta temporibus vel at blanditiis totam velit tenetur inventore.', 'Dignissimos itaque voluptatibus accusamus dicta commodi dolores incidunt debitis quis.', 'Corona', 'Hic officiis voluptatem explicabo dolores error consectetur minima perspiciatis.', 4, 1, 'Bridgeport', '304', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -222,19 +260,22 @@ CREATE TABLE `customer_credits_data` (
   `customer_building_status` varchar(255) DEFAULT NULL,
   `grantor_building_status` varchar(255) DEFAULT NULL,
   `customer_region_level` varchar(255) DEFAULT NULL,
-  `grantor_region_level` varchar(255) DEFAULT NULL
+  `grantor_region_level` varchar(255) DEFAULT NULL,
+  `customer_accommodation_duration` varchar(255) DEFAULT NULL,
+  `grantor_accommodation_duration` varchar(255) DEFAULT NULL,
+  `customer_accommodation_start` varchar(255) DEFAULT NULL,
+  `grantor_accommodation_start` varchar(255) DEFAULT NULL,
+  `grantor_accommodation_end` varchar(255) DEFAULT NULL,
+  `customer_accommodation_end` varchar(255) DEFAULT NULL,
+  `credit_limit` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `customer_credits_data`
 --
 
-INSERT INTO `customer_credits_data` (`id`, `customer_id`, `grantor_id`, `relatives_data`, `work_field`, `work_address`, `job_title`, `salary`, `work_duration`, `previous_work_field`, `customer_income`, `customer_additional_income`, `grantor_income`, `grantor_additional_income`, `commitments`, `has_business`, `business_data`, `business_income`, `business_outcome`, `product_name`, `product_price`, `installement_duration`, `required_installement`, `downpayment`, `profit_percentage`, `final_customer_tatal_income`, `final_total_commitments`, `final_business_income`, `grantor_commitments`, `final_overall_income`, `credit_researcher_feedback`, `cerdit_researcher_id`, `credit_admin`, `created_at`, `updated_at`, `same_outcome_source`, `commitments_amount`, `customer_educational_qualification`, `grantor_educational_qualification`, `customer_marital_status`, `grantor_marital_status`, `customer_childrens_data`, `grantor_childrens_data`, `customer_accommodation`, `grantor_accommodation`, `customer_rental_price`, `grantor_rental_price`, `customer_facilities`, `grantor_facilities`, `customer_building_owner_name`, `grantor_building_owner_name`, `customer_building_status`, `grantor_building_status`, `customer_region_level`, `grantor_region_level`) VALUES
-(1, 2, 2, '<p>fasd</p>', 'est labore officiis', '14370 Joany Fall', 'Dynamic Security Engineer', 'Cumque fugiat consequatur nihil nisi.', 'illo laborum consequatur', 'aliquid quis deleniti', 'Miller_Waters65', 'Bertha_Ruecker', 'Blanditiis quos sequi eius error optio mollitia et.', 'Quas mollitia exercitationem qui rem nostrum consequatur aliquam rerum sint.', NULL, 'no', NULL, '588', '154', 'Reilly Becker', '1', '2023-07-18 22:16:30', '416', '595', '394', '152', '99', '256', '382', '127', 'North Faustinofield', NULL, NULL, '2023-03-29 11:41:41', '2023-03-29 11:41:41', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 2, NULL, NULL, 'dolor dolores molestias', '8722 Dejon Brooks', 'Dynamic Functionality Administrator', '578', 'sed distinctio voluptatem', 'delectus ducimus dolor', '585', '295', '485', '365', NULL, 'no', NULL, '231', '220', 'Litzy Hirthe', '436', NULL, '320', '446', '405', '228', '357', '533', '63', NULL, 'Lake Russell', NULL, NULL, '2023-04-07 22:33:10', '2023-04-07 22:33:37', '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, 3, NULL, '<table style=\"border-collapse: collapse; width: 100%;\" border=\"1\">\n<tbody>\n<tr>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n</tr>\n<tr>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n</tr>\n<tr>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n</tr>\n<tr>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n<td style=\"width: 20%;\">&nbsp;</td>\n</tr>\n</tbody>\n</table>', NULL, NULL, NULL, '0', NULL, NULL, '1500', '500', '1000', '0', NULL, '0', NULL, '0', NULL, NULL, NULL, NULL, '0', '0', '0', NULL, '0', NULL, '0', NULL, NULL, NULL, NULL, '2023-04-08 16:43:21', '2023-04-11 04:28:58', '0', '999', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(4, NULL, NULL, '<table style=\"border-collapse: collapse; width: 99.085%; height: 252px; float: right;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 63px;\">\r\n<td style=\"width: 33.3333%; text-align: right; height: 63px;\">صلة القرابة</td>\r\n<td style=\"width: 33.3333%; text-align: right; height: 63px;\">رقم الهاتف</td>\r\n<td style=\"width: 33.3333%; text-align: right; height: 63px;\">اسم احد الاقارب</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 33.3333%; height: 63px;\">oiretui</td>\r\n<td style=\"width: 33.3333%; height: 63px;\">fjdsoighre</td>\r\n<td style=\"width: 33.3333%; height: 63px;\">fsdlkj</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 33.3333%; height: 63px;\">fdlksjaf</td>\r\n<td style=\"width: 33.3333%; height: 63px;\">flkdsj</td>\r\n<td style=\"width: 33.3333%; height: 63px;\">fsdlkaj</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 33.3333%; height: 63px;\">dfslkfj</td>\r\n<td style=\"width: 33.3333%; height: 63px;\">lfdksjaflksdjgia</td>\r\n<td style=\"width: 33.3333%; height: 63px;\">oifhsdiuaha</td>\r\n</tr>\r\n</tbody>\r\n</table>', NULL, NULL, NULL, '0', NULL, NULL, '0', '0', '0', '0', '<table style=\"border-collapse: collapse; width: 99.6078%; height: 304px; float: right;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 16.6667%; text-align: right;\">تاريخ الانتهاء</td>\r\n<td style=\"width: 16.6667%; text-align: right;\">تاريخ البداية</td>\r\n<td style=\"width: 16.6667%; text-align: right;\">مده القرض</td>\r\n<td style=\"width: 16.6667%; text-align: right;\">قيمة القسط</td>\r\n<td style=\"width: 16.6667%; text-align: right;\">قيمة القرض</td>\r\n<td style=\"width: 16.6667%; text-align: right;\">الجهة المانحة للقرض</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 16.6667%;\">تاريخ الانتهاء</td>\r\n<td style=\"width: 16.6667%;\">المدة</td>\r\n<td style=\"width: 16.6667%;\">قيمة القسط</td>\r\n<td style=\"width: 16.6667%;\">المبلغ</td>\r\n<td style=\"width: 16.6667%;\">المنتج المستهدف</td>\r\n<td style=\"width: 16.6667%;\">جهات اخرى</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 16.6667%;\">اجمالي الالتزامات</td>\r\n<td style=\"width: 16.6667%;\">مصاريف اخرى</td>\r\n<td style=\"width: 16.6667%;\">فاتورة النت</td>\r\n<td style=\"width: 16.6667%;\">فاتورة الغاز</td>\r\n<td style=\"width: 16.6667%;\">فاتورة المياه</td>\r\n<td style=\"width: 16.6667%;\">شفاتورة الكهرباء</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>', '0', '<table style=\"border-collapse: collapse; width: 99.673%; height: 231px;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 16.6667%;\">صافي الدخل الشهري</td>\r\n<td style=\"width: 16.6667%;\">الدخل الشهري</td>\r\n<td style=\"width: 16.6667%;\">الدخل السنوي</td>\r\n<td style=\"width: 16.6667%;\">قيمة البضاعة</td>\r\n<td style=\"width: 16.6667%;\">رأس المال</td>\r\n<td style=\"width: 16.6667%;\">تاريخ بداية النشاط</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 16.6667%;\">اجمالي الالتزامات</td>\r\n<td style=\"width: 16.6667%;\">المرافق</td>\r\n<td style=\"width: 16.6667%;\">مده الايجار</td>\r\n<td style=\"width: 16.6667%;\">قيمة الايجار</td>\r\n<td style=\"width: 16.6667%;\">اجمالي الاجوز</td>\r\n<td style=\"width: 16.6667%;\">عدد العمال</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%;\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>', '0', NULL, NULL, NULL, NULL, '0', '0', '0', NULL, '0', NULL, '0', NULL, NULL, NULL, NULL, '2023-04-12 13:48:38', '2023-04-12 15:18:15', '0', '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(5, NULL, NULL, '<table style=\"border-collapse: collapse; width: 99.085%; height: 252px; float: right;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 63px;\">\r\n<td style=\"width: 33.3333%; text-align: right; height: 63px; font-size: 20px;\">صلة القرابة</td>\r\n<td style=\"width: 33.3333%; text-align: right; height: 63px; font-size: 20px;\">رقم الهاتف</td>\r\n<td style=\"width: 33.3333%; text-align: right; height: 63px; font-size: 20px;\">اسم احد الاقارب</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 33.3333%; height: 63px; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 33.3333%; height: 63px; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 33.3333%; height: 63px; font-size: 20px;\">&nbsp;</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 33.3333%; height: 63px; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 33.3333%; height: 63px; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 33.3333%; height: 63px; font-size: 20px;\">&nbsp;</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 33.3333%; height: 63px; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 33.3333%; height: 63px; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 33.3333%; height: 63px; font-size: 20px;\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>', 'optio est mollitia', '47492 Kertzmann Mills', 'Chief Tactics Manager', NULL, 'natus quibusdam velit', 'non sit accusantium', '395', '139', '359', '189', '<table style=\"border-collapse: collapse; width: 99.6078%; height: 304px; float: right;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 16.6667%; text-align: right; font-size: 20px;\">تاريخ الانتهاء</td>\r\n<td style=\"width: 16.6667%; text-align: right; font-size: 20px;\">تاريخ البداية</td>\r\n<td style=\"width: 16.6667%; text-align: right; font-size: 20px;\">مده القرض</td>\r\n<td style=\"width: 16.6667%; text-align: right; font-size: 20px;\">قيمة القسط</td>\r\n<td style=\"width: 16.6667%; text-align: right; font-size: 20px;\">قيمة القرض</td>\r\n<td style=\"width: 16.6667%; text-align: right; font-size: 20px;\">الجهة المانحة للقرض</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 16.6667%; font-size: 20px;\">تاريخ الانتهاء</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">المدة</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">قيمة القسط</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">المبلغ</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">المنتج المستهدف</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">جهات اخرى</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 16.6667%; font-size: 20px;\">اجمالي الالتزامات</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">مصاريف اخرى</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">فاتورة النت</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">فاتورة الغاز</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">فاتورة المياه</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">شفاتورة الكهرباء</td>\r\n</tr>\r\n<tr style=\"text-align: right;\">\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px;\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>', '0', NULL, '77', '7', 'Tommie Steuber', '55100', '203', '282.7881773399015', '1000', '6', '492', '0', '70', '260', '563', 'Dorianton', 2, 2, '2023-04-17 11:07:19', '2023-04-17 11:07:19', '0', '329', 'Sasha49', 'Voluptas eveniet et ea voluptatem.', 'armal', 'armal', NULL, NULL, 'married', 'married', '616', '235', 'Nikolas_Turner95', 'Aliquam omnis cum dolores nulla inventore iste quibusdam sit sit.', 'Ken Smith', 'Jamil Steuber', 'good', 'middle', 'good', 'poor');
+INSERT INTO `customer_credits_data` (`id`, `customer_id`, `grantor_id`, `relatives_data`, `work_field`, `work_address`, `job_title`, `salary`, `work_duration`, `previous_work_field`, `customer_income`, `customer_additional_income`, `grantor_income`, `grantor_additional_income`, `commitments`, `has_business`, `business_data`, `business_income`, `business_outcome`, `product_name`, `product_price`, `installement_duration`, `required_installement`, `downpayment`, `profit_percentage`, `final_customer_tatal_income`, `final_total_commitments`, `final_business_income`, `grantor_commitments`, `final_overall_income`, `credit_researcher_feedback`, `cerdit_researcher_id`, `credit_admin`, `created_at`, `updated_at`, `same_outcome_source`, `commitments_amount`, `customer_educational_qualification`, `grantor_educational_qualification`, `customer_marital_status`, `grantor_marital_status`, `customer_childrens_data`, `grantor_childrens_data`, `customer_accommodation`, `grantor_accommodation`, `customer_rental_price`, `grantor_rental_price`, `customer_facilities`, `grantor_facilities`, `customer_building_owner_name`, `grantor_building_owner_name`, `customer_building_status`, `grantor_building_status`, `customer_region_level`, `grantor_region_level`, `customer_accommodation_duration`, `grantor_accommodation_duration`, `customer_accommodation_start`, `grantor_accommodation_start`, `grantor_accommodation_end`, `customer_accommodation_end`, `credit_limit`) VALUES
+(10, 7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0', '0', '0', '0', NULL, '0', '<table style=\"border-collapse: collapse; width: 99.673%; height: 216px;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 55px;\">\r\n<td style=\"width: 8.33335%; font-size: 20px;\">نوع النشاط التجاري</td>\r\n<td style=\"width: 8.33335%; font-size: 20px; height: 55px;\">صافي الدخل الشهري</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 55px;\">الدخل الشهري</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 55px;\">الدخل السنوي</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 55px;\">قيمة البضاعة</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 55px;\">رأس المال</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 55px;\">تاريخ بداية النشاط</td>\r\n</tr>\r\n<tr style=\"height: 53px;\">\r\n<td style=\"width: 8.33335%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 8.33335%; font-size: 20px; height: 53px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 53px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 53px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 53px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 53px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 53px;\">&nbsp;</td>\r\n</tr>\r\n<tr style=\"height: 55px;\">\r\n<td style=\"width: 8.33335%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 8.33335%; font-size: 20px; height: 55px;\">اجمالي الالتزامات</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 55px;\">المرافق</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 55px;\">مده الايجار</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 55px;\">قيمة الايجار</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 55px;\">اجمالي الاجوز</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 55px;\">عدد العمال</td>\r\n</tr>\r\n<tr style=\"height: 53px;\">\r\n<td style=\"width: 8.33335%; font-size: 20px;\">&nbsp;</td>\r\n<td style=\"width: 8.33335%; font-size: 20px; height: 53px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 53px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 53px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 53px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 53px;\">&nbsp;</td>\r\n<td style=\"width: 16.6667%; font-size: 20px; height: 53px;\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>', '0', NULL, NULL, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', NULL, NULL, NULL, '2023-07-20 09:17:31', '2023-07-20 09:43:02', '0', '0', NULL, NULL, 'devorced', 'single', NULL, NULL, 'owned', 'owned', NULL, NULL, NULL, NULL, NULL, NULL, 'hight', 'hight', 'hight', 'hight', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -281,7 +322,9 @@ CREATE TABLE `customer_installement_requests_customers` (
 
 INSERT INTO `customer_installement_requests_customers` (`id`, `customer_installment_request_id`, `customer_id`, `created_at`, `updated_at`) VALUES
 (1, 4, 1, NULL, NULL),
-(2, 4, 3, NULL, NULL);
+(2, 4, 3, NULL, NULL),
+(3, 5, 7, NULL, NULL),
+(4, 6, 9, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -310,224 +353,26 @@ CREATE TABLE `customer_installments` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
-  `bill_no` varchar(255) DEFAULT NULL
+  `bill_no` varchar(255) DEFAULT NULL,
+  `penalty_amount_perday` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `customer_installments`
 --
 
-INSERT INTO `customer_installments` (`id`, `installment_id`, `customer_id`, `order_id`, `user_id`, `amount`, `due_date`, `installment_amount_paid`, `partially_paid`, `partially_paid_amout`, `penalty_amount`, `penalty_days`, `paid_penalty`, `paid_penalty_date`, `notes`, `total_paid`, `status`, `created_at`, `updated_at`, `deleted_at`, `bill_no`) VALUES
-(196, 1, 3, 11, NULL, '1100', '2023-01-01', '0', NULL, '0', '1180', '118', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 00:48:19', '2023-04-28 21:03:30', NULL, NULL),
-(197, 2, 3, 11, 1, '1100', '2023-02-01', '1100', NULL, '0', '860', '86', '700', '2023-04-28 04:00:51', NULL, '1100', 'paid', '2023-04-28 00:48:19', '2023-04-28 01:00:51', NULL, '5084053062'),
-(198, 3, 3, 11, NULL, '1100', '2023-03-01', '0', NULL, '0', '590', '59', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 00:48:19', '2023-04-28 21:03:30', NULL, NULL),
-(199, 4, 3, 11, NULL, '1100', '2023-04-01', '0', NULL, '0', '280', '28', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 00:48:19', '2023-04-28 21:03:30', NULL, NULL),
-(200, 5, 3, 11, NULL, '1100', '2023-05-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 00:48:19', '2023-04-28 00:48:19', NULL, NULL),
-(201, 6, 3, 11, NULL, '1100', '2023-06-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 00:48:19', '2023-04-28 00:48:19', NULL, NULL),
-(202, 7, 3, 11, NULL, '1100', '2023-07-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 00:48:19', '2023-04-28 00:48:19', NULL, NULL),
-(203, 8, 3, 11, NULL, '1100', '2023-08-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 00:48:19', '2023-04-28 00:48:19', NULL, NULL),
-(204, 9, 3, 11, NULL, '1100', '2023-09-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 00:48:19', '2023-04-28 00:48:19', NULL, NULL),
-(205, 10, 3, 11, NULL, '1100', '2023-10-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 00:48:19', '2023-04-28 00:48:19', NULL, NULL),
-(206, 1, 2, 12, NULL, '1916.6666666667', '2023-01-01', '0', NULL, '0', '1170', '117', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:05:31', '2023-04-28 01:15:02', '2023-04-28 01:15:02', NULL),
-(207, 2, 2, 12, NULL, '1916.6666666667', '2023-02-01', '0', NULL, '0', '860', '86', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:05:31', '2023-04-28 01:15:02', '2023-04-28 01:15:02', NULL),
-(208, 3, 2, 12, NULL, '1916.6666666667', '2023-03-01', '0', NULL, '0', '580', '58', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:05:31', '2023-04-28 01:15:02', '2023-04-28 01:15:02', NULL),
-(209, 4, 2, 12, NULL, '1916.6666666667', '2023-04-01', '0', NULL, '0', '270', '27', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:05:31', '2023-04-28 01:15:02', '2023-04-28 01:15:02', NULL),
-(210, 5, 2, 12, NULL, '1916.6666666667', '2023-05-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:05:31', '2023-04-28 01:15:02', '2023-04-28 01:15:02', NULL),
-(211, 6, 2, 12, NULL, '1916.6666666667', '2023-06-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:05:31', '2023-04-28 01:15:02', '2023-04-28 01:15:02', NULL),
-(212, 7, 2, 12, NULL, '1916.6666666667', '2023-07-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:05:31', '2023-04-28 01:15:02', '2023-04-28 01:15:02', NULL),
-(213, 8, 2, 12, NULL, '1916.6666666667', '2023-08-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:05:31', '2023-04-28 01:15:02', '2023-04-28 01:15:02', NULL),
-(214, 9, 2, 12, NULL, '1916.6666666667', '2023-09-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:05:31', '2023-04-28 01:15:02', '2023-04-28 01:15:02', NULL),
-(215, 10, 2, 12, NULL, '1916.6666666667', '2023-10-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:05:31', '2023-04-28 01:15:02', '2023-04-28 01:15:02', NULL),
-(216, 11, 2, 12, NULL, '1916.6666666667', '2023-11-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:05:31', '2023-04-28 01:15:02', '2023-04-28 01:15:02', NULL),
-(217, 12, 2, 12, NULL, '1916.6666666667', '2023-12-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:05:31', '2023-04-28 01:15:02', '2023-04-28 01:15:02', NULL),
-(218, 1, 2, 12, 1, '1916.67', '2023-01-01', '1916.67', NULL, '0', '1170', '117', '1170', '2023-04-28 06:29:49', NULL, '1086.67', 'paid', '2023-04-28 01:15:02', '2023-04-28 03:29:49', NULL, '5735434456'),
-(219, 2, 2, 12, NULL, '1916.67', '2023-02-01', '0', NULL, '0', '870', '87', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:15:02', '2023-04-28 21:03:30', NULL, NULL),
-(220, 3, 2, 12, NULL, '1916.67', '2023-03-01', '0', NULL, '0', '590', '59', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:15:02', '2023-04-28 21:03:30', NULL, NULL),
-(221, 4, 2, 12, NULL, '1916.67', '2023-04-01', '0', NULL, '0', '280', '28', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:15:02', '2023-04-28 21:03:30', NULL, NULL),
-(222, 5, 2, 12, NULL, '1916.67', '2023-05-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:15:02', '2023-04-28 01:28:03', '2023-04-28 01:28:03', NULL),
-(223, 6, 2, 12, NULL, '1916.67', '2023-06-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:15:02', '2023-04-28 01:28:03', '2023-04-28 01:28:03', NULL),
-(224, 7, 2, 12, NULL, '1916.67', '2023-07-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:15:02', '2023-04-28 01:28:03', '2023-04-28 01:28:03', NULL),
-(225, 8, 2, 12, NULL, '1916.67', '2023-08-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:15:02', '2023-04-28 01:28:03', '2023-04-28 01:28:03', NULL),
-(226, 9, 2, 12, NULL, '1916.67', '2023-09-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:15:02', '2023-04-28 01:28:03', '2023-04-28 01:28:03', NULL),
-(227, 10, 2, 12, NULL, '1916.67', '2023-10-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:15:02', '2023-04-28 01:28:03', '2023-04-28 01:28:03', NULL),
-(228, 11, 2, 12, NULL, '1916.67', '2023-11-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:15:02', '2023-04-28 01:28:03', '2023-04-28 01:28:03', NULL),
-(229, 12, 2, 12, NULL, '1916.67', '2023-12-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:15:02', '2023-04-28 01:28:03', '2023-04-28 01:28:03', NULL),
-(260, 1, 2, 15, 1, '1680', '2022-01-01', '1680', NULL, '0', '4820', '482', '4820', '2023-04-28 06:30:54', NULL, '6500', 'paid', '2023-04-28 01:37:00', '2023-04-28 03:30:54', NULL, '1912979651'),
-(261, 2, 2, 15, NULL, '1680', '2022-02-01', '0', NULL, '0', '4520', '452', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 21:03:30', NULL, NULL),
-(262, 3, 2, 15, NULL, '1680', '2022-03-01', '0', NULL, '0', '4240', '424', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 21:03:30', NULL, NULL),
-(263, 4, 2, 15, NULL, '1680', '2022-04-01', '0', NULL, '0', '3930', '393', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 21:03:30', NULL, NULL),
-(264, 5, 2, 15, NULL, '1680', '2022-05-01', '0', NULL, '0', '3630', '363', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 21:03:30', NULL, NULL),
-(265, 6, 2, 15, NULL, '1680', '2022-06-01', '0', NULL, '0', '3320', '332', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 21:03:30', NULL, NULL),
-(266, 7, 2, 15, NULL, '1680', '2022-07-01', '0', NULL, '0', '3020', '302', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 21:03:30', NULL, NULL),
-(267, 8, 2, 15, NULL, '1680', '2022-08-01', '0', NULL, '0', '2710', '271', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 21:03:30', NULL, NULL),
-(268, 9, 2, 15, NULL, '1680', '2022-09-01', '0', NULL, '0', '2400', '240', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 21:03:30', NULL, NULL),
-(269, 10, 2, 15, NULL, '1680', '2022-10-01', '0', NULL, '0', '2100', '210', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 21:03:30', NULL, NULL),
-(270, 11, 2, 15, NULL, '1680', '2022-11-01', '0', NULL, '0', '1790', '179', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 21:03:30', NULL, NULL),
-(271, 12, 2, 15, NULL, '1680', '2022-12-01', '0', NULL, '0', '1490', '149', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 21:03:30', NULL, NULL),
-(272, 13, 2, 15, NULL, '1680', '2023-01-01', '0', NULL, '0', '1180', '118', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 21:03:30', NULL, NULL),
-(273, 14, 2, 15, NULL, '1680', '2023-02-01', '0', NULL, '0', '870', '87', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 21:03:30', NULL, NULL),
-(274, 15, 2, 15, NULL, '1680', '2023-03-01', '0', NULL, '0', '590', '59', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 21:03:30', NULL, NULL),
-(275, 16, 2, 15, NULL, '1680', '2023-04-01', '0', NULL, '0', '280', '28', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 21:03:30', NULL, NULL),
-(276, 17, 2, 15, NULL, '1680', '2023-05-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(277, 18, 2, 15, NULL, '1680', '2023-06-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(278, 19, 2, 15, NULL, '1680', '2023-07-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(279, 20, 2, 15, NULL, '1680', '2023-08-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(280, 21, 2, 15, NULL, '1680', '2023-09-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(281, 22, 2, 15, NULL, '1680', '2023-10-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(282, 23, 2, 15, NULL, '1680', '2023-11-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(283, 24, 2, 15, NULL, '1680', '2023-12-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(284, 25, 2, 15, NULL, '1680', '2024-01-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:00', NULL, NULL),
-(285, 26, 2, 15, NULL, '1680', '2024-02-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:00', NULL, NULL),
-(286, 27, 2, 15, NULL, '1680', '2024-03-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:00', NULL, NULL),
-(287, 28, 2, 15, NULL, '1680', '2024-04-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:00', NULL, NULL),
-(288, 29, 2, 15, NULL, '1680', '2024-05-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(289, 30, 2, 15, NULL, '1680', '2024-06-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(290, 31, 2, 15, NULL, '1680', '2024-07-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(291, 32, 2, 15, NULL, '1680', '2024-08-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(292, 33, 2, 15, NULL, '1680', '2024-09-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(293, 34, 2, 15, NULL, '1680', '2024-10-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(294, 35, 2, 15, NULL, '1680', '2024-11-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(295, 36, 2, 15, NULL, '1680', '2024-12-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:41', '2023-04-28 01:37:41', NULL),
-(296, 37, 2, 15, NULL, '1680', '2025-01-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:00', NULL, NULL),
-(297, 38, 2, 15, NULL, '1680', '2025-02-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:00', NULL, NULL),
-(298, 39, 2, 15, NULL, '1680', '2025-03-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:00', NULL, NULL),
-(299, 40, 2, 15, NULL, '1680', '2025-04-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:37:00', '2023-04-28 01:37:00', NULL, NULL),
-(300, 1, 2, 16, NULL, '1400', '2022-10-01', '0', NULL, '0', '2100', '210', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 21:03:30', NULL, NULL),
-(301, 2, 2, 16, NULL, '1400', '2022-11-01', '0', NULL, '0', '1790', '179', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 21:03:30', NULL, NULL),
-(302, 3, 2, 16, NULL, '1400', '2022-12-01', '0', NULL, '0', '1490', '149', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 21:03:30', NULL, NULL),
-(303, 4, 2, 16, NULL, '1400', '2023-01-01', '0', NULL, '0', '1180', '118', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 21:03:30', NULL, NULL),
-(304, 5, 2, 16, NULL, '1400', '2023-02-01', '0', NULL, '0', '870', '87', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 21:03:30', NULL, NULL),
-(305, 6, 2, 16, NULL, '1400', '2023-03-01', '0', NULL, '0', '590', '59', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 21:03:30', NULL, NULL),
-(306, 7, 2, 16, NULL, '1400', '2023-04-01', '0', NULL, '0', '280', '28', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 21:03:30', NULL, NULL),
-(307, 8, 2, 16, NULL, '1400', '2023-05-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(308, 9, 2, 16, NULL, '1400', '2023-06-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(309, 10, 2, 16, NULL, '1400', '2023-07-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(310, 11, 2, 16, NULL, '1400', '2023-08-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(311, 12, 2, 16, NULL, '1400', '2023-09-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(312, 13, 2, 16, NULL, '1400', '2023-10-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(313, 14, 2, 16, NULL, '1400', '2023-11-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(314, 15, 2, 16, NULL, '1400', '2023-12-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(315, 16, 2, 16, NULL, '1400', '2024-01-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(316, 17, 2, 16, NULL, '1400', '2024-02-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(317, 18, 2, 16, NULL, '1400', '2024-03-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(318, 19, 2, 16, NULL, '1400', '2024-04-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(319, 20, 2, 16, NULL, '1400', '2024-05-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(320, 21, 2, 16, NULL, '1400', '2024-06-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(321, 22, 2, 16, NULL, '1400', '2024-07-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(322, 23, 2, 16, NULL, '1400', '2024-08-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(323, 24, 2, 16, NULL, '1400', '2024-09-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:40:59', '2023-04-28 01:45:25', '2023-04-28 01:45:25', NULL),
-(324, 1, 3, 17, NULL, '746.67', '2022-10-01', '0', NULL, '0', '2100', '210', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 21:03:30', NULL, NULL),
-(325, 2, 3, 17, 1, '746.67', '2022-11-01', '746.67', NULL, '0', '1780', '178', '1780', '2023-04-28 04:59:36', NULL, '2526.67', 'paid', '2023-04-28 01:46:42', '2023-04-28 01:59:36', NULL, '2767950564'),
-(326, 3, 3, 17, NULL, '746.67', '2022-12-01', '0', NULL, '0', '1490', '149', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 21:03:30', NULL, NULL),
-(327, 4, 3, 17, 1, '746.67', '2023-01-01', '500', NULL, '0', '1180', '118', '600', '2023-04-28 21:33:03', NULL, '1100', 'partially_paid', '2023-04-28 01:46:42', '2023-04-28 21:03:30', NULL, '9214496557'),
-(328, 5, 3, 17, 1, '746.67', '2023-02-01', '746.67', NULL, '0', '860', '86', '500', '2023-04-28 23:50:13', 'دفع القسط', '1246.67', 'paid', '2023-04-28 01:46:42', '2023-04-28 20:50:13', NULL, '8515796539'),
-(329, 6, 3, 17, NULL, '746.67', '2023-03-01', '0', NULL, '0', '590', '59', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 21:03:30', NULL, NULL),
-(330, 7, 3, 17, NULL, '746.67', '2023-04-01', '0', NULL, '0', '280', '28', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 21:03:30', NULL, NULL),
-(331, 8, 3, 17, NULL, '746.67', '2023-05-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(332, 9, 3, 17, NULL, '746.67', '2023-06-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(333, 10, 3, 17, NULL, '746.67', '2023-07-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(334, 11, 3, 17, NULL, '746.67', '2023-08-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(335, 12, 3, 17, NULL, '746.67', '2023-09-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(336, 13, 3, 17, NULL, '746.67', '2023-10-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(337, 14, 3, 17, NULL, '746.67', '2023-11-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(338, 15, 3, 17, NULL, '746.67', '2023-12-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(339, 16, 3, 17, NULL, '746.67', '2024-01-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(340, 17, 3, 17, NULL, '746.67', '2024-02-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(341, 18, 3, 17, NULL, '746.67', '2024-03-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(342, 19, 3, 17, NULL, '746.67', '2024-04-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(343, 20, 3, 17, NULL, '746.67', '2024-05-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(344, 21, 3, 17, NULL, '746.67', '2024-06-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(345, 22, 3, 17, NULL, '746.67', '2024-07-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(346, 23, 3, 17, NULL, '746.67', '2024-08-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(347, 24, 3, 17, NULL, '746.67', '2024-09-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(348, 25, 3, 17, NULL, '746.67', '2024-10-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(349, 26, 3, 17, NULL, '746.67', '2024-11-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(350, 27, 3, 17, NULL, '746.67', '2024-12-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(351, 28, 3, 17, NULL, '746.67', '2025-01-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(352, 29, 3, 17, NULL, '746.67', '2025-02-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(353, 30, 3, 17, NULL, '746.67', '2025-03-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:46:42', '2023-04-28 01:47:17', '2023-04-28 01:47:17', NULL),
-(354, 1, 3, 18, NULL, '2310', '2022-09-01', '0', NULL, '0', '2400', '240', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 21:03:30', NULL, NULL),
-(355, 2, 3, 18, NULL, '2310', '2022-10-01', '0', NULL, '0', '2100', '210', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 21:03:30', NULL, NULL),
-(356, 3, 3, 18, NULL, '2310', '2022-11-01', '0', NULL, '0', '1790', '179', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 21:03:30', NULL, NULL),
-(357, 4, 3, 18, NULL, '2310', '2022-12-01', '0', NULL, '0', '1490', '149', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 21:03:30', NULL, NULL),
-(358, 5, 3, 18, NULL, '2310', '2023-01-01', '0', NULL, '0', '1180', '118', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 21:03:30', NULL, NULL),
-(359, 6, 3, 18, NULL, '2310', '2023-02-01', '0', NULL, '0', '870', '87', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 21:03:30', NULL, NULL),
-(360, 7, 3, 18, NULL, '2310', '2023-03-01', '0', NULL, '0', '590', '59', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 21:03:30', NULL, NULL),
-(361, 8, 3, 18, NULL, '2310', '2023-04-01', '0', NULL, '0', '280', '28', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 21:03:30', NULL, NULL),
-(362, 9, 3, 18, NULL, '2310', '2023-05-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(363, 10, 3, 18, NULL, '2310', '2023-06-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(364, 11, 3, 18, NULL, '2310', '2023-07-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(365, 12, 3, 18, NULL, '2310', '2023-08-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(366, 13, 3, 18, NULL, '2310', '2023-09-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(367, 14, 3, 18, NULL, '2310', '2023-10-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(368, 15, 3, 18, NULL, '2310', '2023-11-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(369, 16, 3, 18, NULL, '2310', '2023-12-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(370, 17, 3, 18, NULL, '2310', '2024-01-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(371, 18, 3, 18, NULL, '2310', '2024-02-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(372, 19, 3, 18, NULL, '2310', '2024-03-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(373, 20, 3, 18, NULL, '2310', '2024-04-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(374, 21, 3, 18, NULL, '2310', '2024-05-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(375, 22, 3, 18, NULL, '2310', '2024-06-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(376, 23, 3, 18, NULL, '2310', '2024-07-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(377, 24, 3, 18, NULL, '2310', '2024-08-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(378, 25, 3, 18, NULL, '2310', '2024-09-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(379, 26, 3, 18, NULL, '2310', '2024-10-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(380, 27, 3, 18, NULL, '2310', '2024-11-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(381, 28, 3, 18, NULL, '2310', '2024-12-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(382, 29, 3, 18, NULL, '2310', '2025-01-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(383, 30, 3, 18, NULL, '2310', '2025-02-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(384, 31, 3, 18, NULL, '2310', '2025-03-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(385, 32, 3, 18, NULL, '2310', '2025-04-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(386, 33, 3, 18, NULL, '2310', '2025-05-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(387, 34, 3, 18, NULL, '2310', '2025-06-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(388, 35, 3, 18, NULL, '2310', '2025-07-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(389, 36, 3, 18, NULL, '2310', '2025-08-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(390, 37, 3, 18, NULL, '2310', '2025-09-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(391, 38, 3, 18, NULL, '2310', '2025-10-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(392, 39, 3, 18, NULL, '2310', '2025-11-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(393, 40, 3, 18, NULL, '2310', '2025-12-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:49:23', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL),
-(394, 1, 3, 18, NULL, '2310', '2023-06-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(395, 2, 3, 18, NULL, '2310', '2023-07-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(396, 3, 3, 18, NULL, '2310', '2023-08-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(397, 4, 3, 18, NULL, '2310', '2023-09-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(398, 5, 3, 18, NULL, '2310', '2023-10-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(399, 6, 3, 18, NULL, '2310', '2023-11-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(400, 7, 3, 18, NULL, '2310', '2023-12-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(401, 8, 3, 18, NULL, '2310', '2024-01-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(402, 9, 3, 18, NULL, '2310', '2024-02-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(403, 10, 3, 18, NULL, '2310', '2024-03-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(404, 11, 3, 18, NULL, '2310', '2024-04-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(405, 12, 3, 18, NULL, '2310', '2024-05-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(406, 13, 3, 18, NULL, '2310', '2024-06-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(407, 14, 3, 18, NULL, '2310', '2024-07-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(408, 15, 3, 18, NULL, '2310', '2024-08-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(409, 16, 3, 18, NULL, '2310', '2024-09-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(410, 17, 3, 18, NULL, '2310', '2024-10-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(411, 18, 3, 18, NULL, '2310', '2024-11-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(412, 19, 3, 18, NULL, '2310', '2024-12-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(413, 20, 3, 18, NULL, '2310', '2025-01-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(414, 21, 3, 18, NULL, '2310', '2025-02-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(415, 22, 3, 18, NULL, '2310', '2025-03-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(416, 23, 3, 18, NULL, '2310', '2025-04-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(417, 24, 3, 18, NULL, '2310', '2025-05-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(418, 25, 3, 18, NULL, '2310', '2025-06-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(419, 26, 3, 18, NULL, '2310', '2025-07-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(420, 27, 3, 18, NULL, '2310', '2025-08-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(421, 28, 3, 18, NULL, '2310', '2025-09-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(422, 29, 3, 18, NULL, '2310', '2025-10-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(423, 30, 3, 18, NULL, '2310', '2025-11-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(424, 31, 3, 18, NULL, '2310', '2025-12-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(425, 32, 3, 18, NULL, '2310', '2026-01-17', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 01:54:57', '2023-04-28 01:54:57', NULL, NULL),
-(426, 1, 3, 19, 1, '4760', '2023-02-01', '0', NULL, '0', '870', '87', '500', '2023-04-28 23:46:25', 'سداد الغرامة جزئيا وخصم 380 جنيه من قيمة الغرامة', '500', 'partially_paid', '2023-04-28 18:48:10', '2023-04-28 21:03:30', NULL, '8456755463'),
-(427, 2, 3, 19, 1, '4760', '2023-03-01', '3260', NULL, '0', '590', '59', '580', '2023-04-28 22:11:47', NULL, '3840', 'partially_paid', '2023-04-28 18:48:10', '2023-04-28 21:03:30', NULL, '6703072663'),
-(428, 3, 3, 19, NULL, '4760', '2023-04-01', '0', NULL, '0', '280', '28', '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 18:48:10', '2023-04-28 21:03:30', NULL, NULL),
-(429, 4, 3, 19, NULL, '4760', '2023-05-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 18:48:10', '2023-04-28 18:48:10', NULL, NULL),
-(430, 5, 3, 19, NULL, '4760', '2023-06-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 18:48:10', '2023-04-28 18:48:10', NULL, NULL),
-(431, 6, 3, 19, NULL, '4760', '2023-07-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 18:48:10', '2023-04-28 18:48:10', NULL, NULL),
-(432, 7, 3, 19, NULL, '4760', '2023-08-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 18:48:10', '2023-04-28 18:48:10', NULL, NULL),
-(433, 8, 3, 19, NULL, '4760', '2023-09-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 18:48:10', '2023-04-28 18:48:10', NULL, NULL),
-(434, 9, 3, 19, NULL, '4760', '2023-10-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 18:48:10', '2023-04-28 18:48:10', NULL, NULL),
-(435, 10, 3, 19, NULL, '4760', '2023-11-01', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-04-28 18:48:10', '2023-04-28 18:48:10', NULL, NULL);
+INSERT INTO `customer_installments` (`id`, `installment_id`, `customer_id`, `order_id`, `user_id`, `amount`, `due_date`, `installment_amount_paid`, `partially_paid`, `partially_paid_amout`, `penalty_amount`, `penalty_days`, `paid_penalty`, `paid_penalty_date`, `notes`, `total_paid`, `status`, `created_at`, `updated_at`, `deleted_at`, `bill_no`, `penalty_amount_perday`) VALUES
+(538, 1, 37, 42, NULL, '30937.5', '2023-04-05', '0', NULL, '0', '3160', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-09-10 07:21:30', '2023-09-10 07:21:59', NULL, NULL, '20'),
+(539, 2, 37, 42, 1, '30937.5', '2023-05-05', '30937.5', NULL, '0', '2560', NULL, '2560', '2023-09-10 10:22:31', NULL, '33497.5', 'paid', '2023-09-10 07:21:30', '2023-09-10 07:22:31', NULL, '8020738045', '20'),
+(540, 3, 37, 42, 1, '30937.5', '2023-06-05', '0', NULL, '0', '1940', NULL, '1940', '2023-09-10 10:24:45', NULL, '1940', 'partially_paid', '2023-09-10 07:21:30', '2023-09-10 07:24:45', NULL, NULL, '20'),
+(541, 4, 37, 42, 1, '30937.5', '2023-07-05', '30937.5', NULL, '0', '1340', NULL, '1340', '2023-09-10 10:26:49', NULL, '32277.5', 'paid', '2023-09-10 07:21:30', '2023-09-10 07:26:49', NULL, '2753925617', '20'),
+(542, 1, 5, 43, NULL, '1607.14', '2023-10-04', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-10-04 14:42:16', '2023-10-04 14:42:16', NULL, NULL, '14'),
+(543, 2, 5, 43, NULL, '1607.14', '2023-11-04', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-10-04 14:42:16', '2023-10-04 14:42:16', NULL, NULL, '14'),
+(544, 3, 5, 43, NULL, '1607.14', '2023-12-04', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-10-04 14:42:16', '2023-10-04 14:42:16', NULL, NULL, '14'),
+(545, 4, 5, 43, NULL, '1607.14', '2024-01-04', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-10-04 14:42:16', '2023-10-04 14:42:16', NULL, NULL, '14'),
+(546, 5, 5, 43, NULL, '1607.14', '2024-02-04', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-10-04 14:42:16', '2023-10-04 14:42:16', NULL, NULL, '14'),
+(547, 6, 5, 43, NULL, '1607.14', '2024-03-04', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-10-04 14:42:16', '2023-10-04 14:42:16', NULL, NULL, '14'),
+(548, 7, 5, 43, NULL, '1607.14', '2024-04-04', '0', NULL, '0', '0', NULL, '0', NULL, NULL, NULL, 'not_paid', '2023-10-04 14:42:16', '2023-10-04 14:42:16', NULL, NULL, '14');
 
 -- --------------------------------------------------------
 
@@ -546,18 +391,18 @@ CREATE TABLE `customer_installment_requests` (
   `deleted_at` timestamp NULL DEFAULT NULL,
   `customer_id` int(11) DEFAULT NULL,
   `grantor_id` int(11) DEFAULT NULL,
-  `trader_id` int(11) DEFAULT NULL
+  `trader_id` int(11) DEFAULT NULL,
+  `installment_date` varchar(255) DEFAULT NULL,
+  `notes` longtext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `customer_installment_requests`
 --
 
-INSERT INTO `customer_installment_requests` (`id`, `product_name`, `product_price`, `deposit`, `installment_months`, `created_at`, `updated_at`, `deleted_at`, `customer_id`, `grantor_id`, `trader_id`) VALUES
-(1, 'mobile phone', '300', '90', '6', '2023-03-19 10:50:12', '2023-03-19 10:50:12', NULL, NULL, NULL, NULL),
-(2, 'Vivien Dickinson', '330', '18', '4', '2023-03-19 14:20:47', '2023-03-19 14:20:47', NULL, 1, 3, NULL),
-(3, 'mobile phone', '43', '5', '34', '2023-04-07 22:52:05', '2023-04-07 22:52:05', NULL, 3, NULL, NULL),
-(4, 'mobile phone', '43', '5', '34', '2023-04-07 22:52:44', '2023-04-07 22:52:44', NULL, 3, NULL, NULL);
+INSERT INTO `customer_installment_requests` (`id`, `product_name`, `product_price`, `deposit`, `installment_months`, `created_at`, `updated_at`, `deleted_at`, `customer_id`, `grantor_id`, `trader_id`, `installment_date`, `notes`) VALUES
+(5, 'هواوى P50', '20000', '1000', '18', '2023-04-29 10:47:47', '2023-04-29 10:47:47', NULL, 6, NULL, NULL, NULL, NULL),
+(6, 'شاشه', '5000', '0', '12', '2023-04-29 10:48:12', '2023-04-29 10:48:12', NULL, 8, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -585,10 +430,9 @@ CREATE TABLE `customer_legals` (
 --
 
 INSERT INTO `customer_legals` (`id`, `customer_id`, `grantor_id`, `customer_status`, `grantor_status`, `customer_note`, `grantor_note`, `document`, `created_at`, `updated_at`, `user_id`, `general_status`) VALUES
-(27, 3, 1, 'rejected', 'approved', 'Bettye.Koelpin30', '99', 'original', '2023-03-16 20:18:04', '2023-03-16 20:18:04', 1, NULL),
-(28, NULL, NULL, 'approved', 'approved', NULL, NULL, NULL, '2023-03-18 18:33:29', '2023-03-18 18:33:29', 1, 'approved'),
-(29, NULL, NULL, '0', '0', NULL, NULL, NULL, '2023-03-18 18:34:54', '2023-03-18 18:34:54', 1, '0'),
-(30, 3, NULL, '0', '0', NULL, NULL, NULL, '2023-04-07 22:55:21', '2023-04-07 22:55:21', 1, '0');
+(31, 6, 7, 'approved', 'approved', NULL, NULL, 'copy', '2023-04-29 10:50:36', '2023-04-29 10:50:36', 1, 'approved'),
+(32, 8, 7, 'approved', 'approved', NULL, NULL, 'copy', '2023-04-29 10:51:12', '2023-04-29 10:51:12', 1, 'approved'),
+(33, 8, 7, 'approved', 'approved', NULL, NULL, 'copy', '2023-04-29 10:51:31', '2023-04-29 10:51:31', 1, 'approved');
 
 -- --------------------------------------------------------
 
@@ -610,7 +454,10 @@ CREATE TABLE `customer_legal_customers` (
 
 INSERT INTO `customer_legal_customers` (`id`, `customer_id`, `customer_legal_id`, `created_at`, `updated_at`) VALUES
 (1, 1, 30, NULL, NULL),
-(2, 3, 30, NULL, NULL);
+(2, 3, 30, NULL, NULL),
+(3, 7, 31, NULL, NULL),
+(4, 9, 32, NULL, NULL),
+(5, 9, 33, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -637,58 +484,27 @@ CREATE TABLE `customer_payments` (
 --
 
 INSERT INTO `customer_payments` (`id`, `order_installment_id`, `customer_id`, `amount`, `type`, `status`, `created_at`, `updated_at`, `deleted_at`, `user_id`, `note`) VALUES
-(1, 96, NULL, '3340', NULL, NULL, '2023-04-23 02:36:19', '2023-04-23 02:36:19', NULL, 1, NULL),
-(2, 96, NULL, '3340', NULL, NULL, '2023-04-23 02:48:03', '2023-04-23 02:48:03', NULL, 1, NULL),
-(3, 96, NULL, '3340', NULL, NULL, '2023-04-23 02:49:15', '2023-04-23 02:49:15', NULL, 1, NULL),
-(4, 96, NULL, '3340', NULL, NULL, '2023-04-23 02:50:42', '2023-04-23 02:50:42', NULL, 1, NULL),
-(5, 96, NULL, '904', NULL, NULL, '2023-04-23 02:52:00', '2023-04-23 02:52:00', NULL, 1, NULL),
-(6, 97, NULL, '1095', NULL, NULL, '2023-04-23 13:47:17', '2023-04-23 13:47:17', NULL, 1, NULL),
-(7, 97, NULL, '1095', NULL, NULL, '2023-04-23 13:48:28', '2023-04-23 13:48:28', NULL, 1, NULL),
-(8, 98, NULL, '2730', NULL, NULL, '2023-04-23 13:48:46', '2023-04-23 13:48:46', NULL, 1, NULL),
-(9, 98, NULL, '2730', NULL, NULL, '2023-04-23 13:52:02', '2023-04-23 13:52:02', NULL, 1, NULL),
-(10, 98, NULL, '2730', NULL, NULL, '2023-04-23 13:52:14', '2023-04-23 13:52:14', NULL, 1, NULL),
-(11, 59, NULL, '99', NULL, NULL, '2023-04-23 13:55:31', '2023-04-23 13:55:31', NULL, 1, NULL),
-(12, 57, NULL, '749', NULL, NULL, '2023-04-23 13:58:20', '2023-04-23 13:58:20', NULL, 1, NULL),
-(13, 58, NULL, '99', NULL, NULL, '2023-04-23 14:11:03', '2023-04-23 14:11:03', NULL, 1, NULL),
-(14, 100, NULL, '1880', NULL, NULL, '2023-04-24 00:31:57', '2023-04-24 00:31:57', NULL, 1, NULL),
-(15, 60, NULL, '99', NULL, NULL, '2023-04-24 00:37:29', '2023-04-24 00:37:29', NULL, 1, NULL),
-(16, 103, NULL, '1230', NULL, NULL, '2023-04-24 02:08:31', '2023-04-24 02:08:31', NULL, 1, NULL),
-(17, 101, NULL, '1820', NULL, NULL, '2023-04-24 02:10:22', '2023-04-24 02:10:22', NULL, 1, NULL),
-(18, 63, NULL, '99', NULL, NULL, '2023-04-27 15:37:54', '2023-04-27 15:37:54', NULL, 1, NULL),
-(19, 104, NULL, '930', NULL, NULL, '2023-04-27 15:41:38', '2023-04-27 15:41:38', NULL, 1, NULL),
-(20, 96, NULL, '3380', NULL, NULL, '2023-04-27 15:56:07', '2023-04-27 15:56:07', NULL, 1, NULL),
-(21, 98, NULL, '2770', NULL, NULL, '2023-04-27 15:57:34', '2023-04-27 15:57:34', NULL, 1, NULL),
-(22, 56, NULL, '199', NULL, NULL, '2023-04-27 15:58:13', '2023-04-27 15:58:13', NULL, 1, NULL),
-(23, 107, NULL, '1100', NULL, NULL, '2023-04-27 16:06:15', '2023-04-27 16:06:15', NULL, 1, NULL),
-(24, 119, NULL, '1300', NULL, NULL, '2023-04-27 20:42:34', '2023-04-27 20:42:34', NULL, 1, NULL),
-(25, 169, 3, '700', NULL, NULL, '2023-04-28 00:24:50', '2023-04-28 00:24:50', NULL, 1, NULL),
-(26, 178, 3, '1000', NULL, NULL, '2023-04-28 00:30:46', '2023-04-28 00:30:46', NULL, 1, NULL),
-(27, 178, 3, '1180', NULL, NULL, '2023-04-28 00:31:57', '2023-04-28 00:31:57', NULL, 1, NULL),
-(28, 178, 3, '1080', NULL, NULL, '2023-04-28 00:33:58', '2023-04-28 00:33:58', NULL, 1, NULL),
-(29, 181, 3, '400', NULL, NULL, '2023-04-28 00:34:50', '2023-04-28 00:34:50', NULL, 1, NULL),
-(30, 181, 3, '700', NULL, NULL, '2023-04-28 00:37:13', '2023-04-28 00:37:13', NULL, 1, NULL),
-(31, 176, 3, '1000', NULL, NULL, '2023-04-28 00:40:15', '2023-04-28 00:40:15', NULL, 1, NULL),
-(32, 189, 3, '200', NULL, NULL, '2023-04-28 00:45:38', '2023-04-28 00:45:38', NULL, 1, NULL),
-(33, 189, 3, '1170', NULL, NULL, '2023-04-28 00:45:58', '2023-04-28 00:45:58', NULL, 1, NULL),
-(34, 187, 3, '500', NULL, NULL, '2023-04-28 00:47:27', '2023-04-28 00:47:27', NULL, 1, NULL),
-(35, 197, 3, '500', NULL, NULL, '2023-04-28 00:48:43', '2023-04-28 00:48:43', NULL, 1, NULL),
-(36, 197, 3, '200', NULL, NULL, '2023-04-28 00:56:13', '2023-04-28 00:56:13', NULL, 1, NULL),
-(37, 197, 3, '1100', NULL, NULL, '2023-04-28 01:00:51', '2023-04-28 01:00:51', NULL, 1, NULL),
-(38, 325, 3, '2526.67', NULL, NULL, '2023-04-28 01:59:36', '2023-04-28 01:59:36', NULL, 1, NULL),
-(39, 218, 2, '2000', NULL, NULL, '2023-04-28 03:26:32', '2023-04-28 03:26:32', NULL, 1, NULL),
-(40, 218, 2, '1085.67', NULL, NULL, '2023-04-28 03:28:31', '2023-04-28 03:28:31', NULL, 1, NULL),
-(41, 218, 2, '1086.67', NULL, NULL, '2023-04-28 03:29:49', '2023-04-28 03:29:49', NULL, 1, NULL),
-(42, 260, 2, '4820', NULL, NULL, '2023-04-28 03:30:30', '2023-04-28 03:30:30', NULL, 1, NULL),
-(43, 260, 2, '6500', NULL, NULL, '2023-04-28 03:30:54', '2023-04-28 03:30:54', NULL, 1, NULL),
-(44, 327, 3, '1100', NULL, NULL, '2023-04-28 18:33:03', '2023-04-28 18:33:03', NULL, 1, NULL),
-(45, 427, 3, '1000', NULL, NULL, '2023-04-28 18:50:00', '2023-04-28 18:50:00', NULL, 1, NULL),
-(46, 427, 3, '80', NULL, NULL, '2023-04-28 19:05:48', '2023-04-28 19:05:48', NULL, 1, NULL),
-(47, 427, 3, '500', NULL, NULL, '2023-04-28 19:08:27', '2023-04-28 19:08:27', NULL, 1, NULL),
-(48, 427, 3, '760', NULL, NULL, '2023-04-28 19:08:57', '2023-04-28 19:08:57', NULL, 1, NULL),
-(49, 427, 3, '1500', NULL, NULL, '2023-04-28 19:11:47', '2023-04-28 19:11:47', NULL, 1, NULL),
-(50, 426, 3, '500', NULL, NULL, '2023-04-28 20:46:25', '2023-04-28 20:46:25', NULL, 1, NULL),
-(51, 328, 3, '500', NULL, NULL, '2023-04-28 20:49:50', '2023-04-28 20:49:50', NULL, 1, 'دفع الغرامة بعد خصم 360 جنيه'),
-(52, 328, 3, '746.67', NULL, NULL, '2023-04-28 20:50:13', '2023-04-28 20:50:13', NULL, 1, 'دفع القسط');
+(53, 436, 5, '1025.51', NULL, NULL, '2023-07-20 12:56:35', '2023-07-20 12:56:35', NULL, 1, NULL),
+(54, 439, 5, '1025.51', NULL, NULL, '2023-08-16 08:13:30', '2023-08-16 08:13:30', NULL, 1, 'دفع مبلغ القسط'),
+(55, 486, 9, '4200', NULL, NULL, '2023-08-20 05:56:06', '2023-08-20 05:56:06', NULL, 1, NULL),
+(56, 486, 9, '375', NULL, NULL, '2023-08-20 05:56:24', '2023-08-20 05:56:24', NULL, 1, NULL),
+(57, 486, 9, '66', NULL, NULL, '2023-08-20 05:57:01', '2023-08-20 05:57:01', NULL, 1, NULL),
+(58, 488, 9, '4375', NULL, NULL, '2023-08-20 06:05:23', '2023-08-20 06:05:23', NULL, 1, NULL),
+(59, 458, 9, '135.56', NULL, NULL, '2023-09-05 12:33:14', '2023-09-05 12:33:14', NULL, 1, NULL),
+(60, 513, 6, '100', NULL, NULL, '2023-09-09 11:31:38', '2023-09-09 11:31:38', NULL, 1, NULL),
+(61, 513, 6, '80', NULL, NULL, '2023-09-09 11:31:47', '2023-09-09 11:31:47', NULL, 1, NULL),
+(62, 514, 6, '1000', NULL, NULL, '2023-09-09 11:32:04', '2023-09-09 11:32:04', NULL, 1, NULL),
+(63, 514, 6, '220.8', NULL, NULL, '2023-09-09 11:49:17', '2023-09-09 11:49:17', NULL, 1, NULL),
+(64, 528, 5, '3000', NULL, NULL, '2023-09-10 06:31:16', '2023-09-10 06:31:16', NULL, 1, NULL),
+(65, 528, 5, '300', NULL, NULL, '2023-09-10 06:32:09', '2023-09-10 06:32:09', NULL, 1, NULL),
+(66, 528, 5, '2000', NULL, NULL, '2023-09-10 06:32:19', '2023-09-10 06:32:19', NULL, 1, NULL),
+(67, 528, 5, '34', NULL, NULL, '2023-09-10 06:32:25', '2023-09-10 06:32:25', NULL, 1, NULL),
+(68, 539, 37, '2000', NULL, NULL, '2023-09-10 07:22:16', '2023-09-10 07:22:16', NULL, 1, NULL),
+(69, 539, 37, '560', NULL, NULL, '2023-09-10 07:22:23', '2023-09-10 07:22:23', NULL, 1, NULL),
+(70, 539, 37, '30937.5', NULL, NULL, '2023-09-10 07:22:31', '2023-09-10 07:22:31', NULL, 1, NULL),
+(71, 540, 37, '1940', NULL, NULL, '2023-09-10 07:24:45', '2023-09-10 07:24:45', NULL, 1, NULL),
+(72, 541, 37, '1340', NULL, NULL, '2023-09-10 07:26:37', '2023-09-10 07:26:37', NULL, 1, NULL),
+(73, 541, 37, '30937.5', NULL, NULL, '2023-09-10 07:26:49', '2023-09-10 07:26:49', NULL, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -726,7 +542,18 @@ CREATE TABLE `customer_requests` (
   `notification_date` varchar(255) DEFAULT NULL,
   `excecution_date` varchar(255) DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
-  `commuication` varchar(255) DEFAULT NULL
+  `commuication` varchar(255) DEFAULT NULL,
+  `new_installment_profit` varchar(255) DEFAULT NULL,
+  `prepaid_amount` varchar(255) DEFAULT NULL,
+  `new_installment_credit_limit` varchar(255) DEFAULT NULL,
+  `all_over_amount` varchar(255) DEFAULT NULL,
+  `paid_amount` varchar(255) DEFAULT NULL,
+  `rest_amount` varchar(255) DEFAULT NULL,
+  `discount_precentatge` varchar(255) DEFAULT NULL,
+  `penalty_amount` varchar(255) DEFAULT NULL,
+  `pay_penalty_date` varchar(255) DEFAULT NULL,
+  `penalty_profit_discount` varchar(255) DEFAULT NULL,
+  `restructure_installments_count` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -821,7 +648,7 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (82, 14, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 0, 0, 0, 0, '{}', 18),
 (83, 14, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 19),
 (84, 16, 'id', 'text', 'Id', 1, 1, 0, 0, 0, 0, '{}', 1),
-(85, 16, 'code', 'text', 'الكود', 0, 0, 0, 0, 0, 0, '{}', 3),
+(85, 16, 'code', 'text', 'الكود', 0, 1, 1, 1, 0, 0, '{}', 3),
 (86, 16, 'name', 'text', 'الاسم', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":[\"required\"]}}', 2),
 (87, 16, 'national_id', 'number', 'رقم البطاقة', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":[\"required\",\"min:14\",\"max:14\"]}}', 5),
 (88, 16, 'phone', 'number', 'رقم التليفون', 0, 1, 1, 1, 1, 1, '{}', 7),
@@ -833,10 +660,10 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (95, 1, 'email_verified_at', 'timestamp', 'Email Verified At', 0, 0, 0, 0, 0, 0, '{}', 6),
 (113, 19, 'id', 'text', 'Id', 1, 1, 0, 0, 0, 0, '{}', 1),
 (114, 19, 'customer_id', 'text', 'Customer Id', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"},\"attribute\":\"name\"}', 3),
-(118, 19, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 1, 0, 1, '{}', 7),
-(119, 19, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 9),
+(118, 19, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 1, 0, 1, '{}', 20),
+(119, 19, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 8),
 (120, 19, 'customer_credit_belongsto_customer_relationship', 'relationship', 'العميل', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Customer\",\"table\":\"customers\",\"type\":\"belongsTo\",\"column\":\"customer_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 2),
-(121, 19, 'status', 'select_dropdown', 'الحالة', 0, 1, 1, 1, 1, 1, '{\"options\":{\"approved\":\"\\u062a\\u0645 \\u0627\\u0644\\u0642\\u0628\\u0648\\u0644\",\"rejected\":\"\\u062a\\u0645 \\u0627\\u0644\\u0631\\u0641\\u0636\",\"hold\":\"\\u062a\\u0639\\u0644\\u064a\\u0642\"}}', 18),
+(121, 19, 'status', 'select_dropdown', 'الحالة', 0, 0, 1, 1, 1, 1, '{\"options\":{\"approved\":\"\\u062a\\u0645 \\u0627\\u0644\\u0642\\u0628\\u0648\\u0644\",\"rejected\":\"\\u062a\\u0645 \\u0627\\u0644\\u0631\\u0641\\u0636\",\"hold\":\"\\u062a\\u0639\\u0644\\u064a\\u0642\"}}', 17),
 (122, 22, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (123, 22, 'customer_id', 'text', 'id العميل', 0, 1, 1, 1, 1, 1, '{\"attribute\":\"name\"}', 3),
 (124, 22, 'grantor_id', 'text', 'id الضامن', 0, 0, 0, 0, 0, 0, '{\"attribute\":\"name\"}', 7),
@@ -848,7 +675,7 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (130, 22, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 1, 0, 1, '{}', 13),
 (131, 22, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 14),
 (132, 22, 'customer_legal_belongsto_customer_relationship', 'relationship', 'العميل', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Customer\",\"table\":\"customers\",\"type\":\"belongsTo\",\"column\":\"customer_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 2),
-(133, 22, 'customer_legal_belongsto_customer_relationship_1', 'relationship', 'الضامن', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Customer\",\"table\":\"customers\",\"type\":\"belongsToMany\",\"column\":\"grantor_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"customer_legal_customers\",\"pivot\":\"1\",\"taggable\":\"0\"}', 6),
+(133, 22, 'customer_legal_belongsto_customer_relationship_1', 'relationship', 'الضامن', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Grantor\",\"table\":\"grantors\",\"type\":\"hasOne\",\"column\":\"id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"customer_legal_customers\",\"pivot\":\"0\",\"taggable\":\"0\"}', 6),
 (134, 22, 'user_id', 'text', 'User Id', 0, 0, 0, 0, 0, 0, '{\"display\":{\"class\":\"user_id_custom_class\"}}', 12),
 (135, 23, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (136, 23, 'name', 'text', 'الاسم', 0, 1, 1, 1, 1, 1, '{}', 2),
@@ -859,7 +686,7 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (144, 24, 'reason', 'text', 'السبب', 0, 1, 1, 1, 1, 1, '{}', 4),
 (145, 24, 'customer_id', 'text', 'Customer Id', 0, 1, 1, 1, 1, 1, '{}', 2),
 (146, 24, 'user_id', 'text', 'User Id', 0, 1, 1, 1, 1, 1, '{}', 5),
-(147, 24, 'date', 'timestamp', 'التاريخ', 0, 1, 1, 1, 1, 1, 'null', 6),
+(147, 24, 'date', 'date', 'التاريخ', 0, 1, 1, 1, 1, 1, '{}', 6),
 (148, 24, 'department_id', 'text', 'Department Id', 0, 1, 1, 1, 1, 1, '{}', 7),
 (149, 24, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 0, 0, 0, '{}', 11),
 (150, 24, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 12),
@@ -869,15 +696,15 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (154, 22, 'general_status', 'select_dropdown', 'الحالة النهائية', 0, 1, 1, 1, 1, 1, '{\"options\":{\"0\":\"--\\u0627\\u062e\\u062a\\u0631--\",\"approved\":\"\\u062a\\u0645 \\u0627\\u0644\\u0642\\u0628\\u0648\\u0644\",\"rejected\":\"\\u062a\\u0645 \\u0627\\u0644\\u0631\\u0641\\u0636\",\"hold\":\"\\u062a\\u0639\\u0644\\u064a\\u0642\"}}', 11),
 (161, 19, 'user_id', 'text', 'User Id', 0, 0, 0, 0, 0, 0, '{}', 4),
 (162, 19, 'income_feedback', 'text_area', 'يرتكز العمل والدخل على :', 0, 1, 1, 1, 1, 1, '{}', 5),
-(163, 19, 'discussion_feedback', 'text_area', 'بمعاينة العميل والمناقشة تبين', 0, 1, 1, 1, 1, 1, '{}', 6),
-(164, 19, 'enquiry_feedback', 'text_area', 'بالتحري والاستعلام تبين', 0, 1, 1, 1, 1, 1, '{}', 8),
-(165, 19, 'credit_manager_feedback', 'text_area', 'رأي مدير الائتمان', 0, 1, 1, 1, 1, 1, '{}', 17),
-(166, 19, 'documents_feedback', 'text_area', 'بالاطلاع على الاوراق وسندات الائتمان تبين', 0, 1, 1, 1, 1, 1, '{}', 10),
-(167, 19, 'credit_researcher_id', 'text', 'Credit Researcher Id', 0, 1, 1, 1, 1, 1, '{}', 12),
-(168, 19, 'credit_manager_id', 'text', 'Credit Manager Id', 0, 1, 1, 1, 1, 1, '{}', 13),
-(169, 19, 'customer_credit_belongsto_customer_relationship_1', 'relationship', 'الباحث الائتماني', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\User\",\"table\":\"users\",\"type\":\"belongsTo\",\"column\":\"credit_researcher_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 14),
-(170, 19, 'customer_credit_belongsto_user_relationship', 'relationship', 'مدير الائتمان', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\User\",\"table\":\"users\",\"type\":\"belongsTo\",\"column\":\"credit_manager_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 16),
-(171, 19, 'credit_researcher_feedback', 'text_area', 'رأي الباحث الائتماني', 0, 1, 1, 1, 1, 1, '{}', 15),
+(163, 19, 'discussion_feedback', 'text_area', 'بمعاينة العميل والمناقشة تبين', 0, 0, 1, 1, 1, 1, '{}', 6),
+(164, 19, 'enquiry_feedback', 'text_area', 'بالتحري والاستعلام تبين', 0, 0, 1, 1, 1, 1, '{}', 7),
+(165, 19, 'credit_manager_feedback', 'text_area', 'رأي مدير الائتمان', 0, 1, 1, 1, 1, 1, '{}', 15),
+(166, 19, 'documents_feedback', 'text_area', 'بالاطلاع على الاوراق وسندات الائتمان تبين', 0, 1, 1, 1, 1, 1, '{}', 9),
+(167, 19, 'credit_researcher_id', 'text', 'Credit Researcher Id', 0, 0, 1, 1, 1, 1, '{}', 10),
+(168, 19, 'credit_manager_id', 'text', 'Credit Manager Id', 0, 0, 1, 1, 1, 1, '{}', 11),
+(169, 19, 'customer_credit_belongsto_customer_relationship_1', 'relationship', 'الباحث الائتماني', 0, 0, 1, 1, 1, 1, '{\"model\":\"App\\\\User\",\"table\":\"users\",\"type\":\"belongsTo\",\"column\":\"credit_researcher_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 12),
+(170, 19, 'customer_credit_belongsto_user_relationship', 'relationship', 'مدير الائتمان', 0, 0, 1, 1, 1, 1, '{\"model\":\"App\\\\User\",\"table\":\"users\",\"type\":\"belongsTo\",\"column\":\"credit_manager_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 14),
+(171, 19, 'credit_researcher_feedback', 'text_area', 'رأي الباحث الائتماني', 0, 0, 1, 1, 1, 1, '{}', 13),
 (172, 25, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (173, 25, 'product_name', 'text', 'اسم المنتج', 0, 1, 1, 1, 1, 1, '{}', 4),
 (174, 25, 'product_price', 'number', 'سعر المنتج', 0, 1, 1, 1, 1, 1, '{}', 5),
@@ -892,41 +719,41 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (183, 25, 'grantor_id', 'text', 'Grantor Id', 0, 0, 0, 0, 0, 0, '{}', 12),
 (184, 26, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (185, 26, 'customer_id', 'text', 'Customer Id', 0, 1, 1, 1, 1, 1, '{}', 3),
-(186, 26, 'grantor_id', 'text', 'Grantor Id', 0, 0, 0, 0, 0, 0, '{\"display\":{\"id\":\"custom_grantor_id\"}}', 14),
-(187, 26, 'relatives_data', 'rich_text_box', 'بيانات الأقارب', 0, 0, 1, 1, 1, 1, '{\"display\":{\"id\":\"relatives_data_id\"}}', 24),
-(188, 26, 'work_field', 'text', 'مجال العمل', 0, 1, 1, 1, 1, 1, '{}', 25),
-(189, 26, 'work_address', 'text_area', 'عنوان العمل', 0, 0, 1, 1, 1, 1, '{}', 26),
-(190, 26, 'job_title', 'text', 'المسمى الوظيفي', 0, 0, 1, 1, 1, 1, '{}', 27),
-(191, 26, 'salary', 'number', 'الراتب الشهري', 0, 0, 0, 0, 0, 0, '{\"default\":\"0\",\"min\":\"0\"}', 28),
-(192, 26, 'work_duration', 'text', 'فترة العمل في المجال', 0, 0, 1, 1, 1, 1, '{}', 29),
-(193, 26, 'previous_work_field', 'text', 'مجال العمل السابق', 0, 0, 1, 1, 1, 1, '{}', 30),
-(194, 26, 'customer_income', 'number', 'دخل العميل', 0, 1, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 31),
-(195, 26, 'customer_additional_income', 'number', 'مصدر دخل اضافى للعميل', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 32),
-(196, 26, 'grantor_income', 'number', 'دخل الضامن', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 33),
-(197, 26, 'grantor_additional_income', 'number', 'مصدر دخل اضافي للضامن', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 34),
-(198, 26, 'commitments', 'rich_text_box', 'الالتزامات', 0, 0, 1, 1, 1, 1, '{\"display\":{\"id\":\"load_commitments\"}}', 35),
-(199, 26, 'has_business', 'checkbox', 'العميل لديه نشاط تجاري', 0, 0, 1, 1, 1, 1, '{\"on\":\"\\u0646\\u0639\\u0645\",\"off\":\"\\u0644\\u0627\"}', 38),
-(200, 26, 'business_data', 'rich_text_box', 'بيانات النشاط التجاري', 0, 0, 1, 1, 1, 1, '{\"default\":\"here are default\"}', 39),
-(201, 26, 'business_income', 'number', 'الدخل الشهري للنشاط التجاري', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 40),
-(203, 26, 'product_name', 'text', 'اسم المنتج', 0, 1, 1, 1, 1, 1, '{}', 47),
-(204, 26, 'product_price', 'number', 'سعر المنتج', 0, 1, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 48),
-(205, 26, 'installement_duration', 'number', 'مده التقسيط بالشهور', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 49),
-(206, 26, 'required_installement', 'number', 'القسط المطلوب', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 52),
-(207, 26, 'downpayment', 'number', 'المقدم', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 50),
-(208, 26, 'profit_percentage', 'number', 'نسبة الفائدة', 0, 1, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 51),
-(209, 26, 'final_customer_tatal_income', 'number', 'صافي الدخل للعميل', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 43),
-(210, 26, 'final_total_commitments', 'hidden', 'صافي الالتزامات للعميل', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 44),
-(211, 26, 'final_business_income', 'number', 'صافي الدخل التجاري للعميل', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 45),
-(213, 26, 'final_overall_income', 'number', 'صافي الدخل الكامل للعميل من جميع المصادر', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 46),
-(214, 26, 'credit_researcher_feedback', 'text', 'رأي الباحث الائتماني', 0, 0, 1, 1, 1, 1, '{}', 56),
-(216, 26, 'credit_admin', 'text', 'مدير الائتمان', 0, 0, 1, 1, 1, 1, '{}', 54),
-(217, 26, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 0, 0, 0, '{}', 58),
-(218, 26, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 59),
+(186, 26, 'grantor_id', 'text', 'Grantor Id', 0, 0, 0, 0, 0, 0, '{\"display\":{\"id\":\"custom_grantor_id\"}}', 17),
+(187, 26, 'relatives_data', 'rich_text_box', 'بيانات الأقارب', 0, 0, 1, 1, 1, 1, '{\"display\":{\"id\":\"relatives_data_id\"}}', 30),
+(188, 26, 'work_field', 'text', 'مجال العمل', 0, 0, 1, 1, 1, 1, '{}', 31),
+(189, 26, 'work_address', 'text_area', 'عنوان العمل', 0, 0, 1, 1, 1, 1, '{}', 32),
+(190, 26, 'job_title', 'text', 'المسمى الوظيفي', 0, 0, 1, 1, 1, 1, '{}', 33),
+(191, 26, 'salary', 'number', 'الراتب الشهري', 0, 0, 0, 0, 0, 0, '{\"default\":\"0\",\"min\":\"0\"}', 34),
+(192, 26, 'work_duration', 'text', 'فترة العمل في المجال', 0, 0, 1, 1, 1, 1, '{}', 35),
+(193, 26, 'previous_work_field', 'text', 'مجال العمل السابق', 0, 0, 1, 1, 1, 1, '{}', 36),
+(194, 26, 'customer_income', 'number', 'دخل العميل', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 37),
+(195, 26, 'customer_additional_income', 'number', 'مصدر دخل اضافى للعميل', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 38),
+(196, 26, 'grantor_income', 'number', 'دخل الضامن', 0, 1, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 39),
+(197, 26, 'grantor_additional_income', 'number', 'مصدر دخل اضافي للضامن', 0, 1, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 40),
+(198, 26, 'commitments', 'rich_text_box', 'الالتزامات', 0, 0, 1, 1, 1, 1, '{\"display\":{\"id\":\"load_commitments\"}}', 41),
+(199, 26, 'has_business', 'checkbox', 'العميل لديه نشاط تجاري', 0, 0, 1, 1, 1, 1, '{\"on\":\"\\u0646\\u0639\\u0645\",\"off\":\"\\u0644\\u0627\"}', 44),
+(200, 26, 'business_data', 'rich_text_box', 'بيانات النشاط التجاري', 0, 0, 1, 1, 1, 1, '{\"default\":\"here are default\"}', 45),
+(201, 26, 'business_income', 'number', 'الدخل الشهري للنشاط التجاري', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 46),
+(203, 26, 'product_name', 'text', 'اسم المنتج', 0, 1, 1, 1, 1, 1, '{}', 53),
+(204, 26, 'product_price', 'number', 'سعر المنتج', 0, 1, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 54),
+(205, 26, 'installement_duration', 'number', 'مده التقسيط بالشهور', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 55),
+(206, 26, 'required_installement', 'number', 'القسط المطلوب', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 58),
+(207, 26, 'downpayment', 'number', 'المقدم', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 56),
+(208, 26, 'profit_percentage', 'number', 'نسبة الفائدة', 0, 1, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 57),
+(209, 26, 'final_customer_tatal_income', 'number', 'صافي الدخل للعميل', 0, 1, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 49),
+(210, 26, 'final_total_commitments', 'hidden', 'صافي الالتزامات للعميل', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 50),
+(211, 26, 'final_business_income', 'number', 'صافي الدخل التجاري للعميل', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 51),
+(213, 26, 'final_overall_income', 'number', 'صافي الدخل الكامل للعميل من جميع المصادر', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 52),
+(214, 26, 'credit_researcher_feedback', 'text', 'رأي الباحث الائتماني', 0, 0, 0, 0, 0, 0, '{}', 63),
+(216, 26, 'credit_admin', 'text', 'مدير الائتمان', 0, 0, 1, 1, 1, 1, '{}', 61),
+(217, 26, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 0, 0, 0, '{}', 65),
+(218, 26, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 66),
 (219, 26, 'customer_credits_datum_belongsto_customer_relationship', 'relationship', 'العميل', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Customer\",\"table\":\"customers\",\"type\":\"belongsTo\",\"column\":\"customer_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 2),
-(220, 26, 'customer_credits_datum_belongsto_customer_relationship_1', 'relationship', 'الضامن', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Customer\",\"table\":\"customers\",\"type\":\"belongsTo\",\"column\":\"grantor_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"customer_credits_data_customers\",\"pivot\":\"0\",\"taggable\":\"0\"}', 13),
-(221, 26, 'customer_credits_datum_belongsto_user_relationship', 'relationship', 'مدير الائتمان', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\User\",\"table\":\"users\",\"type\":\"belongsTo\",\"column\":\"credit_admin\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 57),
-(222, 26, 'cerdit_researcher_id', 'text', 'Cerdit Researcher Id', 0, 0, 1, 1, 1, 1, '{}', 53),
-(223, 26, 'customer_credits_datum_belongsto_user_relationship_1', 'relationship', 'الباحث الائتماني', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\User\",\"table\":\"users\",\"type\":\"belongsTo\",\"column\":\"cerdit_researcher_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 55),
+(220, 26, 'customer_credits_datum_belongsto_customer_relationship_1', 'relationship', 'الضامن', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Grantor\",\"table\":\"grantors\",\"type\":\"belongsTo\",\"column\":\"grantor_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"customer_credits_data_customers\",\"pivot\":\"0\",\"taggable\":\"0\"}', 16),
+(221, 26, 'customer_credits_datum_belongsto_user_relationship', 'relationship', 'مدير الائتمان', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\User\",\"table\":\"users\",\"type\":\"belongsTo\",\"column\":\"credit_admin\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 64),
+(222, 26, 'cerdit_researcher_id', 'text', 'Cerdit Researcher Id', 0, 0, 1, 1, 1, 1, '{}', 60),
+(223, 26, 'customer_credits_datum_belongsto_user_relationship_1', 'relationship', 'الباحث الائتماني', 0, 0, 1, 1, 1, 1, '{\"model\":\"App\\\\User\",\"table\":\"users\",\"type\":\"belongsTo\",\"column\":\"cerdit_researcher_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 62),
 (224, 16, 'national_id_end_date', 'date', 'تاريخ انتهاء البطاقة', 0, 0, 1, 1, 1, 1, '{}', 6),
 (237, 14, 'phone_2', 'number', 'رقم التليفون 2', 0, 1, 1, 1, 1, 1, '{}', 9),
 (238, 14, 'landline', 'number', 'التليفون الارضي', 0, 0, 1, 1, 1, 1, '{}', 10),
@@ -969,14 +796,14 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (278, 25, 'trader_id', 'text', 'Trader Id', 0, 1, 1, 1, 1, 1, '{}', 11),
 (279, 28, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (280, 28, 'name', 'text', 'اسم المحافظة', 0, 1, 1, 1, 1, 1, '{}', 2),
-(281, 28, 'code', 'text', 'كود المحافظة', 0, 1, 1, 1, 1, 1, '{}', 3),
+(281, 28, 'code', 'text', 'كود المحافظة', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"address\"}}', 3),
 (282, 28, 'details', 'text_area', 'ملاحظات', 0, 1, 1, 1, 1, 1, '{}', 4),
 (283, 28, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 1, 0, 1, '{}', 5),
 (284, 28, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 6),
 (285, 28, 'deleted_at', 'timestamp', 'تم الحذف في', 0, 0, 0, 0, 0, 0, '{}', 7),
 (286, 29, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (287, 29, 'name', 'text', 'اسم المدينة', 0, 1, 1, 1, 1, 1, '{}', 2),
-(288, 29, 'code', 'text', 'كود المدينة', 0, 1, 1, 1, 1, 1, '{}', 3),
+(288, 29, 'code', 'text', 'كود المدينة', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"address\"}}', 3),
 (289, 29, 'details', 'text_area', 'ملاحظات', 0, 1, 1, 1, 1, 1, '{}', 5),
 (290, 29, 'governemet_id', 'text', 'Governemet Id', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 6),
 (291, 29, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 1, 0, 1, '{}', 7),
@@ -985,14 +812,14 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (294, 29, 'city_belongsto_governement_relationship', 'relationship', 'المحافظة', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Governement\",\"table\":\"governements\",\"type\":\"belongsTo\",\"column\":\"governemet_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 4),
 (295, 30, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (296, 30, 'name', 'text', 'اسم المنطقة', 0, 1, 1, 1, 1, 1, '{}', 2),
-(297, 30, 'code', 'text', 'كود المنطقة', 0, 1, 1, 1, 1, 1, '{}', 3),
+(297, 30, 'code', 'text', 'كود المنطقة', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"address\"}}', 3),
 (298, 30, 'details', 'text_area', 'ملاحظات', 0, 1, 1, 1, 1, 1, '{}', 4),
 (299, 30, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 1, 0, 1, '{}', 6),
 (300, 30, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 7),
 (301, 30, 'deleted_at', 'timestamp', 'تم الحذف في', 0, 0, 0, 0, 0, 0, '{}', 8),
 (302, 30, 'region_belongsto_city_relationship', 'relationship', 'المدينة', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\City\",\"table\":\"cities\",\"type\":\"belongsTo\",\"column\":\"city_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 5),
 (303, 30, 'city_id', 'text', 'City Id', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 9),
-(304, 26, 'same_outcome_source', 'checkbox', 'الالتزامات مشتركة للعميل والضامن', 0, 1, 1, 1, 1, 1, '{\"on\":\"\\u0646\\u0639\\u0645\",\"off\":\"\\u0644\\u0627\"}', 42),
+(304, 26, 'same_outcome_source', 'checkbox', 'الالتزامات مشتركة للعميل والضامن', 0, 0, 1, 1, 1, 1, '{\"on\":\"\\u0646\\u0639\\u0645\",\"off\":\"\\u0644\\u0627\"}', 48),
 (305, 16, 'region_id', 'text', 'Region Id', 0, 1, 1, 1, 1, 1, '{}', 12),
 (306, 16, 'governorate_id', 'hidden', 'Governorate Id', 0, 1, 1, 1, 1, 1, '{}', 24),
 (307, 16, 'city_id', 'hidden', 'City Id', 0, 1, 1, 1, 1, 1, '{}', 29),
@@ -1013,55 +840,55 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (322, 27, 'region_id', 'text', 'Region Id', 0, 1, 1, 1, 1, 1, '{}', 10),
 (323, 16, 'birth_date', 'date', 'تاريخ الميلاد', 0, 1, 1, 1, 1, 1, '{}', 4),
 (324, 31, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(325, 31, 'customer_id', 'text', 'Customer Id', 0, 1, 1, 1, 1, 1, '{}', 4),
-(329, 31, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 0, 0, 0, 1, '{}', 13),
-(330, 31, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 12),
-(331, 31, 'deleted_at', 'timestamp', 'تم الحذف في', 0, 0, 0, 0, 0, 0, '{}', 14),
+(325, 31, 'customer_id', 'text', 'Customer Id', 0, 1, 1, 1, 1, 1, '{}', 5),
+(329, 31, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 0, 0, 0, 1, '{}', 25),
+(330, 31, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 13),
+(331, 31, 'deleted_at', 'timestamp', 'تم الحذف في', 0, 0, 0, 0, 0, 0, '{}', 16),
 (332, 31, 'order_belongsto_customer_relationship', 'relationship', 'العميل', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Customer\",\"table\":\"customers\",\"type\":\"belongsTo\",\"column\":\"customer_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 2),
-(333, 31, 'order_belongstomany_customer_relationship', 'relationship', 'الضامن', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Customer\",\"table\":\"customers\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"orders_customers\",\"pivot\":\"1\",\"taggable\":\"0\"}', 3),
-(334, 31, 'order_amount', 'number', 'سعر المنتج', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"order_amount_id\"},\"default\":0,\"min\":0}', 5),
-(335, 31, 'order_profit_percentage', 'number', 'نسبة الربح ( نسبة مؤية % )', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"order_profit_percentage_id\"},\"default\":0,\"min\":0}', 7),
-(336, 31, 'total_order_amount', 'number', 'اجمالي مبلغ التقسيط', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"total_installement_amout\"},\"default\":0,\"min\":0}', 10),
-(337, 31, 'installment_start_date', 'date', 'تاريخ بداية التقسيط', 0, 1, 1, 1, 1, 1, '{}', 8),
-(338, 31, 'months_count', 'number', 'عدد شهور التقسيط', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"order_months_count_id\"},\"default\":0,\"min\":0}', 9),
-(339, 26, 'commitments_amount', 'number', 'مبلغ التزامات العميل', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 36),
-(340, 26, 'business_outcome', 'text', 'الالتزامات الشهرية للنشاط التجاري', 0, 0, 1, 1, 1, 1, '{}', 41),
-(341, 26, 'grantor_commitments', 'number', 'مبلغ التزامات الضامن', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 37),
-(342, 31, 'monthly_amount', 'number', 'مبلغ القسط الشهري', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"monthly_amount_id\"},\"default\":0,\"min\":0}', 11),
+(333, 31, 'order_belongstomany_customer_relationship', 'relationship', 'الضامن', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Grantor\",\"table\":\"grantors\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"orders_customers\",\"pivot\":\"1\",\"taggable\":\"0\"}', 3),
+(334, 31, 'order_amount', 'number', 'سعر المنتج', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"order_amount_id\"},\"default\":0,\"min\":0}', 6),
+(335, 31, 'order_profit_percentage', 'number', 'نسبة الفايدة ( نسبة مؤية % )', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"order_profit_percentage_id\"},\"default\":0,\"min\":0}', 8),
+(336, 31, 'total_order_amount', 'number', 'اجمالي مبلغ التقسيط', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"total_installement_amout\"},\"default\":0,\"min\":0}', 11),
+(337, 31, 'installment_start_date', 'date', 'تاريخ بداية التقسيط', 0, 1, 1, 1, 1, 1, '{}', 9),
+(338, 31, 'months_count', 'number', 'عدد شهور التقسيط', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"order_months_count_id\"},\"default\":0,\"min\":0}', 10),
+(339, 26, 'commitments_amount', 'number', 'مبلغ التزامات العميل', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 42),
+(340, 26, 'business_outcome', 'text', 'الالتزامات الشهرية للنشاط التجاري', 0, 0, 1, 1, 1, 1, '{}', 47),
+(341, 26, 'grantor_commitments', 'number', 'مبلغ التزامات الضامن', 0, 0, 1, 1, 1, 1, '{\"default\":\"0\",\"min\":\"0\"}', 43),
+(342, 31, 'monthly_amount', 'number', 'مبلغ القسط الشهري', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"monthly_amount_id\"},\"default\":0,\"min\":0}', 12),
 (343, 32, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (344, 32, 'customer_id', 'text', 'Customer Id', 0, 1, 1, 1, 1, 1, '{}', 2),
-(345, 32, 'request_date', 'text', 'تاريخ الطلب', 0, 1, 1, 1, 1, 1, '{}', 4),
-(346, 32, 'due_date', 'text', 'تاريخ الاستحقاق', 0, 1, 1, 1, 1, 1, '{}', 5),
-(347, 32, 'request_type', 'select_dropdown', 'نوع الطلب', 0, 1, 1, 1, 1, 1, '{\"options\":{\"change_due_date\":\"\\u062a\\u063a\\u064a\\u064a\\u0631 \\u0645\\u064a\\u0639\\u0627\\u062f \\u0627\\u0644\\u0642\\u0633\\u0637\",\"installment_request\":\"\\u0637\\u0644\\u0628 \\u0642\\u0633\\u0637 \\u062c\\u062f\\u064a\\u062f\",\"delay_penalety\":\"\\u062a\\u0623\\u062e\\u064a\\u0631 \\u0627\\u0644\\u063a\\u0631\\u0627\\u0645\\u0629\",\"early_payment\":\"\\u062f\\u0641\\u0639 \\u0645\\u0628\\u0643\\u0631\"}}', 6),
+(345, 32, 'request_date', 'date', 'تاريخ الطلب', 0, 1, 1, 1, 1, 1, '{}', 4),
+(346, 32, 'due_date', 'date', 'تاريخ الاستحقاق', 0, 1, 1, 1, 1, 1, '{}', 5),
+(347, 32, 'request_type', 'select_dropdown', 'نوع الطلب', 0, 1, 1, 1, 1, 1, '{\"options\":{\"change_due_date\":\"\\u062a\\u063a\\u064a\\u064a\\u0631 \\u0645\\u064a\\u0639\\u0627\\u062f \\u0627\\u0644\\u0642\\u0633\\u0637\",\"installment_request\":\"\\u0637\\u0644\\u0628 \\u0642\\u0633\\u0637 \\u062c\\u062f\\u064a\\u062f\",\"delay_penalety\":\"\\u0637\\u0644\\u0628 \\u0627\\u0644\\u063a\\u0631\\u0627\\u0645\\u0629\",\"early_payment\":\"\\u062f\\u0641\\u0639 \\u0645\\u0628\\u0643\\u0631\"}}', 8),
 (348, 32, 'departement_id', 'text', 'Departement Id', 0, 1, 1, 1, 1, 1, '{}', 9),
-(351, 32, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 1, 0, 1, '{}', 30),
-(352, 32, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 31),
+(351, 32, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 1, 0, 1, '{}', 40),
+(352, 32, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 41),
 (353, 32, 'customer_request_belongsto_customer_relationship', 'relationship', 'العميل', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Customer\",\"table\":\"customers\",\"type\":\"belongsTo\",\"column\":\"customer_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 3),
-(354, 19, 'notes', 'text', 'ملاحظات', 0, 1, 1, 1, 1, 1, '{}', 11),
-(355, 19, 'history_notes', 'rich_text_box', 'تقرير متابعة عميل', 0, 1, 1, 1, 1, 1, '{}', 19),
-(356, 31, 'downpayment', 'number', 'المقدم', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"downpayment_id\"},\"default\":0,\"min\":0}', 6),
+(354, 19, 'notes', 'text', 'ملاحظات', 0, 1, 1, 1, 1, 1, '{}', 19),
+(355, 19, 'history_notes', 'rich_text_box', 'تقرير متابعة عميل', 0, 0, 1, 1, 1, 1, '{}', 18),
+(356, 31, 'downpayment', 'number', 'المقدم', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"downpayment_id\"},\"default\":0,\"min\":0}', 7),
 (357, 27, 'place_phone', 'number', 'تليفون المكان', 0, 1, 1, 1, 1, 1, '{}', 4),
 (358, 27, 'place_phone2', 'number', 'تليفون 2 للمكان', 0, 1, 1, 1, 1, 1, '{}', 5),
 (359, 27, 'place_whatsapp', 'number', 'واتساب المكان', 0, 1, 1, 1, 1, 1, '{}', 7),
 (360, 27, 'place_landline', 'number', 'التليفون الارضي للمكان', 0, 1, 1, 1, 1, 1, '{}', 6),
-(361, 26, 'customer_educational_qualification', 'text', 'المؤهل الدراسي للعميل', 0, 0, 1, 1, 1, 1, '{}', 4),
-(362, 26, 'grantor_educational_qualification', 'text', 'المؤهل الدراسي للضامن', 0, 0, 1, 1, 1, 1, '{}', 15),
-(363, 26, 'customer_marital_status', 'select_dropdown', 'الحالة الاجتماعية للعميل', 0, 0, 1, 1, 1, 1, '{\"options\":{\"single\":\"\\u0623\\u0639\\u0632\\u0628\",\"married\":\"\\u0645\\u062a\\u0632\\u0648\\u062c\",\"devorced\":\"\\u0645\\u0637\\u0644\\u0642\",\"armal\":\"\\u0623\\u0631\\u0645\\u0644\"}}', 5),
-(364, 26, 'grantor_marital_status', 'select_dropdown', 'الحالة الاجتماعية للضامن', 0, 0, 1, 1, 1, 1, '{\"options\":{\"single\":\"\\u0623\\u0639\\u0632\\u0628\",\"married\":\"\\u0645\\u062a\\u0632\\u0648\\u062c\",\"devorced\":\"\\u0645\\u0637\\u0644\\u0642\",\"armal\":\"\\u0623\\u0631\\u0645\\u0644\"}}', 16),
-(365, 26, 'customer_childrens_data', 'rich_text_box', 'بيانات اطفال العميل', 0, 0, 1, 1, 1, 1, '{}', 6),
-(366, 26, 'grantor_childrens_data', 'rich_text_box', 'بيانات اطفال الضامن', 0, 0, 1, 1, 1, 1, '{}', 17),
-(367, 26, 'customer_accommodation', 'select_dropdown', 'نوع الافامة \\ مدة الاقامة للعميل', 0, 0, 1, 1, 1, 1, '{\"options\":{\"single\":\"\\u062a\\u0645\\u0644\\u064a\\u0643\",\"married\":\"\\u0627\\u064a\\u062c\\u0627\\u0631 \\u062c\\u062f\\u064a\\u062f\",\"devorced\":\"\\u0627\\u064a\\u062c\\u0627\\u0631 \\u0642 \\/ \\u0645\\u062f\\u0629 \\u0627\\u0644\\u0627\\u0642\\u0627\\u0645\\u0629 \\u0645\\u0646  5: 1\\u0633\\u0646\\u0648\\u0627\\u062a\"}}', 7),
-(368, 26, 'grantor_accommodation', 'select_dropdown', 'نوع الاقامة \\ مدة الاقامة للضامن', 0, 0, 1, 1, 1, 1, '{\"options\":{\"single\":\"\\u062a\\u0645\\u0644\\u064a\\u0643\",\"married\":\"\\u0627\\u064a\\u062c\\u0627\\u0631 \\u062c\\u062f\\u064a\\u062f\",\"devorced\":\"\\u0627\\u064a\\u062c\\u0627\\u0631 \\u0642 \\/ \\u0645\\u062f\\u0629 \\u0627\\u0644\\u0627\\u0642\\u0627\\u0645\\u0629 \\u0645\\u0646  5: 1\\u0633\\u0646\\u0648\\u0627\\u062a\"}}', 18),
-(369, 26, 'customer_rental_price', 'number', 'قيمة الايجار للعميل', 0, 0, 1, 1, 1, 1, '{}', 8),
-(370, 26, 'grantor_rental_price', 'number', 'قيمة الايجار للضامن', 0, 0, 1, 1, 1, 1, '{}', 19),
-(371, 26, 'customer_facilities', 'text', 'ايصال المرافق للعميل', 0, 0, 1, 1, 1, 1, '{}', 9),
-(372, 26, 'grantor_facilities', 'text', 'ايصال المرافق الضامن', 0, 0, 1, 1, 1, 1, '{}', 20),
-(373, 26, 'customer_building_owner_name', 'text', 'اسم صاحب عقار العميل', 0, 0, 1, 1, 1, 1, '{}', 10),
-(374, 26, 'grantor_building_owner_name', 'text', 'اسم صاحب عقار الضامن', 0, 0, 1, 1, 1, 1, '{}', 21),
-(375, 26, 'customer_building_status', 'select_dropdown', 'حالة عقار العميل', 0, 0, 1, 1, 1, 1, '{\"options\":{\"hight\":\"\\u0631\\u0627\\u0642\\u064a\\u0629\",\"good\":\"\\u062c\\u064a\\u062f\\u0629\",\"middle\":\"\\u0645\\u062a\\u0648\\u0633\\u0637\\u0648\",\"poor\":\"\\u0645\\u062a\\u0648\\u0627\\u0636\\u0639\\u0629\"}}', 11),
-(376, 26, 'grantor_building_status', 'select_dropdown', 'حالة عقار الضامن', 0, 0, 1, 1, 1, 1, '{\"options\":{\"hight\":\"\\u0631\\u0627\\u0642\\u064a\\u0629\",\"good\":\"\\u062c\\u064a\\u062f\\u0629\",\"middle\":\"\\u0645\\u062a\\u0648\\u0633\\u0637\\u0648\",\"poor\":\"\\u0645\\u062a\\u0648\\u0627\\u0636\\u0639\\u0629\"}}', 22),
-(377, 26, 'customer_region_level', 'select_dropdown', 'مستوى منطقة العميل', 0, 0, 1, 1, 1, 1, '{\"options\":{\"hight\":\"\\u0631\\u0627\\u0642\\u064a\\u0629\",\"good\":\"\\u062c\\u064a\\u062f\\u0629\",\"middle\":\"\\u0645\\u062a\\u0648\\u0633\\u0637\\u0648\",\"poor\":\"\\u0645\\u062a\\u0648\\u0627\\u0636\\u0639\\u0629\"}}', 12),
-(378, 26, 'grantor_region_level', 'select_dropdown', 'مستوى منطقة الضامن', 0, 0, 1, 1, 1, 1, '{\"options\":{\"hight\":\"\\u0631\\u0627\\u0642\\u064a\\u0629\",\"good\":\"\\u062c\\u064a\\u062f\\u0629\",\"middle\":\"\\u0645\\u062a\\u0648\\u0633\\u0637\\u0648\",\"poor\":\"\\u0645\\u062a\\u0648\\u0627\\u0636\\u0639\\u0629\"}}', 23),
+(361, 26, 'customer_educational_qualification', 'text', 'المؤهل الدراسي للعميل', 0, 0, 1, 1, 1, 1, '{\"display\":{\"id\":\"tab1-1\"}}', 4),
+(362, 26, 'grantor_educational_qualification', 'text', 'المؤهل الدراسي للضامن', 0, 0, 1, 1, 1, 1, '{}', 18),
+(363, 26, 'customer_marital_status', 'select_dropdown', 'الحالة الاجتماعية للعميل', 0, 0, 1, 1, 1, 1, '{\"options\":{\"single\":\"\\u0623\\u0639\\u0632\\u0628\",\"married\":\"\\u0645\\u062a\\u0632\\u0648\\u062c\",\"devorced\":\"\\u0645\\u0637\\u0644\\u0642\",\"armal\":\"\\u0623\\u0631\\u0645\\u0644\"},\"display\":{\"id\":\"tabl-2\"}}', 5),
+(364, 26, 'grantor_marital_status', 'select_dropdown', 'الحالة الاجتماعية للضامن', 0, 0, 1, 1, 1, 1, '{\"options\":{\"single\":\"\\u0623\\u0639\\u0632\\u0628\",\"married\":\"\\u0645\\u062a\\u0632\\u0648\\u062c\",\"devorced\":\"\\u0645\\u0637\\u0644\\u0642\",\"armal\":\"\\u0623\\u0631\\u0645\\u0644\"}}', 19),
+(365, 26, 'customer_childrens_data', 'rich_text_box', 'بيانات ابناء العميل', 0, 0, 1, 1, 1, 1, '{\"display\":{\"id\":\"load_customer_childrens_data tab2-1\"}}', 6),
+(366, 26, 'grantor_childrens_data', 'rich_text_box', 'بيانات ابناء الضامن', 0, 0, 1, 1, 1, 1, '{\"display\":{\"id\":\"load_grantor_childrens_data\"}}', 20),
+(367, 26, 'customer_accommodation', 'select_dropdown', 'نوع اقامة العميل', 0, 0, 1, 1, 1, 1, '{\"options\":{\"owned\":\"\\u062a\\u0645\\u0644\\u064a\\u0643\",\"new-rent\":\"\\u0627\\u064a\\u062c\\u0627\\u0631 \\u062c\\u062f\\u064a\\u062f\",\"old-rent\":\"\\u0627\\u064a\\u062c\\u0627\\u0631 \\u0642\\u062f\\u064a\\u0645\"}}', 7),
+(368, 26, 'grantor_accommodation', 'select_dropdown', 'نوع اقامة الضامن', 0, 0, 1, 1, 1, 1, '{\"options\":{\"owned\":\"\\u062a\\u0645\\u0644\\u064a\\u0643\",\"new-rent\":\"\\u0627\\u064a\\u062c\\u0627\\u0631 \\u062c\\u062f\\u064a\\u062f\",\"old-rent\":\"\\u0627\\u064a\\u062c\\u0627\\u0631 \\u0642\\u062f\\u064a\\u0645\"}}', 21),
+(369, 26, 'customer_rental_price', 'number', 'قيمة الايجار للعميل', 0, 0, 1, 1, 1, 1, '{}', 11),
+(370, 26, 'grantor_rental_price', 'number', 'قيمة الايجار للضامن', 0, 0, 1, 1, 1, 1, '{}', 25),
+(371, 26, 'customer_facilities', 'text', 'ايصال المرافق للعميل', 0, 0, 1, 1, 1, 1, '{}', 12),
+(372, 26, 'grantor_facilities', 'text', 'ايصال المرافق الضامن', 0, 0, 1, 1, 1, 1, '{}', 26),
+(373, 26, 'customer_building_owner_name', 'text', 'اسم صاحب عقار العميل', 0, 0, 1, 1, 1, 1, '{}', 13),
+(374, 26, 'grantor_building_owner_name', 'text', 'اسم صاحب عقار الضامن', 0, 0, 1, 1, 1, 1, '{}', 27),
+(375, 26, 'customer_building_status', 'select_dropdown', 'حالة عقار العميل', 0, 0, 1, 1, 1, 1, '{\"options\":{\"hight\":\"\\u0631\\u0627\\u0642\\u064a\\u0629\",\"good\":\"\\u062c\\u064a\\u062f\\u0629\",\"middle\":\"\\u0645\\u062a\\u0648\\u0633\\u0637\\u0629\",\"poor\":\"\\u0645\\u062a\\u0648\\u0627\\u0636\\u0639\\u0629\"}}', 14),
+(376, 26, 'grantor_building_status', 'select_dropdown', 'حالة عقار الضامن', 0, 0, 1, 1, 1, 1, '{\"options\":{\"hight\":\"\\u0631\\u0627\\u0642\\u064a\\u0629\",\"good\":\"\\u062c\\u064a\\u062f\\u0629\",\"middle\":\"\\u0645\\u062a\\u0648\\u0633\\u0637\\u0648\",\"poor\":\"\\u0645\\u062a\\u0648\\u0627\\u0636\\u0639\\u0629\"}}', 28),
+(377, 26, 'customer_region_level', 'select_dropdown', 'مستوى منطقة العميل', 0, 0, 1, 1, 1, 1, '{\"options\":{\"hight\":\"\\u0631\\u0627\\u0642\\u064a\\u0629\",\"good\":\"\\u062c\\u064a\\u062f\\u0629\",\"middle\":\"\\u0645\\u062a\\u0648\\u0633\\u0637\\u0629\",\"poor\":\"\\u0645\\u062a\\u0648\\u0627\\u0636\\u0639\\u0629\"}}', 15),
+(378, 26, 'grantor_region_level', 'select_dropdown', 'مستوى منطقة الضامن', 0, 0, 1, 1, 1, 1, '{\"options\":{\"hight\":\"\\u0631\\u0627\\u0642\\u064a\\u0629\",\"good\":\"\\u062c\\u064a\\u062f\\u0629\",\"middle\":\"\\u0645\\u062a\\u0648\\u0633\\u0637\\u0648\",\"poor\":\"\\u0645\\u062a\\u0648\\u0627\\u0636\\u0639\\u0629\"}}', 29),
 (379, 33, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (380, 33, 'doc_date', 'timestamp', 'Doc Date', 0, 1, 1, 1, 1, 1, '{}', 2),
 (381, 33, 'customer_id', 'text', 'Customer Id', 0, 1, 1, 1, 1, 1, '{}', 4),
@@ -1102,21 +929,21 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (419, 32, 'installment_request', 'checkbox', 'طلب قسط جديد', 0, 0, 1, 1, 1, 1, '{}', 15),
 (420, 32, 'ir_product', 'text', 'اسم المنتج', 0, 0, 1, 1, 1, 1, '{}', 16),
 (421, 32, 'ir_amount', 'number', 'سعر المنتج', 0, 0, 1, 1, 1, 1, '{}', 17),
-(422, 32, 'delay_penalty', 'checkbox', 'طلب تأخير الغرامة', 0, 0, 1, 1, 1, 1, '{}', 18),
-(423, 32, 'dp_payement_date', 'date', 'تاريخ الاستحقاق الجديد', 0, 0, 1, 1, 1, 1, '{}', 19),
-(424, 32, 'db_dayes_no', 'number', 'عدد ايام التأخير', 0, 0, 1, 1, 1, 1, '{}', 20),
-(425, 32, 'early_payment', 'checkbox', 'دفع مبكر', 0, 0, 1, 1, 1, 1, '{}', 21),
-(426, 32, 'ep_total_months', 'number', 'عدد شهور التقسيط', 0, 0, 1, 1, 1, 1, '{}', 22),
-(427, 32, 'ep_e_months', 'number', 'عدد الشهور المراد دفعها', 0, 0, 1, 1, 1, 1, '{}', 23),
-(428, 32, 'ep_amount', 'number', 'المبلغ', 0, 0, 1, 1, 1, 1, '{}', 24),
-(429, 32, 'ep_discount', 'checkbox', 'خصم', 0, 0, 1, 1, 1, 1, '{}', 25),
-(430, 32, 'notes', 'rich_text_box', 'ملاحظات', 0, 0, 1, 1, 1, 1, '{}', 26),
-(431, 32, 'decision', 'select_dropdown', 'القرار', 0, 1, 1, 1, 1, 1, '{\"options\":{\"accepted\":\"\\u062a\\u0645 \\u0627\\u0644\\u0642\\u0628\\u0648\\u0644\",\"canceled\":\"\\u062a\\u0645 \\u0627\\u0644\\u0627\\u0644\\u063a\\u0627\\u0621\",\"hold\":\"\\u062a\\u0645 \\u0627\\u0644\\u062a\\u0639\\u0644\\u064a\\u0642\"}}', 27),
-(432, 32, 'notification_date', 'date', 'تاريخ تنبيه العميل', 0, 0, 1, 1, 1, 1, '{}', 28),
-(433, 32, 'excecution_date', 'date', 'تاريخ التنفيذ', 0, 0, 1, 1, 1, 1, '{}', 29),
-(434, 32, 'deleted_at', 'timestamp', 'تم الحذف في', 0, 0, 0, 0, 0, 0, '{}', 32),
-(435, 32, 'customer_request_belongsto_department_relationship', 'relationship', 'القسم', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Department\",\"table\":\"departments\",\"type\":\"belongsTo\",\"column\":\"departement_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 7),
-(436, 32, 'commuication', 'select_dropdown', 'طريقة التواصل', 0, 1, 1, 1, 1, 1, '{\"options\":{\"admin\":\"\\u0628\\u0644\\u063a \\u0627\\u0644\\u0627\\u062f\\u0645\\u0646\",\"oral\":\"\\u0634\\u0641\\u0647\\u0648\\u064a\\u0627\",\"written\":\"\\u0643\\u062a\\u0627\\u0628\\u064a\\u0627\"}}', 8),
+(422, 32, 'delay_penalty', 'checkbox', 'طلب غرامة', 0, 0, 1, 1, 1, 1, '{}', 20),
+(423, 32, 'dp_payement_date', 'date', 'تاريخ الاستحقاق الجديد', 0, 0, 1, 1, 1, 1, '{}', 25),
+(424, 32, 'db_dayes_no', 'number', 'عدد ايام التأخير', 0, 0, 1, 1, 1, 1, '{}', 26),
+(425, 32, 'early_payment', 'checkbox', 'دفع مبكر', 0, 0, 1, 1, 1, 1, '{}', 27),
+(426, 32, 'ep_total_months', 'number', 'عدد شهور التقسيط', 0, 0, 1, 1, 1, 1, '{}', 29),
+(427, 32, 'ep_e_months', 'number', 'عدد الشهور المراد دفعها', 0, 0, 1, 1, 1, 1, '{}', 30),
+(428, 32, 'ep_amount', 'number', 'المبلغ المراد تحصيله', 0, 0, 1, 1, 1, 1, '{}', 33),
+(429, 32, 'ep_discount', 'checkbox', 'خصم', 0, 0, 1, 1, 1, 1, '{}', 35),
+(430, 32, 'notes', 'rich_text_box', 'ملاحظات', 0, 0, 1, 1, 1, 1, '{}', 36),
+(431, 32, 'decision', 'select_dropdown', 'القرار', 0, 1, 1, 1, 1, 1, '{\"options\":{\"accepted\":\"\\u062a\\u0645 \\u0627\\u0644\\u0642\\u0628\\u0648\\u0644\",\"canceled\":\"\\u062a\\u0645 \\u0627\\u0644\\u0627\\u0644\\u063a\\u0627\\u0621\",\"hold\":\"\\u062a\\u0645 \\u0627\\u0644\\u062a\\u0639\\u0644\\u064a\\u0642\"}}', 37),
+(432, 32, 'notification_date', 'date', 'تاريخ تنبيه العميل', 0, 0, 1, 1, 1, 1, '{}', 38),
+(433, 32, 'excecution_date', 'date', 'تاريخ التنفيذ', 0, 0, 1, 1, 1, 1, '{}', 39),
+(434, 32, 'deleted_at', 'timestamp', 'تم الحذف في', 0, 0, 0, 0, 0, 0, '{}', 42),
+(435, 32, 'customer_request_belongsto_department_relationship', 'relationship', 'القسم', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Department\",\"table\":\"departments\",\"type\":\"belongsTo\",\"column\":\"departement_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 6),
+(436, 32, 'commuication', 'select_dropdown', 'طريقة التواصل', 0, 1, 1, 1, 1, 1, '{\"options\":{\"admin\":\"\\u0628\\u0644\\u063a \\u0627\\u0644\\u0627\\u062f\\u0645\\u0646\",\"oral\":\"\\u0634\\u0641\\u0647\\u0648\\u064a\\u0627\",\"written\":\"\\u0643\\u062a\\u0627\\u0628\\u064a\\u0627\"}}', 7),
 (437, 33, 'steps_action_belongsto_city_relationship', 'relationship', 'city', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\City\",\"table\":\"cities\",\"type\":\"belongsTo\",\"column\":\"city\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 9),
 (438, 34, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 0),
 (439, 34, 'customer_id', 'text', 'Customer Id', 0, 1, 1, 1, 1, 1, '{}', 2),
@@ -1144,7 +971,142 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (461, 35, 'note', 'text', 'ملاحظة السداد', 0, 1, 1, 1, 1, 1, '{}', 9),
 (462, 35, 'customer_id', 'text', 'Customer Id', 0, 1, 1, 1, 1, 1, '{}', 5),
 (463, 35, 'customer_payment_belongsto_customer_relationship', 'relationship', 'العميل', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Customer\",\"table\":\"customers\",\"type\":\"belongsTo\",\"column\":\"customer_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 3),
-(464, 35, 'customer_payment_belongsto_user_relationship', 'relationship', 'المستلم', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\User\",\"table\":\"users\",\"type\":\"belongsTo\",\"column\":\"user_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 10);
+(464, 35, 'customer_payment_belongsto_user_relationship', 'relationship', 'المستلم', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\User\",\"table\":\"users\",\"type\":\"belongsTo\",\"column\":\"user_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 10),
+(465, 16, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 0, '{}', 19),
+(466, 26, 'customer_accommodation_duration', 'text', 'مدة اقامة العميل', 0, 0, 1, 1, 1, 1, '{}', 8),
+(467, 26, 'grantor_accommodation_duration', 'text', 'مدة اقامة الضامن', 0, 0, 1, 1, 1, 1, '{}', 22),
+(468, 26, 'customer_accommodation_start', 'date', 'تاريخ بداية عقد ايجار العميل', 0, 0, 1, 1, 1, 1, '{}', 9),
+(469, 26, 'grantor_accommodation_start', 'date', 'تاريخ بداية عقد ايجار الضامن', 0, 0, 1, 1, 1, 1, '{}', 23),
+(470, 26, 'grantor_accommodation_end', 'date', 'تاريخ نهاية عقد ايجار الضامن', 0, 1, 1, 1, 1, 1, '{}', 24),
+(471, 26, 'customer_accommodation_end', 'date', 'تاريخ نهاية عقد ايجار العميل', 0, 0, 1, 1, 1, 1, '{}', 10),
+(472, 26, 'credit_limit', 'number', 'الحد الائتماني', 0, 1, 1, 1, 1, 1, '{}', 59),
+(473, 32, 'new_installment_profit', 'text', 'اضافه نسبه الفائده', 0, 1, 1, 1, 1, 1, '{}', 18),
+(474, 32, 'prepaid_amount', 'text', 'المبلغ المدفوع', 0, 1, 1, 1, 1, 1, '{}', 31),
+(475, 32, 'new_installment_credit_limit', 'text', 'الحد الائتماني', 0, 1, 1, 1, 1, 1, '{}', 19),
+(476, 32, 'all_over_amount', 'text', 'اجمالي المديونية', 0, 1, 1, 1, 1, 1, '{}', 28),
+(477, 32, 'paid_amount', 'text', 'Paid Amount', 0, 0, 0, 0, 0, 0, '{}', 43),
+(478, 32, 'rest_amount', 'text', 'المبلغ المتبقي', 0, 1, 1, 1, 1, 1, '{}', 32),
+(479, 32, 'discount_precentatge', 'text', 'نسبة الخصم', 0, 1, 1, 1, 1, 1, '{}', 34),
+(480, 32, 'penalty_amount', 'text', 'قيمة الغرامة', 0, 1, 1, 1, 1, 1, '{}', 22),
+(481, 32, 'pay_penalty_date', 'text', 'ميعاد سداد الغرامة', 0, 1, 1, 1, 1, 1, '{}', 21),
+(482, 32, 'penalty_profit_discount', 'text', 'نسبة الخصم', 0, 1, 1, 1, 1, 1, '{}', 24),
+(483, 32, 'restructure_installments_count', 'text', 'عدد اقساط الهيكلة', 0, 1, 1, 1, 1, 1, '{}', 23),
+(484, 25, 'installment_date', 'date', 'تاريخ التقسيط', 0, 1, 1, 1, 1, 1, '{}', 12),
+(485, 25, 'notes', 'rich_text_box', 'ملاحظات', 0, 1, 1, 1, 1, 1, '{}', 13),
+(486, 33, 'status', 'select_dropdown', 'Status', 0, 1, 1, 1, 1, 1, '{\"options\":{\"option1\":\"Accepted\",\"option2\":\"Refues\",\"option3\":\"Hold\"}}', 31),
+(487, 31, 'selling_bill_number', 'text', 'رقم فاتورة البيع', 0, 1, 1, 1, 1, 1, '{}', 14),
+(488, 31, 'selling_bill_date', 'date', 'تاريخ فاتورة البيع', 0, 1, 1, 1, 1, 1, '{}', 15),
+(489, 31, 'selling_bill_type', 'select_dropdown', 'نوع البيع', 0, 1, 1, 1, 1, 1, '{\"options\":{\"option1\":\"\\u0643\\u0627\\u0634\",\"option2\":\"\\u062a\\u0642\\u0633\\u064a\\u0637\"}}', 18),
+(490, 31, 'added_taxes', 'number', 'الضريبة المضافة', 0, 1, 1, 1, 1, 1, '{\"display\":{\"id\":\"additional_profit_id\"},\"default\":0,\"min\":0}', 19),
+(491, 31, 'overall_credit_limit', 'number', 'الحد الائتماني الكلي', 0, 1, 1, 1, 1, 1, '{}', 20),
+(492, 31, 'used_credit_limit', 'number', 'الحد الائتماني المستخدم', 0, 1, 1, 1, 1, 1, '{}', 21),
+(493, 31, 'reset_credit_limit', 'number', 'الحد الائتماني المتبقي', 0, 1, 1, 1, 1, 1, '{}', 22),
+(494, 31, 'salesperson_id', 'text', 'Salesperson Id', 0, 1, 1, 1, 1, 1, '{}', 23),
+(495, 31, 'profit_discount', 'number', 'خصم على الفايدة', 0, 1, 1, 1, 1, 1, '{}', 24),
+(496, 31, 'order_belongsto_user_relationship', 'relationship', 'مندوب المبيعات', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\User\",\"table\":\"users\",\"type\":\"belongsTo\",\"column\":\"salesperson_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 26),
+(497, 31, 'code', 'text', 'الكود', 0, 1, 1, 1, 0, 0, '{}', 4),
+(498, 37, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(499, 37, 'code', 'text', 'الكود', 0, 1, 1, 1, 0, 0, '{}', 3),
+(500, 37, 'name', 'text', 'الاسم', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":[\"required\"]}}', 2),
+(501, 37, 'national_id', 'number', 'رقم البطاقة', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":[\"required\",\"min:14\",\"max:14\"]}}', 5),
+(502, 37, 'phone', 'number', 'رقم التليفون', 0, 1, 1, 1, 1, 1, '{}', 7),
+(503, 37, 'phone_2', 'number', 'رقم التليفون 2', 0, 1, 1, 1, 1, 1, '{}', 8),
+(504, 37, 'notes', 'text_area', 'ملاحظات', 0, 1, 1, 1, 1, 1, '{}', 22),
+(505, 37, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 0, 0, 1, '{}', 16),
+(506, 37, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 17),
+(507, 37, 'address', 'text_area', 'العنوان', 0, 1, 1, 1, 1, 1, '{}', 15),
+(508, 37, 'region_id', 'text', 'Region Id', 0, 1, 1, 1, 1, 1, '{}', 18),
+(509, 37, 'national_id_end_date', 'date', 'تاريخ انتهاء البطاقة', 0, 1, 1, 1, 1, 1, '{}', 6);
+INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, `required`, `browse`, `read`, `edit`, `add`, `delete`, `details`, `order`) VALUES
+(510, 37, 'governorate_id', 'text', 'Governorate Id', 0, 1, 1, 1, 1, 1, '{}', 19),
+(511, 37, 'landline', 'number', 'التليفون الارضي', 0, 1, 1, 1, 1, 1, '{}', 9),
+(512, 37, 'work_number', 'number', 'تليفون العمل', 0, 1, 1, 1, 1, 1, '{}', 10),
+(513, 37, 'whatsapp_number', 'number', 'رقم الواتس اب', 0, 1, 1, 1, 1, 1, '{}', 11),
+(514, 37, 'city_id', 'text', 'City Id', 0, 1, 1, 1, 1, 1, '{}', 20),
+(515, 37, 'birth_date', 'date', 'تاريخ الميلاد', 0, 1, 1, 1, 1, 1, '{}', 4),
+(516, 37, 'deleted_at', 'timestamp', 'تم الحذف في', 0, 0, 0, 0, 0, 0, '{}', 21),
+(517, 37, 'grantor_belongsto_governement_relationship', 'relationship', 'المحافظة', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Governement\",\"table\":\"governements\",\"type\":\"belongsTo\",\"column\":\"governorate_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 12),
+(518, 37, 'grantor_belongsto_city_relationship', 'relationship', 'المدينة', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\City\",\"table\":\"cities\",\"type\":\"belongsTo\",\"column\":\"city_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 13),
+(519, 37, 'grantor_belongsto_region_relationship', 'relationship', 'المنطقة', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Region\",\"table\":\"regions\",\"type\":\"belongsTo\",\"column\":\"region_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 14),
+(524, 45, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(525, 45, 'customer_id', 'text', 'Customer Id', 0, 1, 1, 1, 1, 1, '{}', 4),
+(526, 45, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 1, 0, 1, '{}', 17),
+(527, 45, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 18),
+(528, 45, 'request_date', 'date', 'تاريخ الطلب', 0, 1, 1, 1, 1, 1, '{}', 5),
+(529, 45, 'due_date', 'date', 'تاريخ الاستحقاق', 0, 0, 1, 1, 1, 1, '{}', 6),
+(530, 45, 'departement_id', 'text', 'Departement Id', 0, 1, 1, 1, 1, 1, '{}', 7),
+(531, 45, 'commuication_type', 'select_dropdown', 'طريقة التواصل', 0, 1, 1, 1, 1, 1, '{\"options\":{\"admin\":\"\\u0628\\u0644\\u063a \\u0627\\u0644\\u0627\\u062f\\u0645\\u0646\",\"oral\":\"\\u0634\\u0641\\u0647\\u0648\\u064a\\u0627\",\"written\":\"\\u0643\\u062a\\u0627\\u0628\\u064a\\u0627\"}}', 8),
+(532, 45, 'grace', 'number', 'عدد الايام قبل دفع اول قسط', 0, 0, 1, 1, 1, 1, '{}', 9),
+(533, 45, 'new_due_date', 'date', 'الموعد الجديد المطلوب', 0, 0, 1, 1, 1, 1, '{}', 10),
+(534, 45, 'diff_days', 'number', 'عدد ايام التأجيل', 0, 0, 1, 1, 1, 1, '{}', 11),
+(535, 45, 'total_grace', 'number', 'اجمالي الايام المتأخرة', 0, 0, 1, 1, 1, 1, '{}', 12),
+(536, 45, 'customer_notify_date', 'date', 'تاريخ تنبيه العميل', 0, 0, 1, 1, 1, 1, '{}', 13),
+(537, 45, 'decision', 'select_dropdown', 'القرار', 0, 0, 1, 1, 1, 1, '{\"options\":{\"accepted\":\"\\u062a\\u0645 \\u0627\\u0644\\u0642\\u0628\\u0648\\u0644\",\"canceled\":\"\\u062a\\u0645 \\u0627\\u0644\\u0627\\u0644\\u063a\\u0627\\u0621\",\"hold\":\"\\u062a\\u0645 \\u0627\\u0644\\u062a\\u0639\\u0644\\u064a\\u0642\"}}', 14),
+(538, 45, 'ex_date', 'date', 'تاريخ تنفيذ الطلب', 0, 0, 1, 1, 1, 1, '{}', 15),
+(539, 45, 'notes', 'text_area', 'ملاحظات', 0, 0, 1, 1, 1, 1, '{}', 16),
+(540, 45, 'request_change_due_date_belongsto_customer_relationship', 'relationship', 'العميل', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Customer\",\"table\":\"customers\",\"type\":\"belongsTo\",\"column\":\"customer_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 2),
+(541, 45, 'request_change_due_date_belongsto_department_relationship', 'relationship', 'القسم', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Department\",\"table\":\"departments\",\"type\":\"belongsTo\",\"column\":\"departement_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 3),
+(542, 46, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(543, 46, 'customer_id', 'text', 'Customer Id', 0, 1, 1, 1, 1, 1, '{}', 4),
+(544, 46, 'request_date', 'date', 'تاريخ الطلب', 0, 1, 1, 1, 1, 1, '{}', 5),
+(545, 46, 'due_date', 'date', 'تاريخ الاستحقاق', 0, 0, 1, 1, 1, 1, '{}', 6),
+(546, 46, 'departement_id', 'text', 'Departement Id', 0, 1, 1, 1, 1, 1, '{}', 7),
+(547, 46, 'commuication_type', 'select_dropdown', 'طريقة التواصل', 0, 1, 1, 1, 1, 1, '{\"options\":{\"admin\":\"\\u0628\\u0644\\u063a \\u0627\\u0644\\u0627\\u062f\\u0645\\u0646\",\"oral\":\"\\u0634\\u0641\\u0647\\u0648\\u064a\\u0627\",\"written\":\"\\u0643\\u062a\\u0627\\u0628\\u064a\\u0627\"}}', 8),
+(548, 46, 'product_name', 'text', 'اسم المنتج', 0, 0, 1, 1, 1, 1, '{}', 9),
+(549, 46, 'product_price', 'number', 'سعر المنتج', 0, 0, 1, 1, 1, 1, '{}', 10),
+(550, 46, 'profit_percentage', 'number', 'نسبة الربح', 0, 0, 1, 1, 1, 1, '{}', 11),
+(551, 46, 'credit_limit', 'number', 'الحد الائتماني', 0, 0, 1, 1, 1, 1, '{}', 12),
+(552, 46, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 1, 0, 1, '{}', 17),
+(553, 46, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 18),
+(554, 47, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(555, 47, 'customer_id', 'text', 'Customer Id', 0, 1, 1, 1, 1, 1, '{}', 2),
+(556, 47, 'request_date', 'date', 'تاريخ الطلب', 0, 1, 1, 1, 1, 1, '{}', 5),
+(557, 47, 'due_date', 'date', 'تاريخ الاستحقاق', 0, 0, 1, 1, 1, 1, '{}', 6),
+(558, 47, 'departement_id', 'text', 'Departement Id', 0, 1, 1, 1, 1, 1, '{}', 7),
+(559, 47, 'commuication_type', 'select_dropdown', 'طريقة التواصل', 0, 1, 1, 1, 1, 1, '{\"options\":{\"admin\":\"\\u0628\\u0644\\u063a \\u0627\\u0644\\u0627\\u062f\\u0645\\u0646\",\"oral\":\"\\u0634\\u0641\\u0647\\u0648\\u064a\\u0627\",\"written\":\"\\u0643\\u062a\\u0627\\u0628\\u064a\\u0627\"}}', 8),
+(560, 47, 'penalty_due_date', 'date', 'تاريخ استحقاق الغرامة', 0, 0, 1, 1, 1, 1, '{}', 9),
+(561, 47, 'penalty_amount', 'number', 'قيمة الغرامة', 0, 1, 1, 1, 1, 1, '{}', 10),
+(562, 47, 'restucture_installments_count', 'number', 'عدد اقساط الهيكلة', 0, 0, 1, 1, 1, 1, '{}', 11),
+(563, 47, 'discount_percentage', 'number', 'نسبة الخصم', 0, 0, 1, 1, 1, 1, '{}', 12),
+(564, 47, 'new_due_date', 'date', 'تاريخ الاستحقاق الجديد', 0, 1, 1, 1, 1, 1, '{}', 13),
+(565, 47, 'diff_days', 'number', 'عدد ايام التأخير', 0, 0, 1, 1, 1, 1, '{}', 14),
+(566, 47, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 1, 0, 1, '{}', 19),
+(567, 47, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 20),
+(568, 47, 'decision', 'select_dropdown', 'القرار', 0, 0, 1, 1, 1, 1, '{\"options\":{\"accepted\":\"\\u062a\\u0645 \\u0627\\u0644\\u0642\\u0628\\u0648\\u0644\",\"canceled\":\"\\u062a\\u0645 \\u0627\\u0644\\u0627\\u0644\\u063a\\u0627\\u0621\",\"hold\":\"\\u062a\\u0645 \\u0627\\u0644\\u062a\\u0639\\u0644\\u064a\\u0642\"}}', 15),
+(569, 47, 'customer_notify_date', 'date', 'تاريخ تنبيه العميل', 0, 1, 1, 1, 1, 1, '{}', 16),
+(570, 47, 'ex_date', 'date', 'تاريخ تنفيذ الطلب', 0, 1, 1, 1, 1, 1, '{}', 17),
+(571, 47, 'notes', 'text_area', 'ملاحظات', 0, 0, 1, 1, 1, 1, '{}', 18),
+(572, 47, 'request_penalty_belongsto_customer_relationship', 'relationship', 'العميل', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Customer\",\"table\":\"customers\",\"type\":\"belongsTo\",\"column\":\"customer_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 3),
+(573, 47, 'request_penalty_belongsto_department_relationship', 'relationship', 'القسم', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Department\",\"table\":\"departments\",\"type\":\"belongsTo\",\"column\":\"departement_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 4),
+(574, 48, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(575, 48, 'customer_id', 'text', 'Customer Id', 0, 1, 1, 1, 1, 1, '{}', 4),
+(576, 48, 'request_date', 'date', 'تاريخ الطلب', 0, 1, 1, 1, 1, 1, '{}', 5),
+(577, 48, 'due_date', 'date', 'تاريخ الاستحقاق', 0, 0, 1, 1, 1, 1, '{}', 6),
+(578, 48, 'departement_id', 'text', 'Departement Id', 0, 1, 1, 1, 1, 1, '{}', 7),
+(579, 48, 'communication_type', 'select_dropdown', 'طريقة التواصل', 0, 1, 1, 1, 1, 1, '{\"options\":{\"admin\":\"\\u0628\\u0644\\u063a \\u0627\\u0644\\u0627\\u062f\\u0645\\u0646\",\"oral\":\"\\u0634\\u0641\\u0647\\u0648\\u064a\\u0627\",\"written\":\"\\u0643\\u062a\\u0627\\u0628\\u064a\\u0627\"}}', 8),
+(580, 48, 'total_installments_amount', 'number', 'اجمالي المديونية', 0, 0, 1, 1, 1, 1, '{}', 9),
+(581, 48, 'installment_months', 'number', 'عدد شهور التقسيط', 0, 0, 1, 1, 1, 1, '{}', 10),
+(582, 48, 'installments_prepaid', 'number', 'عدد الشهور المراد دفعها', 0, 0, 1, 1, 1, 1, '{}', 11),
+(583, 48, 'paid_amount', 'number', 'المبلغ المدفوع', 0, 1, 1, 1, 1, 1, '{}', 12),
+(584, 48, 'rest_amount', 'number', 'المبلغ المتبقي', 0, 0, 1, 1, 1, 1, '{}', 13),
+(585, 48, 'overall_amount', 'number', 'المبلغ المراد تحصيلة', 0, 0, 1, 1, 1, 1, '{}', 14),
+(586, 48, 'discount_percentage', 'number', 'نسبة الخصم', 0, 0, 1, 1, 1, 1, '{}', 15),
+(587, 48, 'decision', 'select_dropdown', 'القرار', 0, 1, 1, 1, 1, 1, '{\"options\":{\"accepted\":\"\\u062a\\u0645 \\u0627\\u0644\\u0642\\u0628\\u0648\\u0644\",\"canceled\":\"\\u062a\\u0645 \\u0627\\u0644\\u0627\\u0644\\u063a\\u0627\\u0621\",\"hold\":\"\\u062a\\u0645 \\u0627\\u0644\\u062a\\u0639\\u0644\\u064a\\u0642\"}}', 16),
+(588, 48, 'customer_notify_date', 'date', 'تاريخ تنبيه العميل', 0, 0, 1, 1, 1, 1, '{}', 17),
+(589, 48, 'ex_date', 'date', 'تاريخ تنفيذ الطلب', 0, 0, 1, 1, 1, 1, '{}', 18),
+(590, 48, 'notes', 'text_area', 'ملاحظات', 0, 0, 1, 1, 1, 1, '{}', 19),
+(591, 48, 'created_at', 'timestamp', 'تم الانشاء في', 0, 1, 1, 1, 0, 1, '{}', 20),
+(592, 48, 'updated_at', 'timestamp', 'تم التعديل في', 0, 0, 0, 0, 0, 0, '{}', 21),
+(593, 46, 'customer_notify_date', 'date', 'تاريخ تنبيه العميل', 0, 0, 1, 1, 1, 1, '{}', 13),
+(594, 46, 'decision', 'select_dropdown', 'القرار', 0, 0, 1, 1, 1, 1, '{\"options\":{\"accepted\":\"\\u062a\\u0645 \\u0627\\u0644\\u0642\\u0628\\u0648\\u0644\",\"canceled\":\"\\u062a\\u0645 \\u0627\\u0644\\u0627\\u0644\\u063a\\u0627\\u0621\",\"hold\":\"\\u062a\\u0645 \\u0627\\u0644\\u062a\\u0639\\u0644\\u064a\\u0642\"}}', 14),
+(595, 46, 'ex_date', 'date', 'تاريخ تنفيذ الطلب', 0, 1, 1, 1, 1, 1, '{}', 15),
+(596, 46, 'note', 'text_area', 'ملاحظة', 0, 0, 1, 1, 1, 1, '{}', 16),
+(597, 46, 'request_new_installment_belongsto_customer_relationship', 'relationship', 'العميل', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Customer\",\"table\":\"customers\",\"type\":\"belongsTo\",\"column\":\"customer_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 2),
+(598, 46, 'request_new_installment_belongsto_department_relationship', 'relationship', 'القسم', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Department\",\"table\":\"departments\",\"type\":\"belongsTo\",\"column\":\"departement_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 3),
+(599, 48, 'request_prepaid_installment_belongsto_customer_relationship', 'relationship', 'العميل', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Customer\",\"table\":\"customers\",\"type\":\"belongsTo\",\"column\":\"customer_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 2),
+(600, 48, 'request_prepaid_installment_belongsto_department_relationship', 'relationship', 'القسم', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Department\",\"table\":\"departments\",\"type\":\"belongsTo\",\"column\":\"departement_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 3),
+(601, 31, 'penalty_amount', 'number', 'قيمة الغرامة اليومية', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"},\"display\":{\"id\":\"order_daily_penalty_amount\"},\"default\":0,\"min\":0}', 17),
+(602, 19, 'max_credit_limit', 'number', 'الحد الاقصى للائتمان', 0, 1, 1, 1, 1, 1, '{}', 16);
 
 -- --------------------------------------------------------
 
@@ -1182,23 +1144,29 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (5, 'posts', 'posts', 'Post', 'Posts', 'voyager-news', 'TCG\\Voyager\\Models\\Post', 'TCG\\Voyager\\Policies\\PostPolicy', '', '', 1, 0, NULL, '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
 (6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
 (14, 'visitors', 'visitors', 'الزائر', 'الزوار', 'voyager-people', 'App\\Visitor', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"id\",\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-03-11 13:49:23', '2023-04-07 23:13:50'),
-(16, 'customers', 'customers', 'العميل', 'العملاء', 'voyager-group', 'App\\Customer', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"id\",\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":\"national_id\",\"scope\":null}', '2023-03-11 14:16:21', '2023-04-16 01:02:21'),
-(19, 'customer_credits', 'customer-credits', 'تقارير الائتمان', 'تقارير الائتمانات', 'voyager-credit-card', 'App\\CustomerCredit', NULL, '\\App\\Http\\Controllers\\Admin\\CustomersCreditsControllers', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-03-11 20:56:26', '2023-04-13 18:49:57'),
+(16, 'customers', 'customers', 'العميل', 'العملاء', 'voyager-group', 'App\\Customer', NULL, '\\App\\Http\\Controllers\\Admin\\CustomersCustomController', NULL, 1, 0, '{\"order_column\":\"id\",\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":\"national_id\",\"scope\":null}', '2023-03-11 14:16:21', '2023-08-16 04:59:11'),
+(19, 'customer_credits', 'customer-credits', 'تقارير الائتمان', 'تقارير الائتمانات', 'voyager-credit-card', 'App\\CustomerCredit', NULL, '\\App\\Http\\Controllers\\Admin\\CustomersCreditsControllers', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-03-11 20:56:26', '2023-10-04 15:02:38'),
 (21, 'customer_legal', 'customer-legal', 'Customer Legal', 'Customer Legals', NULL, 'App\\CustomerLegal', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2023-03-11 21:16:20', '2023-03-11 21:16:20'),
-(22, 'customer_legals', 'customer-legals', 'قانوني', 'القانوني', 'voyager-milestone', 'App\\CustomerLegal', NULL, '\\App\\Http\\Controllers\\Admin\\CustomersLegalControllers', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-03-11 21:17:18', '2023-04-08 00:04:47'),
+(22, 'customer_legals', 'customer-legals', 'قانوني', 'القانوني', 'voyager-milestone', 'App\\CustomerLegal', NULL, '\\App\\Http\\Controllers\\Admin\\CustomersLegalControllers', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-03-11 21:17:18', '2023-10-07 10:25:07'),
 (23, 'departments', 'departments', 'قسم', 'الاقسام', 'voyager-browser', 'App\\Department', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-03-16 20:53:19', '2023-03-16 20:56:55'),
-(24, 'customer_care', 'customer-care', 'خدمة العميل', 'خدمة العملاء', 'voyager-phone', 'App\\CustomerCare', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-03-16 21:01:22', '2023-04-08 00:06:46'),
-(25, 'customer_installment_requests', 'customer-installment-requests', 'طلب التقسيط', 'طلبات التقسيط', 'voyager-group', 'App\\CustomerInstallmentRequest', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-03-19 09:23:10', '2023-04-07 23:14:55'),
-(26, 'customer_credits_data', 'customer-credits-data', 'بيانات الائتمان', 'بيانات الائتمانات', 'voyager-data', 'App\\CustomerCreditsData', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-03-28 22:17:45', '2023-04-16 13:59:26'),
+(24, 'customer_care', 'customer-care', 'خدمة العميل', 'خدمة العملاء', 'voyager-phone', 'App\\CustomerCare', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-03-16 21:01:22', '2023-10-07 10:34:13'),
+(25, 'customer_installment_requests', 'customer-installment-requests', 'طلب التقسيط', 'طلبات التقسيط', 'voyager-group', 'App\\CustomerInstallmentRequest', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-03-19 09:23:10', '2023-07-20 12:27:11'),
+(26, 'customer_credits_data', 'customer-credits-data', 'بيانات الائتمان', 'بيانات الائتمانات', 'voyager-data', 'App\\CustomerCreditsData', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-03-28 22:17:45', '2023-10-05 14:58:34'),
 (27, 'traders', 'traders', 'التاجر', 'التجار', 'voyager-warning', 'App\\Trader', NULL, '\\App\\Http\\Controllers\\Admin\\TradersController', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-04-05 15:02:58', '2023-04-15 22:51:04'),
-(28, 'governements', 'governements', 'المحافظة', 'المحافظات', 'voyager-location', 'App\\Governement', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2023-04-07 13:26:48', '2023-04-07 13:26:48'),
-(29, 'cities', 'cities', 'المدينة', 'المدن', 'voyager-bookmark', 'App\\City', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-04-07 13:28:20', '2023-04-07 13:44:44'),
-(30, 'regions', 'regions', 'المنطقة', 'المناظق', 'voyager-leaf', 'App\\Region', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-04-07 13:31:15', '2023-04-07 13:45:36'),
-(31, 'orders', 'orders', 'الاوردر', 'الاوردرات', 'voyager-shop', 'App\\Order', NULL, '\\App\\Http\\Controllers\\Admin\\OrdersController', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-04-08 11:05:54', '2023-04-17 15:50:26'),
-(32, 'customer_requests', 'customer-requests', 'طلب العميل', 'طلبات العميل', 'voyager-chat', 'App\\CustomerRequest', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-04-12 16:40:24', '2023-04-22 01:52:30'),
-(33, 'steps_actions', 'steps-actions', 'Steps Action', 'Steps Actions', 'voyager-params', 'App\\StepsAction', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-04-16 13:08:34', '2023-04-22 01:52:59'),
+(28, 'governements', 'governements', 'المحافظة', 'المحافظات', 'voyager-location', 'App\\Governement', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-04-07 13:26:48', '2023-08-20 08:10:18'),
+(29, 'cities', 'cities', 'المدينة', 'المدن', 'voyager-bookmark', 'App\\City', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-04-07 13:28:20', '2023-08-20 08:11:01'),
+(30, 'regions', 'regions', 'المنطقة', 'المناظق', 'voyager-leaf', 'App\\Region', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-04-07 13:31:15', '2023-08-20 08:11:17'),
+(31, 'orders', 'orders', 'الاوردر', 'الاوردرات', 'voyager-shop', 'App\\Order', NULL, '\\App\\Http\\Controllers\\Admin\\OrdersController', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-04-08 11:05:54', '2023-08-19 11:07:24'),
+(32, 'customer_requests', 'customer-requests', 'طلب العميل', 'طلبات العميل', 'voyager-chat', 'App\\CustomerRequest', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-04-12 16:40:24', '2023-08-19 09:58:39'),
+(33, 'steps_actions', 'steps-actions', 'Steps Action', 'Steps Actions', 'voyager-params', 'App\\StepsAction', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-04-16 13:08:34', '2023-07-20 12:31:12'),
 (34, 'customer_installments', 'customer-installments', 'Customer Installment', 'Customer Installments', NULL, 'App\\CustomerInstallment', NULL, '\\App\\Http\\Controllers\\Admin\\InstallmentsController', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-04-22 00:50:31', '2023-04-22 00:57:38'),
-(35, 'customer_payments', 'customer-payments', 'المدفوع', 'المدفوعات', 'voyager-credit-cards', 'App\\CustomerPayment', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-04-23 14:09:37', '2023-04-28 21:01:52');
+(35, 'customer_payments', 'customer-payments', 'الايراد', 'الايرادات', 'voyager-credit-cards', 'App\\CustomerPayment', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-04-23 14:09:37', '2023-08-16 09:14:04'),
+(37, 'grantors', 'grantors', 'Grantor', 'Grantors', NULL, 'App\\Grantor', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-08-16 05:28:15', '2023-10-07 10:31:05'),
+(43, 'change_due_date_request', 'change-due-date-request', 'Change Due Date Request', 'Change Due Date Requests', NULL, 'App\\ChangeDueDateRequest', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2023-08-19 07:54:28', '2023-08-19 07:54:28'),
+(45, 'request_change_due_dates', 'request-change-due-dates', 'طلب تغيير موعد دفع قسط', 'طلب تغيير موعد دفع قسط', 'voyager-boat', 'App\\RequestChangeDueDate', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-08-19 08:27:22', '2023-08-19 10:09:24'),
+(46, 'request_new_installments', 'request-new-installments', 'طلب قسط جديد', 'طلب اقساط جديدة', 'voyager-shop', 'App\\RequestNewInstallment', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-08-19 08:54:20', '2023-08-19 10:05:42'),
+(47, 'request_penalties', 'request-penalties', 'طلب غرامة', 'طلبات غرامة', 'voyager-wineglass', 'App\\RequestPenalty', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-08-19 09:14:38', '2023-08-19 09:58:31'),
+(48, 'request_prepaid_installments', 'request-prepaid-installments', 'دفع مبكر', 'دفع مبكر', 'voyager-credit-card', 'App\\RequestPrepaidInstallment', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-08-19 09:52:27', '2023-08-19 10:08:36');
 
 -- --------------------------------------------------------
 
@@ -1256,6 +1224,44 @@ INSERT INTO `governements` (`id`, `name`, `code`, `details`, `created_at`, `upda
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `grantors`
+--
+
+CREATE TABLE `grantors` (
+  `id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `national_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone_2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `notes` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `address` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `region_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `national_id_end_date` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `governorate_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `landline` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `work_number` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `whatsapp_number` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `city_id` int(11) DEFAULT NULL,
+  `birth_date` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `grantors`
+--
+
+INSERT INTO `grantors` (`id`, `code`, `name`, `national_id`, `phone`, `phone_2`, `notes`, `created_at`, `updated_at`, `address`, `region_id`, `national_id_end_date`, `governorate_id`, `landline`, `work_number`, `whatsapp_number`, `city_id`, `birth_date`, `deleted_at`) VALUES
+(0, NULL, 'محمد مصطفى رضا', '58688254025664', '01111002808', '283', '192', '2023-10-07 10:31:55', '2023-10-07 10:31:55', '179 Franecki Cliffs', '1', NULL, '1', '475', '84', '638', 2, '2023-10-02 00:00:00', NULL),
+(5, NULL, 'امال فهمى السيد على', '11111111111111', '01289766058', NULL, NULL, '2023-04-29 08:10:08', '2023-07-22 05:40:42', '61 شارع السيد عبداللطيف /  طنطا ثانى / الغربية', NULL, '2023-07-22 00:00:00', NULL, NULL, NULL, NULL, NULL, '2023-07-22 00:00:00', NULL),
+(6, NULL, 'محمد عبد الغنى السيد بكر', '26812151600151', '01222831600', NULL, NULL, '2023-04-29 10:42:56', '2023-04-29 10:42:56', 'طنطا - ش الاستاد', '1', '2023-07-20 00:00:00', '1', '0403569033', NULL, '01222831600', 1, '1999-02-01 00:00:00', NULL),
+(7, NULL, 'تقى محمد عبد الغنى بكر', '29501011629189', '01111786229', NULL, NULL, '2023-04-29 10:44:14', '2023-04-29 10:44:32', 'طنطا ش الاستاد', '1', NULL, '1', '0403569033', NULL, '01111786229', 1, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `menus`
 --
 
@@ -1301,34 +1307,39 @@ CREATE TABLE `menu_items` (
 
 INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
 (1, 1, 'الرئيسية', '', '_self', 'voyager-boat', '#000000', NULL, 1, '2023-03-05 14:11:17', '2023-03-11 16:39:17', 'voyager.dashboard', 'null'),
-(2, 1, 'الوسائط', '', '_self', 'voyager-images', '#000000', NULL, 14, '2023-03-05 14:11:17', '2023-04-23 14:12:22', 'voyager.media.index', 'null'),
-(3, 1, 'المستخدمين', '', '_self', 'voyager-person', '#000000', NULL, 15, '2023-03-05 14:11:17', '2023-04-23 14:12:22', 'voyager.users.index', 'null'),
-(4, 1, 'القدرات', '', '_self', 'voyager-lock', '#000000', NULL, 16, '2023-03-05 14:11:17', '2023-04-23 14:12:19', 'voyager.roles.index', 'null'),
+(2, 1, 'الوسائط', '', '_self', 'voyager-images', '#000000', NULL, 15, '2023-03-05 14:11:17', '2023-08-19 08:44:52', 'voyager.media.index', 'null'),
+(3, 1, 'المستخدمين', '', '_self', 'voyager-person', '#000000', NULL, 16, '2023-03-05 14:11:17', '2023-08-19 09:53:26', 'voyager.users.index', 'null'),
+(4, 1, 'القدرات', '', '_self', 'voyager-lock', '#000000', NULL, 17, '2023-03-05 14:11:17', '2023-08-19 09:53:26', 'voyager.roles.index', 'null'),
 (6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 19, 3, '2023-03-05 14:11:17', '2023-03-11 14:25:31', 'voyager.menus.index', NULL),
 (7, 1, 'Database', '', '_self', 'voyager-data', NULL, 19, 4, '2023-03-05 14:11:17', '2023-03-11 14:25:31', 'voyager.database.index', NULL),
 (8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 19, 5, '2023-03-05 14:11:17', '2023-03-11 14:25:31', 'voyager.compass.index', NULL),
 (9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 19, 2, '2023-03-05 14:11:17', '2023-03-11 14:25:31', 'voyager.bread.index', NULL),
 (10, 1, 'الاعدادات', '', '_self', 'voyager-settings', '#000000', 19, 1, '2023-03-05 14:11:17', '2023-03-11 16:42:35', 'voyager.settings.index', 'null'),
-(17, 1, 'الزوار', '', '_self', 'voyager-people', '#000000', NULL, 4, '2023-03-11 13:49:23', '2023-03-16 21:09:24', 'voyager.visitors.index', 'null'),
+(17, 1, 'الزوار', '', '_self', 'voyager-people', '#000000', NULL, 5, '2023-03-11 13:49:23', '2023-08-16 05:41:16', 'voyager.visitors.index', 'null'),
 (18, 1, 'العملاء', '', '_self', 'voyager-group', '#000000', NULL, 2, '2023-03-11 14:16:22', '2023-03-11 17:07:53', 'voyager.customers.index', 'null'),
-(19, 1, 'الادارة', '', '_self', 'voyager-tools', '#000000', NULL, 18, '2023-03-11 14:24:52', '2023-04-23 14:12:19', NULL, ''),
-(21, 1, 'الاستعلامات', '', '_self', 'voyager-flashlight', '#000000', NULL, 12, '2023-03-11 17:08:38', '2023-04-23 14:12:25', NULL, ''),
+(19, 1, 'الادارة', '', '_self', 'voyager-tools', '#000000', NULL, 19, '2023-03-11 14:24:52', '2023-08-19 09:53:26', NULL, ''),
+(21, 1, 'الاستعلامات', '', '_self', 'voyager-flashlight', '#000000', NULL, 13, '2023-03-11 17:08:38', '2023-08-19 08:44:52', NULL, ''),
 (23, 1, 'تقارير الائتمانات', '', '_self', 'voyager-credit-card', '#000000', 21, 2, '2023-03-11 20:56:26', '2023-04-05 15:04:27', 'voyager.customer-credits.index', 'null'),
 (26, 1, 'القانوني', '', '_self', 'voyager-milestone', '#000000', 21, 3, '2023-03-11 21:17:18', '2023-04-05 15:04:27', 'voyager.customer-legals.index', 'null'),
-(27, 1, 'الاقسام', '', '_self', 'voyager-browser', NULL, NULL, 17, '2023-03-16 20:53:19', '2023-04-23 14:12:19', 'voyager.departments.index', NULL),
-(28, 1, 'خدمة العملاء', '', '_self', 'voyager-phone', '#000000', NULL, 3, '2023-03-16 21:01:22', '2023-03-16 21:11:21', 'voyager.customer-care.index', 'null'),
-(29, 1, 'طلبات التقسيط', '', '_self', 'voyager-group', NULL, NULL, 6, '2023-03-19 09:23:10', '2023-04-08 11:07:03', 'voyager.customer-installment-requests.index', NULL),
+(27, 1, 'الاقسام', '', '_self', 'voyager-browser', NULL, NULL, 18, '2023-03-16 20:53:19', '2023-08-19 09:53:26', 'voyager.departments.index', NULL),
+(28, 1, 'خدمة العملاء', '', '_self', 'voyager-phone', '#000000', NULL, 4, '2023-03-16 21:01:22', '2023-08-16 05:41:16', 'voyager.customer-care.index', 'null'),
+(29, 1, 'طلبات التقسيط', '', '_self', 'voyager-group', NULL, NULL, 7, '2023-03-19 09:23:10', '2023-08-16 05:41:16', 'voyager.customer-installment-requests.index', NULL),
 (30, 1, 'بيانات الائتمان', '', '_self', 'voyager-data', '#000000', 21, 1, '2023-03-28 22:17:45', '2023-03-29 01:34:34', 'voyager.customer-credits-data.index', 'null'),
-(31, 1, 'التجار', '', '_self', 'voyager-warning', '#000000', NULL, 7, '2023-04-05 15:02:58', '2023-04-08 11:07:03', 'voyager.traders.index', 'null'),
+(31, 1, 'التجار', '', '_self', 'voyager-warning', '#000000', NULL, 8, '2023-04-05 15:02:58', '2023-08-16 05:41:16', 'voyager.traders.index', 'null'),
 (32, 1, 'المحافظات', '', '_self', 'voyager-location', NULL, 35, 1, '2023-04-07 13:26:49', '2023-04-07 13:43:31', 'voyager.governements.index', NULL),
 (33, 1, 'المدن', '', '_self', 'voyager-bookmark', '#000000', 35, 2, '2023-04-07 13:28:20', '2023-04-07 13:44:58', 'voyager.cities.index', 'null'),
 (34, 1, 'المناظق', '', '_self', 'voyager-leaf', '#000000', 35, 3, '2023-04-07 13:31:16', '2023-04-07 13:45:23', 'voyager.regions.index', 'null'),
-(35, 1, 'الأماكن', '', '_self', 'voyager-down-circled', '#000000', NULL, 13, '2023-04-07 13:43:08', '2023-04-23 14:12:22', NULL, ''),
-(36, 1, 'الاوردرات', '', '_self', 'voyager-shop', '#000000', NULL, 5, '2023-04-08 11:05:55', '2023-04-08 11:07:03', 'voyager.orders.index', 'null'),
-(37, 1, 'طلبات العميل', '', '_self', 'voyager-chat', '#000000', NULL, 8, '2023-04-12 16:40:25', '2023-04-22 01:54:01', 'voyager.customer-requests.index', 'null'),
-(38, 1, 'Steps Actions', '', '_self', 'voyager-params', '#000000', NULL, 9, '2023-04-16 13:08:34', '2023-04-22 01:53:27', 'voyager.steps-actions.index', 'null'),
-(40, 1, 'اقساط العميل', '', '_self', 'voyager-boat', '#000000', NULL, 10, '2023-04-22 00:50:31', '2023-04-22 00:53:42', 'voyager.customer-installments.index', 'null'),
-(41, 1, 'المدفوعات', '', '_self', 'voyager-credit-cards', NULL, NULL, 11, '2023-04-23 14:09:38', '2023-04-23 14:12:25', 'voyager.customer-payments.index', NULL);
+(35, 1, 'الأماكن', '', '_self', 'voyager-down-circled', '#000000', NULL, 14, '2023-04-07 13:43:08', '2023-08-19 08:44:52', NULL, ''),
+(36, 1, 'الاوردرات', '', '_self', 'voyager-shop', '#000000', NULL, 6, '2023-04-08 11:05:55', '2023-08-16 05:41:16', 'voyager.orders.index', 'null'),
+(37, 1, 'طلبات العميل', '', '_self', 'voyager-chat', '#000000', NULL, 9, '2023-04-12 16:40:25', '2023-08-16 05:41:16', 'voyager.customer-requests.index', 'null'),
+(38, 1, 'Steps Actions', '', '_self', 'voyager-params', '#000000', NULL, 10, '2023-04-16 13:08:34', '2023-08-19 08:44:52', 'voyager.steps-actions.index', 'null'),
+(40, 1, 'اقساط العميل', '', '_self', 'voyager-boat', '#000000', NULL, 11, '2023-04-22 00:50:31', '2023-08-19 08:44:52', 'voyager.customer-installments.index', 'null'),
+(41, 1, 'الايرادات', '', '_self', 'voyager-credit-cards', '#000000', NULL, 12, '2023-04-23 14:09:38', '2023-08-19 08:44:52', 'voyager.customer-payments.index', 'null'),
+(42, 1, 'الضامنين', '', '_self', 'voyager-boat', '#000000', NULL, 3, '2023-08-16 05:28:15', '2023-08-16 05:41:16', 'voyager.grantors.index', 'null'),
+(48, 1, 'تعديل موعد دفع قسط', '', '_self', 'voyager-boat', '#000000', 37, 1, '2023-08-19 08:27:22', '2023-08-19 08:55:35', 'voyager.request-change-due-dates.index', 'null'),
+(49, 1, 'طلب اقساط جديدة', '', '_self', 'voyager-shop', NULL, 37, 2, '2023-08-19 08:54:20', '2023-08-19 08:54:54', 'voyager.request-new-installments.index', NULL),
+(50, 1, 'طلبات غرامة', '', '_self', 'voyager-wineglass', NULL, 37, 3, '2023-08-19 09:14:38', '2023-08-19 09:53:21', 'voyager.request-penalties.index', NULL),
+(51, 1, 'دفع مبكر', '', '_self', 'voyager-credit-card', NULL, 37, 4, '2023-08-19 09:52:27', '2023-08-19 09:53:26', 'voyager.request-prepaid-installments.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -1392,23 +1403,27 @@ CREATE TABLE `orders` (
   `installment_start_date` varchar(255) DEFAULT NULL,
   `months_count` varchar(255) DEFAULT NULL,
   `monthly_amount` varchar(255) DEFAULT NULL,
-  `downpayment` varchar(255) DEFAULT NULL
+  `downpayment` varchar(255) DEFAULT NULL,
+  `selling_bill_number` varchar(255) DEFAULT NULL,
+  `selling_bill_date` varchar(255) DEFAULT NULL,
+  `selling_bill_type` varchar(255) DEFAULT NULL,
+  `added_taxes` varchar(255) DEFAULT NULL,
+  `overall_credit_limit` varchar(255) DEFAULT NULL,
+  `used_credit_limit` varchar(255) DEFAULT NULL,
+  `reset_credit_limit` varchar(255) DEFAULT NULL,
+  `salesperson_id` varchar(255) DEFAULT NULL,
+  `profit_discount` varchar(255) DEFAULT NULL,
+  `code` varchar(255) DEFAULT NULL,
+  `penalty_amount` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`id`, `customer_id`, `order_amount`, `order_profit_percentage`, `total_order_amount`, `created_at`, `updated_at`, `deleted_at`, `installment_start_date`, `months_count`, `monthly_amount`, `downpayment`) VALUES
-(11, 3, '11000', '10', '11000', '2023-04-28 00:07:31', '2023-04-28 00:48:19', NULL, '2023-01-01 00:00:00', '10', '1100.00', '1000'),
-(12, 2, '21000', '15', '23000', '2023-04-28 01:05:31', '2023-04-28 01:30:03', NULL, '2023-05-11 00:00:00', '12', '1916.67', '1000'),
-(13, NULL, '21000', '15', '23000', '2023-04-28 01:14:17', '2023-04-28 01:14:17', NULL, '2023-04-12 00:00:00', '18', '1277.78', '1000'),
-(14, 2, '50000', '8', '52380', '2023-04-28 01:32:07', '2023-04-28 01:36:14', '2023-04-28 01:36:14', '2023-05-15 00:00:00', '30', '1746.00', '1500'),
-(15, 2, '61000', '12', '67200', '2023-04-28 01:37:00', '2023-04-28 01:37:41', NULL, '2023-05-17 00:00:00', '40', '1680.00', '1000'),
-(16, 2, '31000', '12', '33600', '2023-04-28 01:40:59', '2023-04-28 01:45:25', NULL, '2023-05-17 00:00:00', '24', '1400.00', '1000'),
-(17, 3, '23000', '12', '22400', '2023-04-28 01:46:42', '2023-04-28 01:47:17', NULL, '2023-05-17 00:00:00', '30', '746.67', '3000'),
-(18, 3, '71000', '32', '92400', '2023-04-28 01:49:23', '2023-04-28 01:54:57', NULL, '2023-05-17 00:00:00', '40', '2310.00', '1000'),
-(19, 3, '44000', '19', '47600', '2023-04-28 18:48:10', '2023-04-28 18:48:10', NULL, '2023-02-01 00:00:00', '10', '4760.00', '4000');
+INSERT INTO `orders` (`id`, `customer_id`, `order_amount`, `order_profit_percentage`, `total_order_amount`, `created_at`, `updated_at`, `deleted_at`, `installment_start_date`, `months_count`, `monthly_amount`, `downpayment`, `selling_bill_number`, `selling_bill_date`, `selling_bill_type`, `added_taxes`, `overall_credit_limit`, `used_credit_limit`, `reset_credit_limit`, `salesperson_id`, `profit_discount`, `code`, `penalty_amount`) VALUES
+(42, 37, '100000', '25', '123750', '2023-09-10 07:21:30', '2023-09-10 07:21:30', NULL, '2023-04-05 00:00:00', '4', '8250.00', '1000', NULL, NULL, 'option1', '0', NULL, NULL, NULL, NULL, NULL, 'B42', '20'),
+(43, 5, '10000', '25', '11250', '2023-10-04 14:42:16', '2023-10-04 14:42:16', NULL, '2023-10-04 00:00:00', '7', '1125.00', '1000', NULL, '2023-10-16 00:00:00', 'option2', '0', NULL, NULL, NULL, NULL, NULL, 'B43', '14');
 
 -- --------------------------------------------------------
 
@@ -1418,7 +1433,7 @@ INSERT INTO `orders` (`id`, `customer_id`, `order_amount`, `order_profit_percent
 
 CREATE TABLE `orders_customers` (
   `id` int(10) UNSIGNED NOT NULL,
-  `customer_id` int(11) DEFAULT NULL,
+  `grantor_id` int(11) DEFAULT NULL,
   `order_id` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -1428,19 +1443,26 @@ CREATE TABLE `orders_customers` (
 -- Dumping data for table `orders_customers`
 --
 
-INSERT INTO `orders_customers` (`id`, `customer_id`, `order_id`, `created_at`, `updated_at`) VALUES
-(1, 3, 1, NULL, NULL),
-(2, 2, 1, NULL, NULL),
-(3, 2, 5, NULL, NULL),
-(4, 3, 6, NULL, NULL),
-(5, 3, 7, NULL, NULL),
-(6, 2, 8, NULL, NULL),
-(7, 2, 11, NULL, NULL),
-(8, 3, 12, NULL, NULL),
-(9, 2, 14, NULL, NULL),
-(10, 2, 15, NULL, NULL),
-(11, 2, 18, NULL, NULL),
-(12, 3, 19, NULL, NULL);
+INSERT INTO `orders_customers` (`id`, `grantor_id`, `order_id`, `created_at`, `updated_at`) VALUES
+(16, 6, 25, NULL, NULL),
+(17, 5, 26, NULL, NULL),
+(18, 5, 27, NULL, NULL),
+(19, 5, 28, NULL, NULL),
+(20, 6, 29, NULL, NULL),
+(21, 6, 30, NULL, NULL),
+(22, 6, 31, NULL, NULL),
+(23, 6, 32, NULL, NULL),
+(24, 6, 33, NULL, NULL),
+(25, 6, 34, NULL, NULL),
+(26, 6, 35, NULL, NULL),
+(27, 6, 36, NULL, NULL),
+(28, 6, 37, NULL, NULL),
+(29, 6, 38, NULL, NULL),
+(30, 7, 39, NULL, NULL),
+(31, 5, 40, NULL, NULL),
+(32, 6, 41, NULL, NULL),
+(33, 6, 42, NULL, NULL),
+(34, 7, 43, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1509,11 +1531,7 @@ CREATE TABLE `permissions` (
 
 INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`) VALUES
 (1, 'browse_admin', NULL, '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
-(2, 'browse_bread', NULL, '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
-(3, 'browse_database', NULL, '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
 (4, 'browse_media', NULL, '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
-(5, 'browse_compass', NULL, '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
-(6, 'browse_menus', 'menus', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
 (7, 'read_menus', 'menus', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
 (8, 'edit_menus', 'menus', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
 (9, 'add_menus', 'menus', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
@@ -1538,16 +1556,6 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (28, 'edit_categories', 'categories', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
 (29, 'add_categories', 'categories', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
 (30, 'delete_categories', 'categories', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
-(31, 'browse_posts', 'posts', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
-(32, 'read_posts', 'posts', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
-(33, 'edit_posts', 'posts', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
-(34, 'add_posts', 'posts', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
-(35, 'delete_posts', 'posts', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
-(36, 'browse_pages', 'pages', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
-(37, 'read_pages', 'pages', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
-(38, 'edit_pages', 'pages', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
-(39, 'add_pages', 'pages', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
-(40, 'delete_pages', 'pages', '2023-03-05 14:11:18', '2023-03-05 14:11:18'),
 (56, 'browse_visitors', 'visitors', '2023-03-11 13:49:23', '2023-03-11 13:49:23'),
 (57, 'read_visitors', 'visitors', '2023-03-11 13:49:23', '2023-03-11 13:49:23'),
 (58, 'edit_visitors', 'visitors', '2023-03-11 13:49:23', '2023-03-11 13:49:23'),
@@ -1626,9 +1634,54 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (151, 'browse_customer_installments', 'customer_installments', '2023-04-22 00:50:31', '2023-04-22 00:50:31'),
 (156, 'browse_customer_payments', 'customer_payments', '2023-04-23 14:09:38', '2023-04-23 14:09:38'),
 (157, 'read_customer_payments', 'customer_payments', '2023-04-23 14:09:38', '2023-04-23 14:09:38'),
-(161, 'edit_customer_payments', 'customer_payments', '2023-04-28 20:58:46', '2023-04-28 20:58:46'),
-(162, 'add_customer_payments', 'customer_payments', '2023-04-28 20:58:46', '2023-04-28 20:58:46'),
-(163, 'delete_customer_payments', 'customer_payments', '2023-04-28 20:58:46', '2023-04-28 20:58:46');
+(164, 'browse_menus', 'menus', NULL, NULL),
+(165, 'browse_bread', NULL, NULL, NULL),
+(166, 'browse_compass', NULL, NULL, NULL),
+(168, 'browse_database', NULL, NULL, NULL),
+(169, 'browse_grantors', 'grantors', '2023-08-16 05:28:15', '2023-08-16 05:28:15'),
+(170, 'read_grantors', 'grantors', '2023-08-16 05:28:15', '2023-08-16 05:28:15'),
+(171, 'edit_grantors', 'grantors', '2023-08-16 05:28:15', '2023-08-16 05:28:15'),
+(172, 'add_grantors', 'grantors', '2023-08-16 05:28:15', '2023-08-16 05:28:15'),
+(173, 'delete_grantors', 'grantors', '2023-08-16 05:28:15', '2023-08-16 05:28:15'),
+(174, 'edit_customer_payments', 'customer_payments', '2023-08-16 09:14:04', '2023-08-16 09:14:04'),
+(175, 'add_customer_payments', 'customer_payments', '2023-08-16 09:14:04', '2023-08-16 09:14:04'),
+(176, 'delete_customer_payments', 'customer_payments', '2023-08-16 09:14:04', '2023-08-16 09:14:04'),
+(187, 'browse_change_due_date_request', 'change_due_date_request', '2023-08-19 07:54:28', '2023-08-19 07:54:28'),
+(188, 'read_change_due_date_request', 'change_due_date_request', '2023-08-19 07:54:28', '2023-08-19 07:54:28'),
+(189, 'edit_change_due_date_request', 'change_due_date_request', '2023-08-19 07:54:28', '2023-08-19 07:54:28'),
+(190, 'add_change_due_date_request', 'change_due_date_request', '2023-08-19 07:54:28', '2023-08-19 07:54:28'),
+(191, 'delete_change_due_date_request', 'change_due_date_request', '2023-08-19 07:54:28', '2023-08-19 07:54:28'),
+(195, 'add_customer_reqeust_change_due_date', 'customser_reqeust_change_due_date', '2023-08-19 08:12:24', '2023-08-19 08:12:24'),
+(202, 'browse_request_change_due_dates', 'request_change_due_dates', '2023-08-19 08:27:22', '2023-08-19 08:27:22'),
+(203, 'read_request_change_due_dates', 'request_change_due_dates', '2023-08-19 08:27:22', '2023-08-19 08:27:22'),
+(204, 'edit_request_change_due_dates', 'request_change_due_dates', '2023-08-19 08:27:22', '2023-08-19 08:27:22'),
+(205, 'add_request_change_due_dates', 'request_change_due_dates', '2023-08-19 08:27:22', '2023-08-19 08:27:22'),
+(206, 'delete_request_change_due_dates', 'request_change_due_dates', '2023-08-19 08:27:22', '2023-08-19 08:27:22'),
+(207, 'browse_request_new_installments', 'request_new_installments', '2023-08-19 08:54:20', '2023-08-19 08:54:20'),
+(208, 'read_request_new_installments', 'request_new_installments', '2023-08-19 08:54:20', '2023-08-19 08:54:20'),
+(209, 'edit_request_new_installments', 'request_new_installments', '2023-08-19 08:54:20', '2023-08-19 08:54:20'),
+(210, 'add_request_new_installments', 'request_new_installments', '2023-08-19 08:54:20', '2023-08-19 08:54:20'),
+(211, 'delete_request_new_installments', 'request_new_installments', '2023-08-19 08:54:20', '2023-08-19 08:54:20'),
+(212, 'browse_request_penalties', 'request_penalty', '2023-08-19 09:14:38', '2023-08-19 09:14:38'),
+(213, 'read_request_penalties', 'request_penalty', '2023-08-19 09:14:38', '2023-08-19 09:14:38'),
+(214, 'edit_request_penalties', 'request_penalty', '2023-08-19 09:14:38', '2023-08-19 09:14:38'),
+(215, 'add_request_penalties', 'request_penalty', '2023-08-19 09:14:38', '2023-08-19 09:14:38'),
+(216, 'delete_request_penalties', 'request_penalty', '2023-08-19 09:14:38', '2023-08-19 09:14:38'),
+(217, 'browse_request_penalties', 'request_penalties', '2023-08-19 09:19:45', '2023-08-19 09:19:45'),
+(218, 'read_request_penalties', 'request_penalties', '2023-08-19 09:19:45', '2023-08-19 09:19:45'),
+(219, 'edit_request_penalties', 'request_penalties', '2023-08-19 09:19:45', '2023-08-19 09:19:45'),
+(220, 'add_request_penalties', 'request_penalties', '2023-08-19 09:19:45', '2023-08-19 09:19:45'),
+(221, 'delete_request_penalties', 'request_penalties', '2023-08-19 09:19:45', '2023-08-19 09:19:45'),
+(222, 'browse_request_prepaid_installments', 'request_prepaid_installments', '2023-08-19 09:52:27', '2023-08-19 09:52:27'),
+(223, 'read_request_prepaid_installments', 'request_prepaid_installments', '2023-08-19 09:52:27', '2023-08-19 09:52:27'),
+(224, 'edit_request_prepaid_installments', 'request_prepaid_installments', '2023-08-19 09:52:27', '2023-08-19 09:52:27'),
+(225, 'add_request_prepaid_installments', 'request_prepaid_installments', '2023-08-19 09:52:27', '2023-08-19 09:52:27'),
+(226, 'delete_request_prepaid_installments', 'request_prepaid_installments', '2023-08-19 09:52:27', '2023-08-19 09:52:27'),
+(227, 'browse_customer_legals', 'customer_legals', '2023-09-10 06:39:51', '2023-09-10 06:39:51'),
+(228, 'read_customer_legals', 'customer_legals', '2023-09-10 06:39:51', '2023-09-10 06:39:51'),
+(229, 'edit_customer_legals', 'customer_legals', '2023-09-10 06:39:51', '2023-09-10 06:39:51'),
+(230, 'add_customer_legals', 'customer_legals', '2023-09-10 06:39:51', '2023-09-10 06:39:51'),
+(231, 'delete_customer_legals', 'customer_legals', '2023-09-10 06:39:51', '2023-09-10 06:39:51');
 
 -- --------------------------------------------------------
 
@@ -1648,11 +1701,7 @@ CREATE TABLE `permission_role` (
 INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (1, 1),
 (1, 3),
-(2, 1),
-(3, 1),
 (4, 1),
-(5, 1),
-(6, 1),
 (7, 1),
 (8, 1),
 (9, 1),
@@ -1677,16 +1726,6 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (28, 1),
 (29, 1),
 (30, 1),
-(31, 1),
-(32, 1),
-(33, 1),
-(34, 1),
-(35, 1),
-(36, 1),
-(37, 1),
-(38, 1),
-(39, 1),
-(40, 1),
 (56, 1),
 (56, 3),
 (57, 1),
@@ -1776,7 +1815,52 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (150, 1),
 (151, 1),
 (156, 1),
-(157, 1);
+(157, 1),
+(164, 1),
+(165, 1),
+(166, 1),
+(168, 1),
+(169, 1),
+(170, 1),
+(171, 1),
+(172, 1),
+(173, 1),
+(187, 1),
+(188, 1),
+(189, 1),
+(190, 1),
+(191, 1),
+(195, 1),
+(202, 1),
+(203, 1),
+(204, 1),
+(205, 1),
+(206, 1),
+(207, 1),
+(208, 1),
+(209, 1),
+(210, 1),
+(211, 1),
+(212, 1),
+(213, 1),
+(214, 1),
+(215, 1),
+(216, 1),
+(217, 1),
+(218, 1),
+(219, 1),
+(220, 1),
+(221, 1),
+(222, 1),
+(223, 1),
+(224, 1),
+(225, 1),
+(226, 1),
+(227, 1),
+(228, 1),
+(229, 1),
+(230, 1),
+(231, 1);
 
 -- --------------------------------------------------------
 
@@ -1840,6 +1924,111 @@ INSERT INTO `regions` (`id`, `name`, `code`, `details`, `created_at`, `updated_a
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `request_change_due_dates`
+--
+
+CREATE TABLE `request_change_due_dates` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `customer_id` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `request_date` varchar(255) DEFAULT NULL,
+  `due_date` varchar(255) DEFAULT NULL,
+  `departement_id` varchar(255) DEFAULT NULL,
+  `commuication_type` varchar(255) DEFAULT NULL,
+  `grace` int(11) DEFAULT NULL,
+  `new_due_date` varchar(255) DEFAULT NULL,
+  `diff_days` varchar(255) DEFAULT NULL,
+  `total_grace` varchar(255) DEFAULT NULL,
+  `customer_notify_date` varchar(255) DEFAULT NULL,
+  `decision` longtext DEFAULT NULL,
+  `ex_date` varchar(255) DEFAULT NULL,
+  `notes` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `request_new_installments`
+--
+
+CREATE TABLE `request_new_installments` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `customer_id` int(11) DEFAULT NULL,
+  `request_date` varchar(255) DEFAULT NULL,
+  `due_date` varchar(255) DEFAULT NULL,
+  `departement_id` varchar(255) DEFAULT NULL,
+  `commuication_type` varchar(255) DEFAULT NULL,
+  `product_name` varchar(255) DEFAULT NULL,
+  `product_price` varchar(255) DEFAULT NULL,
+  `profit_percentage` varchar(255) DEFAULT NULL,
+  `credit_limit` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `customer_notify_date` varchar(255) DEFAULT NULL,
+  `decision` varchar(255) DEFAULT NULL,
+  `ex_date` varchar(255) DEFAULT NULL,
+  `note` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `request_penalties`
+--
+
+CREATE TABLE `request_penalties` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `customer_id` int(11) DEFAULT NULL,
+  `request_date` varchar(255) DEFAULT NULL,
+  `due_date` varchar(255) DEFAULT NULL,
+  `departement_id` varchar(255) DEFAULT NULL,
+  `commuication_type` varchar(255) DEFAULT NULL,
+  `penalty_due_date` varchar(255) DEFAULT NULL,
+  `penalty_amount` varchar(255) DEFAULT NULL,
+  `restucture_installments_count` varchar(255) DEFAULT NULL,
+  `discount_percentage` varchar(255) DEFAULT NULL,
+  `new_due_date` varchar(255) DEFAULT NULL,
+  `diff_days` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `decision` varchar(255) DEFAULT NULL,
+  `customer_notify_date` varchar(255) DEFAULT NULL,
+  `ex_date` varchar(255) DEFAULT NULL,
+  `notes` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `request_prepaid_installments`
+--
+
+CREATE TABLE `request_prepaid_installments` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `customer_id` int(11) DEFAULT NULL,
+  `request_date` varchar(255) DEFAULT NULL,
+  `due_date` varchar(255) DEFAULT NULL,
+  `departement_id` varchar(255) DEFAULT NULL,
+  `communication_type` varchar(255) DEFAULT NULL,
+  `total_installments_amount` varchar(255) DEFAULT NULL,
+  `installment_months` varchar(255) DEFAULT NULL,
+  `installments_prepaid` varchar(255) DEFAULT NULL,
+  `paid_amount` varchar(255) DEFAULT NULL,
+  `rest_amount` varchar(255) DEFAULT NULL,
+  `overall_amount` varchar(255) DEFAULT NULL,
+  `discount_percentage` varchar(255) DEFAULT NULL,
+  `decision` longtext DEFAULT NULL,
+  `customer_notify_date` varchar(255) DEFAULT NULL,
+  `ex_date` varchar(255) DEFAULT NULL,
+  `notes` longtext DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `roles`
 --
 
@@ -1883,14 +2072,14 @@ CREATE TABLE `settings` (
 
 INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`, `order`, `group`) VALUES
 (1, 'site.title', 'Site Title', 'Bsmart-trade', '', 'text', 1, 'Site'),
-(2, 'site.description', 'Site Description', 'Buy whatever you want', '', 'text', 2, 'Site'),
+(2, 'site.description', 'Site Description', 'Wish Whatever U Want', '', 'text', 2, 'Site'),
 (3, 'site.logo', 'Site Logo', '', '', 'image', 3, 'Site'),
 (4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', NULL, '', 'text', 4, 'Site'),
-(5, 'admin.bg_image', 'Admin Background Image', 'settings\\March2023\\jw3vNbiEy8BHIU40fbaP.jpg', '', 'image', 5, 'Admin'),
+(5, 'admin.bg_image', 'Admin Background Image', 'settings/April2023/PHpkAelfZWxCqVbHZVZN.png', '', 'image', 5, 'Admin'),
 (6, 'admin.title', 'Admin Title', 'BSmart', '', 'text', 1, 'Admin'),
 (7, 'admin.description', 'Admin Description', 'Buy whatever you want', '', 'text', 2, 'Admin'),
 (8, 'admin.loader', 'Admin Loader', '', '', 'image', 3, 'Admin'),
-(9, 'admin.icon_image', 'Admin Icon Image', 'settings\\March2023\\WveWmrjj8FMjQkVv839G.png', '', 'image', 4, 'Admin'),
+(9, 'admin.icon_image', 'Admin Icon Image', 'settings/April2023/BGhDBAuXKgapyTrGW0HY.png', '', 'image', 4, 'Admin'),
 (10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin');
 
 -- --------------------------------------------------------
@@ -1929,15 +2118,9 @@ CREATE TABLE `steps_actions` (
   `ex_cr_limit` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `steps_actions`
---
-
-INSERT INTO `steps_actions` (`id`, `doc_date`, `customer_id`, `customer_phone_no`, `grantor_id`, `grantor_phone_no`, `city`, `cs_datetime`, `cc_datetime`, `cc_cr_contact_date`, `cr_datetime`, `cr_status`, `cr_documents`, `cr_pay_period`, `cr_due_date`, `cr_period`, `cr_notice`, `cc_datetime_2`, `cc_ex_contact_date`, `ex_datetime`, `ex_status`, `ex_notice`, `ex_product_name`, `ex_traders`, `ex_phone_no`, `price`, `ex_cr_limit`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2023-04-16 17:11:00', 2, '35607897253', 3, '2344897542', 'Schmittville', '2023-04-16 17:11:00', '2023-04-16 17:11:00', '2023-05-25 00:00:00', '2023-04-16 17:11:00', 'Oregon', 'Rerum veritatis ea qui quis recusandae quo explicabo.', 'Zieme, Pouros and McLaughlin', '2023-03-10 00:00:00', 'Voluptatem et quos minima alias et ut quae quisquam hic.', '595', NULL, '2022-08-04 00:00:00', '2023-04-16 17:11:00', 'Connecticut', '294flk djsakl fjasdl kjfsda klfj; asdk', 'Bridgette Donnelly', 'Quia non aliquid quibusdam perspiciatis amet et voluptatem.', '373', '326', '146', '2023-04-16 13:11:56', '2023-04-16 13:11:56', NULL);
 
 -- --------------------------------------------------------
 
@@ -1981,15 +2164,6 @@ CREATE TABLE `traders` (
   `place_whatsapp` varchar(255) DEFAULT NULL,
   `place_landline` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `traders`
---
-
-INSERT INTO `traders` (`id`, `activity_title`, `activity_type`, `government_id`, `city_id`, `region_id`, `address`, `owner_name`, `owner_national_id`, `owner_phone`, `owner_phone_2`, `owner_whatsapp`, `owner_landline`, `manager_name`, `manager_phone`, `manager_phone_2`, `manager_whatsapp`, `manager_landline`, `posters_count`, `photos_count`, `email`, `website`, `facebook`, `tiktok`, `telegram`, `instagram`, `status`, `created_at`, `updated_at`, `deleted_at`, `place_phone`, `place_phone2`, `place_whatsapp`, `place_landline`) VALUES
-(1, 'Principal Accountability Officer', 'Zioncester', 'Occaecati blanditiis et delectus sequi sapiente molestias placeat ad.', 'North Miguelhaven', 'Vero qui accusantium soluta et rerum sed quisquam dolores.', '8684 Raphaelle Tunnel', 'Leo_Hodkiewicz27', 'Totam et harum illo corporis quis aut maiores.', '578-170-7434', '579-227-3712', 'Ratione culpa velit eum consequuntur molestiae hic itaque dolores illum.', 'Nader', 'Bernardo.Price', '849-213-0857', '011-202-7364', 'Tempora mollitia autem facilis optio quam est.', 'Wolf', 'Bahrain', 'Saint Lucia', 'your.email+fakedata93316@gmail.com', 'Inventore inventore molestias necessitatibus.', 'Optio eum officia.', 'Facilis debitis nemo delectus odio repudiandae.', 'Soluta dolor asperiores.', 'Et consequatur reiciendis id aut ipsum quia suscipit. Laudantium porro dolores quibusdam id pariatur dicta facilis qui natus. Sit fugiat atque provident debitis impedit assumenda rem.', 'California', '2023-04-05 15:14:31', '2023-04-05 15:14:31', NULL, NULL, NULL, NULL, NULL),
-(2, 'Global Web Architect', 'Lockmanton', 'Perferendis eum corporis aut cum id facere aliquid consectetur quo.', 'Melliefield', 'At maxime et quos qui odio et quam.', '54 Luettgen Plain', 'Name76', '212', '427', '336', '299', '26', 'Elta55', '84', '648', '488', '191', '112', '324', 'your.email+fakedata85782@gmail.com', 'Sequi nemo non non earum dolor commodi dolorum.', 'At quisquam rerum a quam explicabo sit occaecati illum quis.', 'Dicta culpa voluptas rerum quisquam ipsa.', 'Nisi enim iusto atque saepe qui quos a voluptatem.', 'Ut aperiam quibusdam saepe corporis alias. Minus odit dolorem voluptatem magnam beatae quia vero quam. Est soluta sit quaerat.', 'Wyoming', '2023-04-05 15:46:56', '2023-04-05 15:46:56', NULL, NULL, NULL, NULL, NULL),
-(3, 'Customer Accountability Specialist', 'South Rhodaworth', '2', '2', '2', '75452 Hettie Drives', 'Albert_Effertz2', '617', '126', '557', '125', '540', 'Alycia.Von', '403', '15', '214', '201', '83', '613', 'your.email+fakedata16366@gmail.com', 'Qui nemo dolore quod quo nihil voluptas quas.', 'Quibusdam et dicta soluta.', 'Cupiditate quia tempore provident.', 'Fugiat temporibus nesciunt ut qui accusantium rerum ab molestiae.', 'Corporis commodi adipisci autem odit veniam. Esse voluptas et dolorum fuga quibusdam quo ipsam voluptatum. Qui et id illo error nemo.', 'cancel', '2023-04-16 01:06:18', '2023-04-16 01:06:18', NULL, '214', '130', '36', '468');
 
 -- --------------------------------------------------------
 
@@ -2069,9 +2243,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 1, 'المدير', 'admin@admin.com', 'users\\March2023\\lacm25hN9tJuP2gotxbH.png', NULL, '$2y$10$LT2UA9ER1rmFk6i5Xdb.6eCQsBqrVkchXze/cXIeCxAnF6ljKYCfy', 'pYBROVFhuRHoiskQyYOXbkmOZc4uZpYwJ0LsCUNTcexXKfI9QjEcCi1WW6u8', '{\"locale\":\"ar\"}', '2023-03-05 14:11:18', '2023-03-11 22:55:32'),
-(2, NULL, 'Anabelle King', 'your.email+fakedata61175@gmail.com', 'users/default.png', NULL, '$2y$10$5Fqe96rok60z0fmaHMiJDe3lRwLMaWrCbhAYMWlb3KGMFhCnfLc02', NULL, '{\"locale\":\"al\"}', '2023-03-10 14:55:40', '2023-03-10 14:55:40'),
-(3, 3, 'ahmed', 'ahmed@test.com', 'users/default.png', NULL, '$2y$10$uUpLOUpS1hkuwddGczUS5.a2h5LXxsduU7HumoafxqnqaCc.9maKa', NULL, '{\"locale\":\"ar\"}', '2023-03-11 21:54:28', '2023-03-11 21:54:28');
+(1, 1, 'المدير', 'admin@admin.com', 'users/April2023/xx47oJHC5OXikMtRudwV.png', NULL, '$2y$10$LT2UA9ER1rmFk6i5Xdb.6eCQsBqrVkchXze/cXIeCxAnF6ljKYCfy', 'pYBROVFhuRHoiskQyYOXbkmOZc4uZpYwJ0LsCUNTcexXKfI9QjEcCi1WW6u8', '{\"locale\":\"ar\"}', '2023-03-05 14:11:18', '2023-04-29 00:18:02'),
+(4, 3, 'ahmed', 'ahmedelarabykhaled2020@yahoo.com', 'users/default.png', NULL, '$2y$10$L0ORbLgV4o/zueIj3OiI0OtzKuerGvSGkv2BT/rv4YHzZx1Uk0TxS', NULL, '{\"locale\":\"ar\"}', '2023-04-29 10:05:00', '2023-04-29 10:05:00');
 
 -- --------------------------------------------------------
 
@@ -2110,14 +2283,6 @@ CREATE TABLE `visitors` (
   `contact_date` varchar(255) DEFAULT NULL,
   `region_id` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `visitors`
---
-
-INSERT INTO `visitors` (`id`, `name`, `address`, `work`, `phone`, `age`, `communicate`, `note`, `created_at`, `updated_at`, `governorate_id`, `city_id`, `phone_2`, `landline`, `work_phone`, `whatsapp_number`, `contact_date`, `region_id`) VALUES
-(1, 'Chance Quitzon', 'el mahalla', 'deleniti eligendi sunt', '2136845', '549', 'facebook', NULL, '2023-03-11 13:57:18', '2023-03-29 00:36:36', NULL, 'tanta', NULL, NULL, NULL, NULL, '2023-03-09 00:00:00', NULL),
-(2, 'Doris Stracke', 'el mahalla', 'praesentium blanditiis aliquid', '01150420698', '448', 'whatsapp', NULL, '2023-03-12 15:05:21', '2023-03-12 15:05:21', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -2243,6 +2408,12 @@ ALTER TABLE `governements`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `grantors`
+--
+ALTER TABLE `grantors`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `menus`
 --
 ALTER TABLE `menus`
@@ -2313,6 +2484,30 @@ ALTER TABLE `posts`
 -- Indexes for table `regions`
 --
 ALTER TABLE `regions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `request_change_due_dates`
+--
+ALTER TABLE `request_change_due_dates`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `request_new_installments`
+--
+ALTER TABLE `request_new_installments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `request_penalties`
+--
+ALTER TABLE `request_penalties`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `request_prepaid_installments`
+--
+ALTER TABLE `request_prepaid_installments`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -2390,25 +2585,25 @@ ALTER TABLE `cities`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `customer_care`
 --
 ALTER TABLE `customer_care`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `customer_credits`
 --
 ALTER TABLE `customer_credits`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `customer_credits_data`
 --
 ALTER TABLE `customer_credits_data`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `customer_credits_data_customers`
@@ -2420,37 +2615,37 @@ ALTER TABLE `customer_credits_data_customers`
 -- AUTO_INCREMENT for table `customer_installement_requests_customers`
 --
 ALTER TABLE `customer_installement_requests_customers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `customer_installments`
 --
 ALTER TABLE `customer_installments`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=436;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=549;
 
 --
 -- AUTO_INCREMENT for table `customer_installment_requests`
 --
 ALTER TABLE `customer_installment_requests`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `customer_legals`
 --
 ALTER TABLE `customer_legals`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `customer_legal_customers`
 --
 ALTER TABLE `customer_legal_customers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `customer_payments`
 --
 ALTER TABLE `customer_payments`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT for table `customer_requests`
@@ -2462,13 +2657,13 @@ ALTER TABLE `customer_requests`
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=465;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=603;
 
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `departments`
@@ -2498,7 +2693,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -2510,13 +2705,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `orders_customers`
 --
 ALTER TABLE `orders_customers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `order_installments`
@@ -2534,7 +2729,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=164;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=232;
 
 --
 -- AUTO_INCREMENT for table `posts`
@@ -2547,6 +2742,30 @@ ALTER TABLE `posts`
 --
 ALTER TABLE `regions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `request_change_due_dates`
+--
+ALTER TABLE `request_change_due_dates`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `request_new_installments`
+--
+ALTER TABLE `request_new_installments`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `request_penalties`
+--
+ALTER TABLE `request_penalties`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `request_prepaid_installments`
+--
+ALTER TABLE `request_prepaid_installments`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -2582,7 +2801,7 @@ ALTER TABLE `translations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `visitors`
